@@ -1,0 +1,10 @@
+body {
+  background: lavender;
+  font-family: 'Roboto Mono', monospace;
+  padding: 40px;
+}
+
+p {
+  font-size: 28px;
+  font-weight: 100;
+}
