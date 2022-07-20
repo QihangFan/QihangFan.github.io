@@ -1,19 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Welcome to my Website</title>
+    <title>Four-Typos</title>
   </head>
+
   <body>
-    <h1>Hello Baby</h1>
-    <p>
-      After the New York Times reported that President Donald Trump had switched his residency from Florida to New York, he said the Empire State's taxes factored into his decision.
-      Setting aside the claims of political victimization, Trump likely stands to reap benefits from Florida's lenient tax climate for two key reasons.
-      There are no separate state income or estate taxes, the latter being used to tax the transfer of wealth and property of the deceased to designated heirs.
-    </p>
-    <p>
-      Setting aside the claims of political victimization, Trump likely stands to reap benefits from Florida's lenient tax climate for two key reasons: There are no separate state income or estate taxes, the latter being used to tax the transfer of wealth and property of the deceased to designated heirs.
-    </p>
+    <div id="menu" class="flex-container" >
+      <div>
+        <img class="Icon" src="Materials/Icon/Info.png" alt="Info">
+      </div>
+      <div>
+        <img class="Icon" src="Materials/Icon/Menu.png" alt="Menu">
+      </div>
+
+    </div>
+
+    <div id="home-videoContainer" class="grid-container">
+      <div class="grid-item" onclick="location.href='Pages/Marfet/Marfet.html';">
+        <video id="Marfet" class="grid-video" width=100% height=100% loop muted>
+          <source src="Materials/Video/Marfet_isoFull.mp4" type="video/mp4">
+          <source src="Materials/Video/Marfet_isoFull.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="grid-item" onclick="location.href='Pages/Exhifition/Exhifition.html';">
+        <video id="Exhifition" class="grid-video" width=100% height=100% loop muted>
+          <source src="Materials/Video/Exhifition_isoFull.mp4" type="video/mp4">
+          <source src="Materials/Video/Exhifition_isoFull.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="grid-item" onclick="location.href='Pages/Stufio/Stufio.html';">
+        <video id="Stufio" class="grid-video" width=100% height=100% loop muted>
+          <source src="Materials/Video/Stufio_isoFull.mp4" type="video/mp4">
+          <source src="Materials/Video/Stufio_isoFull.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="grid-item" onclick="location.href='Pages/Tofer/Tofer.html';">
+        <video id="Tofer" class="grid-video" width=100% height=100% loop muted>
+          <source src="Materials/Video/Tofer_isoFull.mp4" type="video/mp4">
+          <source src="Materials/Video/Tofer_isoFull.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
   </body>
 </html>
+
+<script type="text/javascript">
+  const Tofer = document.getElementById("Tofer");
+  const Marfet = document.getElementById("Marfet");
+  const Exhifition = document.getElementById("Exhifition");
+  const Stufio = document.getElementById("Stufio");
+  let videoList = [Tofer, Marfet, Exhifition, Stufio];
+
+  let value = [false, false, false, false];
+
+  for (let i = 0; i < videoList.length; i++){
+    videoList[i].addEventListener("canplaythrough", function(){
+      value[i] = true;
+      console.log(value);
+    });
+  }
+
+  console.log("Play");
+
+  setTimeout(() => {
+    value.every(element => {
+      if (element === true) {
+        videoList.forEach(function(elem){
+          elem.play();
+        })
+      }
+    })}, 2000)
+</script>

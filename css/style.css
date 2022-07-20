@@ -1,10 +1,76 @@
 body {
   background: lavender;
   font-family: 'Roboto Mono', monospace;
-  padding: 40px;
 }
 
 p {
   font-size: 28px;
   font-weight: 100;
+}
+
+#home-videoContainer {
+  border: none;
+  display: grid;
+  grid-template-columns: repeat(2, 50vw);
+  grid-gap: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: -8px;
+}
+
+#menu {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+
+}
+
+.Icon {
+  width: 28px;
+}
+
+.grid-item {
+  overflow: hidden;
+
+}
+
+.grid-video {
+  object-fit: cover;
+  justify-items: center;
+  align-items: center;
+  transition-duration: 500ms;
+}
+
+.grid-video:hover {
+  transform: scale(1.1);
+  transition-duration: 500ms;
+  cursor: pointer;
+}
+
+/*children pages*/
+.fullScreenVideo {
+  width: 100vw;
+  height: 100vh;
+  margin: -8px;
+}
+
+.pageSolo {
+  object-fit: cover;
+  justify-items: center;
+  align-items: center;
+}
+
+.rotateButton_div {
+  position: absolute;
+  bottom: 6vh;
+  width: 100%;
+  text-align: center;
+}
+
+.rotateButton {
+  width: 80px;
+  height: auto;
 }
