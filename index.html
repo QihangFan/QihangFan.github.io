@@ -65,7 +65,7 @@
 
   for (let i = 0; i < videoList.length; i++){
     videoList[i].addEventListener("canplaythrough", function(){
-      value[i] = true;
+      vidReady[i] = true;
       console.log(vidReady);
     });
   }
