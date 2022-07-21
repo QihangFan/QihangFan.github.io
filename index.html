@@ -69,8 +69,6 @@
       console.log(vidReady);
     });
   }
-
-  console.log("Play");
   
   var simulVidPlayer = setInterval(() => {
     var trueChecker = arr => arr.every(v => v === true);
@@ -78,10 +76,10 @@
     if (trueChecker(vidReady) === true) {
       videoList.forEach(function(elem){
         elem.play();
+        console.log("Play");
+        clearInterval(simulVidPlayer);
       });
-      
-      clearInterval(simulVidPlayer);
+      // clearInterval(simulVidPlayer);
     }
-    
   }, 100)
 </script>
