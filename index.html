@@ -61,23 +61,27 @@
   const Stufio = document.getElementById("Stufio");
   let videoList = [Tofer, Marfet, Exhifition, Stufio];
 
-  let value = [false, false, false, false];
+  let vidReady = [false, false, false, false];
 
   for (let i = 0; i < videoList.length; i++){
     videoList[i].addEventListener("canplaythrough", function(){
       value[i] = true;
-      console.log(value);
+      console.log(vidReady);
     });
   }
 
   console.log("Play");
+  
+  var simulVidPlayer = setInterval(() => {
+    var trueChecker = arr => arr.every(v => v === true);
 
-  setTimeout(() => {
-    value.every(element => {
-      if (element === true) {
-        videoList.forEach(function(elem){
-          elem.play();
-        })
-      }
-    })}, 2000)
+    if (trueChecker(vidReady) === true) {
+      videoList.forEach(function(elem){
+        elem.play();
+      });
+      
+      clearInterval(simulVidPlayer);
+    }
+    
+  }, 100)
 </script>
