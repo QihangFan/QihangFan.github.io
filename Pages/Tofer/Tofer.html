@@ -6,34 +6,71 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Tofer</title>
 </head>
-<body>
-<div id="menu" class="flex-container" >
-    <div>
-        <img class="Icon" src="/Materials/Icon/Home.png" alt="Home">
+    <body>
+    <div id="menu" class="flex-container" >
+        <div>
+            <img class="Icon" src="/Materials/Icon/Home.png" alt="Home" onclick="location.href='/index.html';">
+        </div>
+        <div>
+            <img class="Icon" src="/Materials/Icon/Info.png" alt="Info">
+        </div>
+        <div>
+            <img class="Icon" src="/Materials/Icon/Replay.png" alt="Replay">
+        </div>
+        <div>
+            <img class="Icon" src="/Materials/Icon/Menu.png" alt="Menu">
+        </div>
     </div>
-    <div>
-        <img class="Icon" src="/Materials/Icon/Info.png" alt="Info">
-    </div>
-    <div>
-        <img class="Icon" src="/Materials/Icon/Replay.png" alt="Replay">
-    </div>
-    <div>
-        <img class="Icon" src="/Materials/Icon/Menu.png" alt="Menu">
-    </div>
-</div>
 
-<div id="rotateButton_div_tofer" class="rotateButton_div" >
-    <div>
-        <img class="rotateButton" src="/Materials/Icon/RotateButton.png" alt="Rotate">
+    <div id="rotateButton_div_tofer" class="rotateButton_div" >
+        <div>
+            <img class="rotateButton" src="/Materials/Icon/RotateButton.png" alt="Rotate" onclick="videoPlay()">
+        </div>
     </div>
-</div>
 
-<div id="Tofersolo_div" class="fullScreenVideo" >
-    <video id="ToferSolo" class="pageSolo" width=100% height=100% autoplay loop muted>
-        <source src="/Materials/Video/Tofer_isoFull.mp4" type="video/mp4">
-        <source src="/Materials/Video/Tofer_isoFull.mp4" type="video/ogg">
-        Your browser does not support the video tag.
-    </video>
-</div>
+    <div id="Tofersolo_div" class="fullScreenVideo" >
+        <video id="ToferSolo" class="pageSolo" width=100% height=100% autoplay muted>
+            <source src="/Materials/Video/Tofer_isoFull.mp4" type="video/mp4">
+            <source src="/Materials/Video/Tofer_isoFull.mp4" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 </body>
 </html>
+
+<script type="text/javascript">
+    const ToferSolo = document.getElementById("ToferSolo");
+    var pausePoint = [5,11,13],
+        pauseIndex = 0,
+        currentStopTime = pausePoint[pauseIndex];
+
+    var videoTracker = setInterval(() => {
+        checkTime();
+        console.log(ToferSolo.currentTime);
+        console.log(currentStopTime);
+
+        ToferSolo.addEventListener('ended', (event) => {
+            videoReset();
+            console.log("videoReset");
+            ToferSolo.play();
+        })
+    }, 20)
+
+    function checkTime() {
+        if (ToferSolo.currentTime >= currentStopTime) {
+            ToferSolo.pause();
+            if (pausePoint.length > ++pauseIndex) {
+                currentStopTime = pausePoint[pauseIndex]
+            }
+        }
+    }
+
+    function videoPlay(){
+        ToferSolo.play();
+    }
+
+    function videoReset(){
+        pauseIndex = 0
+        currentStopTime = pausePoint[pauseIndex]
+    }
+</script>
