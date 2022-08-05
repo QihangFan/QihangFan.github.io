@@ -114,7 +114,7 @@ p {
 
 .rotateButton {
   position: relative;
-  width: 150px;
+  width: 200px;
   height: auto;
   cursor: pointer;
   z-index: 5;
