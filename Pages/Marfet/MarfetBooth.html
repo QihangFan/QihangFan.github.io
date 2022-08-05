@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../JavaScript/navComponents.js"></script>
+    <script src="../../JavaScript/VideoController.js"></script>
+    <title>Marfet Booth</title>
+</head>
+<body>
+<nav-menu></nav-menu>
+
+<div id="Marfetsolo_div" class="fullScreenVideo" >
+    <video id="MarfetBoothSolo" class="pageSolo" width=100% height=100% autoplay muted>
+        <source src="/Materials/Video/Marfet/MarfetBooth.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="overlayLayer">
+        <div class="navButtonDiv" style = "left:6%; bottom:40%">
+            <div>
+                <img id="MarfetBoothLeftEnter" class="navButton" src="/Materials/Icon/door-enter-line-left.png"
+                     alt="Enter"
+                     onclick="location.href='/Pages/Marfet/MarfetArch.html';"
+                >
+            </div>
+        </div>
+
+        <div class="navButtonDiv" style = "right:6%; top:40%">
+            <div>
+                <img id="MarfetBoothRightEnter" class="navButton" src="/Materials/Icon/door-enter-line-right.png"
+                     alt="Enter"
+                     onclick="videoPlay(MarfetBoothSolo)"
+                >
+            </div>
+        </div>
+
+        <div class="navButtonDiv" style = "right:30%; top:6%">
+            <div>
+                <img id="MarfetBoothTopview" class="navButton" src="/Materials/Icon/top-view.png"
+                     alt="Enter"
+                     onclick="location.href='/Pages/Marfet/MarfetTopview.html';"
+                >
+            </div>
+        </div>
+
+        <div class="navButtonDiv" style = "left:30%; bottom:6%">
+            <div>
+                <img id="MarfetBoothCloseup" class="navButton" src="/Materials/Icon/close-up.png"
+                     alt="Enter"
+                     onclick="location.href='/Pages/Marfet/MarfetCommodity.html';">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+    const MarfetBoothSolo = document.getElementById("MarfetBoothSolo");
+    var pausePoint = [4.2,12]
+
+    intervalRefresher(MarfetBoothSolo, pausePoint)
+</script>

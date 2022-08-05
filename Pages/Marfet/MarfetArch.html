@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../JavaScript/navComponents.js"></script>
+    <script src="../../JavaScript/VideoController.js"></script>
+    <title>Marfet Arch</title>
+</head>
+<body>
+<nav-menu></nav-menu>
+
+<div id="Marfetsolo_div" class="fullScreenVideo" >
+    <video id="MarfetArchSolo" class="pageSolo" width=100% height=100% autoplay muted>
+        <source src="/Materials/Video/Marfet/MarfetArch.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="overlayLayer">
+        <div class="navButtonDiv" style = "right:6%; top:34%">
+            <div>
+                <img id="MarfetArchToBooth" class="navButton" src="/Materials/Icon/door-enter-line-right.png"
+                     alt="Enter"
+                     onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
+            </div>
+        </div>
+
+        <div class="navButtonDiv" style = "left:30%; bottom:30%">
+            <div>
+                <img id="MarfetArchEnter" class="navButton" src="/Materials/Icon/door-enter-line-left.png"
+                     alt="Enter"
+                     onclick="MarfetArchSolo.play()"
+                >
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+    const MarfetArchSolo = document.getElementById("MarfetArchSolo");
+    var pausePoint = [2.15,15]
+
+    intervalRefresher(MarfetArchSolo, pausePoint)
+</script>

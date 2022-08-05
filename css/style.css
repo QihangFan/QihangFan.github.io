@@ -1,6 +1,9 @@
 body {
   background: lavender;
   font-family: 'Roboto Mono', monospace;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 p {
@@ -18,7 +21,7 @@ p {
   margin: -8px;
 }
 
-#menu {
+#menuIndex {
   display: flex;
   gap: 10px;
   position: absolute;
@@ -28,7 +31,7 @@ p {
 
 }
 
-.Icon {
+.IconIndex {
   width: 28px;
   cursor: pointer;
 }
@@ -56,6 +59,22 @@ p {
   width: 100vw;
   height: 100vh;
   margin: -8px;
+  overflow: hidden;
+}
+
+.navHotSpot {
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.overlayLayerIso {
+  width:50px;
+  height:50px;
+  position: absolute;
+  left:50%;
+  top:50%;
 }
 
 .pageSolo {
@@ -73,6 +92,18 @@ p {
 
 .rotateButton {
   position: relative;
+  width: 80px;
+  height: auto;
+  cursor: pointer;
+  z-index: 5;
+}
+
+/*nav icons*/
+.navButtonDiv {
+  position: absolute;
+}
+
+.navButton {
   width: 80px;
   height: auto;
   cursor: pointer;

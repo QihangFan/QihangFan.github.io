@@ -3,28 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../JavaScript/navComponents.js"></script>
     <title>Marfet</title>
+<!--    don't import videoController.js-->
 </head>
 <body>
-    <div id="menu" class="flex-container" >
-        <div>
-            <img class="Icon" src="/Materials/Icon/Home.png" alt="Home" onclick="location.href='/index.html';">
-        </div>
-        <div>
-            <img class="Icon" src="/Materials/Icon/Info.png" alt="Info">
-        </div>
-        <div>
-            <img class="Icon" src="/Materials/Icon/Replay.png" alt="Replay">
-        </div>
-        <div>
-            <img class="Icon" src="/Materials/Icon/Menu.png" alt="Menu">
-        </div>
-    </div>
+    <nav-menu></nav-menu>
 
     <div id="rotateButton_div_marfet" class="rotateButton_div" >
         <div>
-<!--            <button class="rotateButton" onclick="videoPlay()">Rotate</button>-->
             <img class="rotateButton" src="/Materials/Icon/RotateButton.png" alt="Rotate" onclick="videoPlay()">
         </div>
     </div>
@@ -35,6 +23,30 @@
             <source src="/Materials/Video/Marfet_isoFull.ogg" type="video/ogg">
             Your browser does not support the video tag.
         </video>
+    </div>
+
+    <div class="overlayLayerIso">
+        <div class="navButtonDiv" style = "left:calc(-5vw - 130px); top:calc(-4vh - 20px)">
+            <div>
+                <img id="MarfetArch" class="navHotSpot" src="/Materials/Icon/HotSpot.png"
+                     alt="Enter"
+                     onclick="location.href='/Pages/Marfet/MarfetArch.html';">
+            </div>
+        </div>
+        <div class="navButtonDiv" style = "left:calc(-5vw - 80px); bottom:calc(-4vh - 40px)">
+            <div>
+                <img id="MarfetBooth" class="navHotSpot" src="/Materials/Icon/HotSpot.png"
+                     alt="Enter"
+                     onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
+            </div>
+        </div>
+        <div class="navButtonDiv" style = "right:calc(-7vw - 130px); bottom:calc(-5vh - 80px)">
+            <div>
+                <img id="MarfetUnderground" class="navHotSpot" src="/Materials/Icon/HotSpot.png"
+                     alt="Enter"
+                     onclick="location.href='/Pages/Marfet/MarfetUnderground.html';">
+            </div>
+        </div>
     </div>
 </body>
 </html>
@@ -55,7 +67,7 @@
             console.log("videoReset");
             MarfetSolo.play();
         })
-    }, 20)
+    }, 10)
 
     function checkTime() {
         if (MarfetSolo.currentTime >= currentStopTime) {

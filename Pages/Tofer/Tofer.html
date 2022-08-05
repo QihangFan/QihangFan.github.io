@@ -3,24 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../JavaScript/navComponents.js"></script>
     <title>Tofer</title>
 </head>
-    <body>
-    <div id="menu" class="flex-container" >
-        <div>
-            <img class="Icon" src="/Materials/Icon/Home.png" alt="Home" onclick="location.href='/index.html';">
-        </div>
-        <div>
-            <img class="Icon" src="/Materials/Icon/Info.png" alt="Info">
-        </div>
-        <div>
-            <img class="Icon" src="/Materials/Icon/Replay.png" alt="Replay">
-        </div>
-        <div>
-            <img class="Icon" src="/Materials/Icon/Menu.png" alt="Menu">
-        </div>
-    </div>
+<body>
+    <nav-menu></nav-menu>
 
     <div id="rotateButton_div_tofer" class="rotateButton_div" >
         <div>
@@ -54,7 +42,7 @@
             console.log("videoReset");
             ToferSolo.play();
         })
-    }, 20)
+    }, 10)
 
     function checkTime() {
         if (ToferSolo.currentTime >= currentStopTime) {

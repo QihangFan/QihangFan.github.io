@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <script src="../../JavaScript/navComponents.js"></script>
+  <script src="../../JavaScript/VideoController.js"></script>
+  <title>Marfet Topview</title>
+</head>
+<body>
+<nav-menu></nav-menu>
+
+<div id="Marfetsolo_div" class="fullScreenVideo" >
+  <video id="MarfetTopviewSolo" class="pageSolo" width=100% height=100% autoplay muted>
+    <source src="/Materials/Video/Marfet/MarfetTopview.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="overlayLayer">
+    <div class="navButtonDiv" style = "right:20%; top:6%">
+      <div>
+        <img id="MarfetTopviewReturn" class="navButton" src="/Materials/Icon/door-enter-line-right.png"
+             alt="Enter"
+             onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
+      </div>
+    </div>
+
+    <div class="navButtonDiv" style = "left:30%; bottom:35%">
+      <div>
+        <img id="MarfetTopviewCloseup" class="navButton" src="/Materials/Icon/close-up.png"
+             alt="Enter"
+             onclick="location.href='/Pages/Marfet/MarfetCommodity.html';">
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
