@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/xlm0fuz.css");
+
 body {
   background: lavender;
   font-family: 'Roboto Mono', monospace;
@@ -6,9 +8,29 @@ body {
   overflow: hidden;
 }
 
+h1 {
+  font-family: garamond-premier-pro-display, serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 48px;
+  color: #425080;
+  margin-bottom: 15px;
+}
+
 p {
-  font-size: 28px;
-  font-weight: 100;
+  font-family: open-sans, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  color: #425080;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.projectText {
+  position: absolute;
+  top: 8vh;
+  right: 5vw;
 }
 
 #home-videoContainer {
@@ -85,14 +107,14 @@ p {
 
 .rotateButton_div {
   position: absolute;
-  bottom: 6vh;
+  bottom: 5vh;
   width: 100%;
   text-align: center;
 }
 
 .rotateButton {
   position: relative;
-  width: 80px;
+  width: 150px;
   height: auto;
   cursor: pointer;
   z-index: 5;
