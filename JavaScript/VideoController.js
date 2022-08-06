@@ -74,3 +74,4 @@ function videoControl (videoID, pauseArray) {
     //     videoID.play();
     // })
 }
+

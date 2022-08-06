@@ -27,6 +27,20 @@ p {
   margin-top: 5px;
 }
 
+/*fade in and fade out animation*/
+.visible {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: opacity 0.5s linear;
+}
+
+.hidden {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+/*homepage*/
 .projectText {
   position: absolute;
   top: 8vh;

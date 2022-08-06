@@ -5,17 +5,12 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
     <script src="../../JavaScript/navComponents.js"></script>
+    <script src="../../JavaScript/isoOverlayController.js"></script>
     <title>Marfet</title>
-<!--    don't import videoController.js-->
+    <!--    don't import videoController.js-->
 </head>
 <body>
     <nav-menu></nav-menu>
-
-    <div id="rotateButton_div_marfet" class="rotateButton_div" >
-        <div>
-            <img class="rotateButton" src="/Materials/Icon/RotateButton.png" alt="Rotate" onclick="videoPlay()">
-        </div>
-    </div>
 
     <div id="Marfetsolo_div" class="fullScreenVideo" >
         <video id="MarfetSolo" class="pageSolo" width=100% height=100% autoplay muted>
@@ -27,7 +22,15 @@
 
     <div class="overlayLayer">
 
-        <div class="projectText" style = "width:400px">
+<!--        rotate button-->
+        <div id="rotateButton_div_marfet" class="rotateButton_div" style="visibility: hidden; opacity: 0;" >
+            <div>
+                <img class="rotateButton" src="/Materials/Icon/RotateButton.png" alt="Rotate" onclick="videoPlay()">
+            </div>
+        </div>
+
+<!--        text content-->
+        <div id="marfetTextContent" class="projectText" style = "width:320px; visibility: hidden; opacity: 0;">
             <div class="h1Wrapper" style = "width:100%; text-align: right;">
                 <h1>
                     The Marfet
@@ -44,7 +47,8 @@
             </div>
         </div>
 
-        <div class="overlayLayerIso">
+<!--        hotspot-->
+        <div id="marfetHotspotFirst" class="overlayLayerIso" style="visibility: hidden; opacity: 0;" >
             <div class="navButtonDiv" style = "left:calc(-5vw - 130px); top:calc(-4vh - 20px)">
                 <div>
                     <img id="MarfetArch" class="navHotSpot" src="/Materials/Icon/HotSpot.png"
@@ -67,25 +71,52 @@
                 </div>
             </div>
         </div>
+
+        <!--        hotspot second-->
+        <div id="marfetHotspotSecond" class="overlayLayerIso" style="visibility: hidden; opacity: 0;">
+            <div class="navButtonDiv" style = "right:calc(-5vw - 90px); top:calc(-4vh - 50px)">
+                <div>
+                    <img id="MarfetArchSecond" class="navHotSpot" src="/Materials/Icon/HotSpot.png"
+                         alt="Enter"
+                         onclick="location.href='/Pages/Marfet/MarfetArch.html';">
+                </div>
+            </div>
+            <div class="navButtonDiv" style = "right:calc(-5vw - 20px); top:calc(-4vh - 160px)">
+                <div>
+                    <img id="MarfetBoothSecond" class="navHotSpot" src="/Materials/Icon/HotSpot.png"
+                         alt="Enter"
+                         onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
+                </div>
+            </div>
+            <div class="navButtonDiv" style = "left:calc(-7vw - 270px); top:calc(-5vh - 20px)">
+                <div>
+                    <img id="MarfetUndergroundSecond" class="navHotSpot" src="/Materials/Icon/HotSpot.png"
+                         alt="Enter"
+                         onclick="location.href='/Pages/Marfet/MarfetUnderground.html';">
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
 </html>
 
 <script type="text/javascript">
+    //animation controller
     const MarfetSolo = document.getElementById("MarfetSolo");
+
     var pausePoint = [5,11,13],
         pauseIndex = 0,
         currentStopTime = pausePoint[pauseIndex];
 
     var videoTracker = setInterval(() => {
         checkTime();
-        console.log(MarfetSolo.currentTime);
-        console.log(currentStopTime);
+        // console.log(MarfetSolo.currentTime);
+        // console.log(currentStopTime);
 
         MarfetSolo.addEventListener('ended', (event) => {
             videoReset();
-            console.log("videoReset");
+            // console.log("videoReset");
             MarfetSolo.play();
         })
     }, 10)
@@ -94,7 +125,7 @@
         if (MarfetSolo.currentTime >= currentStopTime) {
             MarfetSolo.pause();
             if (pausePoint.length > ++pauseIndex) {
-                currentStopTime = pausePoint[pauseIndex]
+                currentStopTime = pausePoint[pauseIndex];
             }
         }
     }
@@ -104,7 +135,79 @@
     }
 
     function videoReset(){
-        pauseIndex = 0
-        currentStopTime = pausePoint[pauseIndex]
+        pauseIndex = 0;
+        currentStopTime = pausePoint[pauseIndex];
     }
+
+    //info-overlay controller
+    isoOverlayControl(MarfetSolo, "rotateButton_div_marfet", "marfetTextContent", "marfetHotspotFirst", "marfetHotspotSecond");
+
+    // const marfetRotateButton = document.getElementById("rotateButton_div_marfet");
+    // const marfetTextContent = document.getElementById("marfetTextContent");
+    // const marfetHotspot = document.getElementById("marfetHotspotFirst");
+    // const marfetHotspotSecond = document.getElementById("marfetHotspotSecond");
+    //
+    // var hotspotController = 0;
+    //
+    // MarfetSolo.addEventListener('play', (event) => {
+    //     console.log("videoPlay");
+    //
+    //     removeClassFrom(marfetRotateButton, "visible");
+    //     removeClassFrom(marfetTextContent, "visible");
+    //     removeClassFrom(marfetHotspot, "visible");
+    //     removeClassFrom(marfetHotspotSecond, "visible");
+    //
+    //     marfetRotateButton.classList.add("hidden");
+    //     marfetTextContent.classList.add("hidden");
+    //
+    //     marfetHotspot.classList.add("hidden");
+    //     marfetHotspotSecond.classList.add("hidden");
+    //
+    //     ++hotspotController;
+    // });
+    //
+    // MarfetSolo.addEventListener('pause', (event) => {
+    //
+    //     console.log("videoPause");
+    //
+    //     if (hotspotController === 1) {
+    //         setTimeout(function(){
+    //             removeClassFrom(marfetRotateButton, "hidden");
+    //             marfetRotateButton.classList.add("visible");
+    //         }, 500);
+    //
+    //         setTimeout(function(){
+    //             marfetTextContent.classList.add("visible");
+    //             removeClassFrom(marfetTextContent, "hidden");
+    //         }, 1000);
+    //
+    //         removeClassFrom(marfetHotspot, "hidden");
+    //         marfetHotspot.classList.add("visible");
+    //     }
+    //     else if (hotspotController === 2) {
+    //         setTimeout(function(){
+    //             removeClassFrom(marfetRotateButton, "hidden");
+    //             marfetRotateButton.classList.add("visible");
+    //         }, 500);
+    //
+    //         setTimeout(function(){
+    //             marfetTextContent.classList.add("visible");
+    //             removeClassFrom(marfetTextContent, "hidden");
+    //         }, 1000);
+    //
+    //         removeClassFrom(marfetHotspotSecond, "hidden");
+    //         marfetHotspotSecond.classList.add("visible");
+    //     }
+    //     else {
+    //         hotspotController = 0;
+    //     }
+    //
+    // });
+    //
+    // function removeClassFrom(element, className) {
+    //     if (element.classList.contains(className)) {
+    //         element.classList.remove(className);
+    //     }
+    // }
+
 </script>

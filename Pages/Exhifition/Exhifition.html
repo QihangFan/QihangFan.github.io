@@ -10,12 +10,6 @@
 <body>
     <nav-menu></nav-menu>
 
-    <div id="rotateButton_div_exhifition" class="rotateButton_div" >
-        <div>
-            <img class="rotateButton" src="/Materials/Icon/RotateButton.png" alt="Rotate" onclick="ExhifitionSolo.play()">
-        </div>
-    </div>
-
     <div id="Exhifitionsolo_div" class="fullScreenVideo" >
         <video id="ExhifitionSolo" class="pageSolo" width=100% height=100% autoplay muted>
             <source src="/Materials/Video/Exhifition_isoFull.mp4" type="video/mp4">
@@ -26,6 +20,14 @@
 
     <div class="overlayLayer">
 
+<!--        rotate button-->
+        <div id="rotateButton_div_exhifition" class="rotateButton_div" >
+            <div>
+                <img class="rotateButton" src="/Materials/Icon/RotateButton.png" alt="Rotate" onclick="ExhifitionSolo.play()">
+            </div>
+        </div>
+
+<!--        text content-->
         <div class="projectText" style = "width:400px">
             <div class="h1Wrapper" style = "width:100%; text-align: right;">
                 <h1>
@@ -43,6 +45,7 @@
             </div>
         </div>
 
+<!--        hotspot-->
         <div class="overlayLayerIso">
             <div class="navButtonDiv" style = "left:calc(-5vw - 130px); top:calc(-4vh - 20px)">
                 <div>
