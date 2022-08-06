@@ -18,7 +18,7 @@
   </video>
 
   <div class="overlayLayer">
-    <div class="navIcons">
+    <div id="marfetCommodityNavIcons" class="navIcons" style="visibility: hidden; opacity: 0;">
       <div class="navButtonDiv" style = "right:15%; top:6%">
         <div>
           <img id="MarfetCommodityTopview" class="navButton" src="/Materials/Icon/top-view.png"
@@ -35,8 +35,24 @@
         </div>
       </div>
     </div>
+
+    <div id="marfetCommodityText" class="textContent">
+
+    </div>
   </div>
 </div>
 
 </body>
 </html>
+
+
+<script type="text/javascript">
+  const marfetComoditySolo = document.getElementById("MarfetCommoditySolo");
+
+  marfetComoditySolo.addEventListener('ended', (event) => {
+    setTimeout(function(){
+      document.getElementById("marfetCommodityNavIcons").classList.add("visible");}, 0);
+  });
+</script>
+
+

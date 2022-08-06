@@ -18,23 +18,39 @@
   </video>
 
   <div class="overlayLayer">
-    <div class="navButtonDiv" style = "right:20%; top:6%">
-      <div>
-        <img id="MarfetTopviewReturn" class="navButton" src="/Materials/Icon/door-enter-line-right.png"
-             alt="Enter"
-             onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
+    <div id="marfetTopviewNavIcons" class="navIcons" style="visibility: hidden; opacity: 0;">
+      <div class="navButtonDiv" style = "right:20%; top:6%">
+        <div>
+          <img id="MarfetTopviewReturn" class="navButton" src="/Materials/Icon/door-enter-line-right.png"
+               alt="Enter"
+               onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
+        </div>
+      </div>
+
+      <div class="navButtonDiv" style = "left:30%; bottom:35%">
+        <div>
+          <img id="MarfetTopviewCloseup" class="navButton" src="/Materials/Icon/close-up.png"
+               alt="Enter"
+               onclick="location.href='/Pages/Marfet/MarfetCommodity.html';">
+        </div>
       </div>
     </div>
 
-    <div class="navButtonDiv" style = "left:30%; bottom:35%">
-      <div>
-        <img id="MarfetTopviewCloseup" class="navButton" src="/Materials/Icon/close-up.png"
-             alt="Enter"
-             onclick="location.href='/Pages/Marfet/MarfetCommodity.html';">
-      </div>
+    <div id="marfetTopviewText" class="textContent">
+
     </div>
+
   </div>
 </div>
 
 </body>
 </html>
+
+<script type="text/javascript">
+  const marfetTopviewSolo = document.getElementById("MarfetTopviewSolo");
+
+  marfetTopviewSolo.addEventListener('ended', (event) => {
+    setTimeout(function(){
+      document.getElementById("marfetTopviewNavIcons").classList.add("visible");}, 0);
+  });
+</script>
