@@ -25,7 +25,7 @@ navTemplate.innerHTML = `
         <img class="Icon" src="/Materials/Icon/Info.png" alt="Info">
     </div>
     <div>
-        <img class="Icon" src="/Materials/Icon/Replay.png" alt="Replay">
+        <img class="Icon" src="/Materials/Icon/sound-disabled.png" alt="SoundDisabled">
     </div>
     <div>
         <img class="Icon" src="/Materials/Icon/Menu.png" alt="Menu">

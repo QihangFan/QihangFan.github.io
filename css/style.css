@@ -41,7 +41,7 @@ p {
 }
 
 /*homepage*/
-.projectText {
+.isoProjectText {
   position: absolute;
   top: 8vh;
   right: 5vw;
@@ -137,6 +137,7 @@ p {
 /*nav icons*/
 .navButtonDiv {
   position: absolute;
+  z-index: 6;
 }
 
 .navButton {
@@ -145,3 +146,22 @@ p {
   cursor: pointer;
   z-index: 5;
 }
+
+/*direction icon hover animation*/
+/*.navDirection{*/
+/*  position: relative;*/
+/*  margin: -65px 20px 0;*/
+
+/*  width: 40px;*/
+/*  height: 40px;*/
+/*  background: white;*/
+/*  opacity: 0.9;*/
+
+/*}*/
+
+/*.roundRect {*/
+/*  width: 300px;*/
+/*  background: white;*/
+/*  opacity: 0.9;*/
+
+/*}*/

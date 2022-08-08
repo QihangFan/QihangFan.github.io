@@ -5,7 +5,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../css/style.css">
   <script src="../../JavaScript/navComponents.js"></script>
-  <script src="../../JavaScript/VideoController.js"></script>
+  <script src="../../JavaScript/jquery-3.6.0.min.js"></script>
   <title>Marfet Underground</title>
 </head>
 <body>
@@ -21,12 +21,16 @@
         <img id="MarfetUndergroundReturn" class="navButton" src="/Materials/Icon/door-enter-line-left.png"
              alt="Enter"
              onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
+
+        <div id="marfetUndergroundToBooth" class="navDirection">
+
+        </div>
       </div>
     </div>
 
-    <div id="marfetUndergroundText" class="textContent">
+<!--    <div id="marfetUndergroundText" class="textContent" style="visibility: hidden; opacity: 0;">-->
 
-    </div>
+<!--    </div>-->
 
   </div>
 </div>
@@ -36,6 +40,15 @@
 
 <script type="text/javascript">
 
-setTimeout(function(){document.getElementById("marfetUndergroundNavIcon").classList.add("visible");}, 1000);
+setTimeout(function(){
+  document.getElementById("marfetUndergroundNavIcon").classList.add("visible");}, 0);
+setTimeout(function(){
+  document.getElementById("marfetUndergroundText").classList.add("visible");}, 500);
+
+// function showDirection() {
+//   document.getElementById("marfetUndergroundToBooth").classList.add("roundRect");
+// }
+
+
 
 </script>

@@ -5,8 +5,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
     <script src="../../JavaScript/navComponents.js"></script>
-    <script src="../../JavaScript/VideoController.js"></script>
+    <script src="../../JavaScript/isoOverlayController.js"></script>
     <title>Marfet Booth</title>
+
 </head>
 <body>
 <nav-menu></nav-menu>
@@ -18,7 +19,7 @@
     </video>
 
     <div class="overlayLayer">
-        <div id="marfetBoothNavIcons" class="navIcons">
+        <div id="marfetBoothNavIconsFirst" class="navIcons" style="visibility: hidden; opacity: 0;">
             <div class="navButtonDiv" style = "left:6%; bottom:40%">
                 <div>
                     <img id="MarfetBoothLeftEnter" class="navButton" src="/Materials/Icon/door-enter-line-left.png"
@@ -31,7 +32,7 @@
                 <div>
                     <img id="MarfetBoothRightEnter" class="navButton" src="/Materials/Icon/door-enter-line-right.png"
                          alt="Enter"
-                         onclick="videoPlay(MarfetBoothSolo)">
+                         onclick="MarfetBoothSolo.play()">
                 </div>
             </div>
 
@@ -52,6 +53,40 @@
             </div>
         </div>
 
+        <div id="marfetBoothNavIconsSecond" class="navIcons" style="visibility: hidden; opacity: 0;">
+            <div class="navButtonDiv" style = "left:6%; bottom:40%">
+                <div>
+                    <img id="MarfetBoothReturn" class="navButton" src="/Materials/Icon/door-enter-line-left.png"
+                         alt="Enter"
+                         onclick="MarfetBoothSolo.play(); pauseIndex = 0;">
+                </div>
+            </div>
+
+            <div class="navButtonDiv" style = "right:6%; top:40%">
+                <div>
+                    <img id="MarfetBoothToUnderground" class="navButton" src="/Materials/Icon/door-enter-line-right.png"
+                         alt="Enter"
+                         onclick="location.href='/Pages/Marfet/MarfetUnderground.html';">
+                </div>
+            </div>
+
+            <div class="navButtonDiv" style = "right:30%; top:6%">
+                <div>
+                    <img id="MarfetBoothTopviewSecond" class="navButton" src="/Materials/Icon/top-view.png"
+                         alt="Enter"
+                         onclick="location.href='/Pages/Marfet/MarfetTopview.html';">
+                </div>
+            </div>
+
+            <div class="navButtonDiv" style = "left:30%; bottom:6%">
+                <div>
+                    <img id="MarfetBoothCloseupSecond" class="navButton" src="/Materials/Icon/close-up.png"
+                         alt="Enter"
+                         onclick="location.href='/Pages/Marfet/MarfetCommodity.html';">
+                </div>
+            </div>
+        </div>
+
         <div id="marfetBoothText" class="textContent">
 
         </div>
@@ -66,9 +101,23 @@
 
 <script type="text/javascript">
     const MarfetBoothSolo = document.getElementById("MarfetBoothSolo");
-    var pausePoint = [4.2,12]
+    var pausePoint = [4.2,12],
+        pauseIndex = 0;
 
-    intervalRefresher(MarfetBoothSolo, pausePoint)
+    setInterval(videoControl, 10, MarfetBoothSolo, pausePoint);
+    immerseOverlayControl(MarfetBoothSolo, "marfetBoothText", "marfetBoothNavIconsFirst", "marfetBoothNavIconsSecond");
 
+    function videoControl (videoID, pauseArray) {
+        currentStopTime = pauseArray[pauseIndex];
+
+        console.log(videoID.currentTime);
+        console.log(currentStopTime);
+
+        if (videoID.currentTime >= currentStopTime) {
+            videoID.pause();
+            ++pauseIndex;
+            console.log("videoPause");
+        }
+    }
 
 </script>

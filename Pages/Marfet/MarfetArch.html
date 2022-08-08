@@ -5,8 +5,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
     <script src="../../JavaScript/navComponents.js"></script>
-    <script src="../../JavaScript/VideoController.js"></script>
+    <script src="../../JavaScript/isoOverlayController.js"></script>
     <title>Marfet Arch</title>
+
 </head>
 <body>
 <nav-menu></nav-menu>
@@ -18,7 +19,8 @@
     </video>
 
     <div class="overlayLayer">
-        <div id="marfetArchNavIcons" class="navIcons">
+
+        <div id="marfetArchNavIconsFirst" class="navIcons" style="visibility: hidden; opacity: 0;">
             <div class="navButtonDiv" style = "right:6%; top:34%">
                 <div>
                     <img id="MarfetArchToBooth" class="navButton" src="/Materials/Icon/door-enter-line-right.png"
@@ -27,7 +29,7 @@
                 </div>
             </div>
 
-            <div class="navButtonDiv" style = "left:30%; bottom:30%">
+            <div class="navButtonDiv" style = "left:calc(35vw - 120px); bottom:30%">
                 <div>
                     <img id="MarfetArchEnter" class="navButton" src="/Materials/Icon/door-enter-line-left.png"
                          alt="Enter"
@@ -36,9 +38,22 @@
             </div>
         </div>
 
-        <div id="marfetArchText" class="textContent">
-
+        <div id="marfetArchNavIconsSecond" class="navIcons" style="visibility: hidden; opacity: 0;">
+            <div class="navButtonDiv" style = "right:10vw; bottom:10vh">
+                <div>
+                    <img id="MarfetArchExit" class="navButton" src="/Materials/Icon/door-enter-line-right.png"
+                         alt="Enter"
+                         onclick="MarfetArchSolo.play(); pauseIndex = 0;">
+                </div>
+            </div>
         </div>
+
+        <div id="marfetArchText" class="textContent" style="text-align:center; padding: 40vh 0; position:absolute; width:100vw; height:100vh; z-index:3; top:0; left:0; visibility: hidden; opacity: 0;">
+            <h1>
+                Marfet
+            </h1>
+        </div>
+
     </div>
 </div>
 
@@ -47,7 +62,23 @@
 
 <script type="text/javascript">
     const MarfetArchSolo = document.getElementById("MarfetArchSolo");
-    var pausePoint = [2.15,15]
 
-    intervalRefresher(MarfetArchSolo, pausePoint)
+    var pausePoint = [2.15,15],
+        pauseIndex = 0;
+
+    setInterval(videoControl, 10, MarfetArchSolo, pausePoint);
+    immerseOverlayControlTextSecond(MarfetArchSolo, "marfetArchText", "marfetArchNavIconsFirst", "marfetArchNavIconsSecond");
+
+    function videoControl (videoID, pauseArray) {
+        currentStopTime = pauseArray[pauseIndex];
+
+        console.log(videoID.currentTime);
+        console.log(currentStopTime);
+
+        if (videoID.currentTime >= currentStopTime) {
+            videoID.pause();
+            ++pauseIndex;
+            console.log("videoPause");
+        }
+    }
 </script>
