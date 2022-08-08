@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="../../css/style.css">
     <script src="../../JavaScript/navComponents.js"></script>
     <script src="../../JavaScript/isoOverlayController.js"></script>
+    <script src="../../JavaScript/jquery-3.6.0.min.js"></script>
+
     <title>Marfet</title>
+
     <!--    don't import videoController.js-->
 </head>
 <body>
@@ -49,21 +52,21 @@
 
 <!--        hotspot-->
         <div id="marfetHotspotFirst" class="overlayLayerIso" style="visibility: hidden; opacity: 0;" >
-            <div class="navButtonDiv" style = "left:calc(-5vw - 130px); top:calc(-4vh - 20px)">
+            <div id="navArch1" class="navButtonDiv" style = "left:calc(-5vw - 130px); top:calc(-4vh - 20px)">
                 <div>
                     <img id="MarfetArch" class="navHotSpot" src="/Materials/Icon/HotSpot.png"
                          alt="Enter"
                          onclick="location.href='/Pages/Marfet/MarfetArch.html';">
                 </div>
             </div>
-            <div class="navButtonDiv" style = "left:calc(-5vw - 80px); bottom:calc(-4vh - 40px)">
+            <div id="navBooth1" class="navButtonDiv" style = "left:calc(-5vw - 80px); bottom:calc(-4vh - 40px)">
                 <div>
                     <img id="MarfetBooth" class="navHotSpot" src="/Materials/Icon/HotSpot.png"
                          alt="Enter"
                          onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
                 </div>
             </div>
-            <div class="navButtonDiv" style = "right:calc(-7vw - 130px); bottom:calc(-5vh - 80px)">
+            <div id="navUnderg1" class="navButtonDiv" style = "right:calc(-7vw - 130px); bottom:calc(-5vh - 80px)">
                 <div>
                     <img id="MarfetUnderground" class="navHotSpot" src="/Materials/Icon/HotSpot.png"
                          alt="Enter"
@@ -74,21 +77,21 @@
 
         <!--        hotspot second-->
         <div id="marfetHotspotSecond" class="overlayLayerIso" style="visibility: hidden; opacity: 0;">
-            <div class="navButtonDiv" style = "right:calc(-5vw - 90px); top:calc(-4vh - 50px)">
+            <div id="navArch2" class="navButtonDiv" style = "right:calc(-5vw - 90px); top:calc(-4vh - 50px)">
                 <div>
                     <img id="MarfetArchSecond" class="navHotSpot" src="/Materials/Icon/HotSpot.png"
                          alt="Enter"
                          onclick="location.href='/Pages/Marfet/MarfetArch.html';">
                 </div>
             </div>
-            <div class="navButtonDiv" style = "right:calc(-5vw - 20px); top:calc(-4vh - 160px)">
+            <div id="navBooth2" class="navButtonDiv" style = "right:calc(-5vw - 20px); top:calc(-4vh - 160px)">
                 <div>
                     <img id="MarfetBoothSecond" class="navHotSpot" src="/Materials/Icon/HotSpot.png"
                          alt="Enter"
                          onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
                 </div>
             </div>
-            <div class="navButtonDiv" style = "left:calc(-7vw - 270px); top:calc(-5vh - 20px)">
+            <div id="navUnderg2" class="navButtonDiv" style = "left:calc(-7vw - 270px); top:calc(-5vh - 20px)">
                 <div>
                     <img id="MarfetUndergroundSecond" class="navHotSpot" src="/Materials/Icon/HotSpot.png"
                          alt="Enter"
@@ -97,6 +100,30 @@
             </div>
         </div>
     </div>
+
+    <!--hover content to show-->
+    <div id="cursorArrow" class="pointer" style="visibility: hidden; opacity: 0;">
+        <img src="/Materials/Icon/zoom-in.png" class="cursorStyle  isoPoint" alt="">
+    </div>
+
+    <div id="cursorTextBooth" class="pointerText" style="visibility: hidden; opacity: 0;">
+        <h1 class="h1-navDir h1-navDir-iso">
+            The Booth
+        </h1>
+    </div>
+
+    <div id="cursorTextUnderground" class="pointerText" style="visibility: hidden; opacity: 0;">
+        <h1 class="h1-navDir h1-navDir-iso">
+            The Underground
+        </h1>
+    </div>
+
+    <div id="cursorTextArch" class="pointerText" style="visibility: hidden; opacity: 0;">
+        <h1 class="h1-navDir h1-navDir-iso">
+            The Arch
+        </h1>
+    </div>
+
 
 </body>
 </html>
@@ -209,5 +236,97 @@
     //         element.classList.remove(className);
     //     }
     // }
+
+    //hover - cursor change
+    const cursorArrow = document.getElementById("cursorArrow"),
+            cursorTextBooth = document.getElementById("cursorTextBooth"),
+            cursorTextUnderground = document.getElementById("cursorTextUnderground"),
+            cursorTextArch = document.getElementById("cursorTextArch");
+
+    $(document).mousemove(function (e) {
+        $(".pointer").css({ left: e.pageX, top: e.pageY });
+        $(".pointerText").css({ left: e.pageX, top: e.pageY });
+    });
+
+
+    $("#navArch1").hover(function(){
+
+            showUp(cursorArrow);
+            showUp(cursorTextArch);
+            shyAway(this);
+            cursorShyAway();
+        },
+
+        function(){
+
+            shyAway(cursorArrow);
+            shyAway(cursorTextArch);
+            showUp(this);
+            cursorShowUp();
+        });
+
+    $("#navArch2").hover(function(){
+
+            showUp(cursorArrow);
+            showUp(cursorTextArch);
+            shyAway(this);
+            cursorShyAway();
+        },
+
+        function(){
+
+            shyAway(cursorArrow);
+            shyAway(cursorTextArch);
+            showUp(this);
+            cursorShowUp();
+        });
+
+    $("#navBooth1").hover(function(){
+
+            showUp(cursorArrow);
+            showUp(cursorTextBooth);
+            shyAway(this);
+            cursorShyAway();
+        },
+
+        function(){
+
+            shyAway(cursorArrow);
+            shyAway(cursorTextBooth);
+            showUp(this);
+            cursorShowUp();
+        });
+
+    $("#navBooth2").hover(function(){
+
+            showUp(cursorArrow);
+            showUp(cursorTextBooth);
+            shyAway(this);
+            cursorShyAway();
+        },
+
+        function(){
+
+            shyAway(cursorArrow);
+            shyAway(cursorTextBooth);
+            showUp(this);
+            cursorShowUp();
+        });
+
+    $("#navUnderg1").hover(function(){
+
+            showUp(cursorArrow);
+            showUp(cursorTextUnderground);
+            shyAway(this);
+            cursorShyAway();
+        },
+
+        function(){
+
+            shyAway(cursorArrow);
+            shyAway(cursorTextUnderground);
+            showUp(this);
+            cursorShowUp();
+        });
 
 </script>

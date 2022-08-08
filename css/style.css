@@ -19,8 +19,12 @@ h1 {
 
 .h1-navDir {
   color: #B0C2FF;
-  font-weight: 600;
+  font-weight: 300;
   transform: translate(10%, -40%);
+}
+
+.h1-navDir-iso {
+  font-size: 30px;
 }
 
 p {
@@ -107,7 +111,7 @@ p {
 .navHotSpot {
   width: 50px;
   height: auto;
-  cursor: pointer;
+  /*cursor: pointer;*/
   z-index: 5;
 }
 
@@ -193,11 +197,29 @@ p {
   transform: translate(-50%, -50%);
 }
 
+.isoPoint {
+  width: 70px;
+}
+
 .cursorNone {
   cursor: none;
 }
 
 .cursorReturn {
+  animation: delay-pointer-events 1s;
   cursor: default;
-  transition: cursor 0s 0.5s;
+  /*transition: cursor 0s 0.5s;*/
+  /*transition-delay: 0.3s;*/
+}
+
+@keyframes delay-pointer-events {
+  0% {
+    cursor: none;
+  }
+  50% {
+    cursor: none;
+  }
+  100% {
+    cursor: default;
+  }
 }
