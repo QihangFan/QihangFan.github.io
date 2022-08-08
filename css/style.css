@@ -17,6 +17,12 @@ h1 {
   margin-bottom: 15px;
 }
 
+.h1-navDir {
+  color: #B0C2FF;
+  font-weight: 600;
+  transform: translate(10%, -40%);
+}
+
 p {
   font-family: open-sans, sans-serif;
   font-weight: 300;
@@ -140,28 +146,58 @@ p {
   z-index: 6;
 }
 
+.iconWrapper {
+  width: 160px;
+  height: 160px;
+  padding:20px;
+}
+
 .navButton {
   width: 80px;
-  height: auto;
-  cursor: pointer;
+  height: 80px;
+  /*cursor: pointer;*/
   z-index: 5;
 }
 
-/*direction icon hover animation*/
-/*.navDirection{*/
-/*  position: relative;*/
-/*  margin: -65px 20px 0;*/
+/*cursor change*/
 
-/*  width: 40px;*/
-/*  height: 40px;*/
-/*  background: white;*/
-/*  opacity: 0.9;*/
-
+/*html {*/
+/*  cursor: none;*/
+/*  overflow: hidden;*/
 /*}*/
 
-/*.roundRect {*/
-/*  width: 300px;*/
-/*  background: white;*/
-/*  opacity: 0.9;*/
+.pointer {
+  position: absolute;
+  height: 480px; top:100px;
+  width: 480px; left:50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 7;
 
-/*}*/
+  transition: all 0.3s ease-out;
+}
+
+.pointerText {
+  position: absolute;
+  height: 480px; top:100px;
+  width: 480px; left:50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 7;
+
+  transition: all 0.8s ease-out;
+}
+
+.cursorStyle {
+  width: 140px;
+  transform: translate(-50%, -50%);
+}
+
+.cursorNone {
+  cursor: none;
+}
+
+.cursorReturn {
+  cursor: default;
+  transition: cursor 0s 0.5s;
+}

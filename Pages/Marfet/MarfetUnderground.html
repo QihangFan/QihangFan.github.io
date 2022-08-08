@@ -7,8 +7,10 @@
   <script src="../../JavaScript/navComponents.js"></script>
   <script src="../../JavaScript/jquery-3.6.0.min.js"></script>
   <title>Marfet Underground</title>
+  <script src="../../JavaScript/isoOverlayController.js"></script>
 </head>
 <body>
+
 <nav-menu></nav-menu>
 
 <div id="Marfetsolo_div" class="fullScreenVideo" >
@@ -17,22 +19,28 @@
 
   <div class="overlayLayer">
     <div id="marfetUndergroundNavIcon" class="navButtonDiv" style = "right:30%; top:10%; visibility: hidden; opacity: 0;">
-      <div>
-        <img id="MarfetUndergroundReturn" class="navButton" src="/Materials/Icon/door-enter-line-left.png"
+      <div id="marfetIconWrapper" class="iconWrapper">
+        <img id="MarfetUndergroundReturn" class="navButton" src="/Materials/Icon/door-enter-line-right.png"
              alt="Enter"
              onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
-
-        <div id="marfetUndergroundToBooth" class="navDirection">
-
-        </div>
       </div>
     </div>
 
-<!--    <div id="marfetUndergroundText" class="textContent" style="visibility: hidden; opacity: 0;">-->
+    <div id="marfetUndergroundText" class="textContent" style="visibility: hidden; opacity: 0;">
 
-<!--    </div>-->
+    </div>
 
   </div>
+</div>
+
+<div id="cursorArrow" class="pointer" style="visibility: hidden; opacity: 0;">
+  <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="">
+</div>
+
+<div id="cursorText" class="pointerText" style="visibility: hidden; opacity: 0;">
+  <h1 class="h1-navDir">
+    The Booth
+  </h1>
 </div>
 
 </body>
@@ -45,10 +53,54 @@ setTimeout(function(){
 setTimeout(function(){
   document.getElementById("marfetUndergroundText").classList.add("visible");}, 500);
 
-// function showDirection() {
-//   document.getElementById("marfetUndergroundToBooth").classList.add("roundRect");
-// }
+//cursor change
+const cursorArrow = document.getElementById("cursorArrow"),
+      cursorText = document.getElementById("cursorText");
+      // bodyClass = document.body;
+
+$(document).mousemove(function (e) {
+  $(".pointer").css({ left: e.pageX, top: e.pageY });
+  $(".pointerText").css({ left: e.pageX, top: e.pageY });
+});
 
 
+$("#marfetUndergroundNavIcon").hover(function(){
+
+  showUp(cursorArrow);
+  // removeClassFrom(cursorArrow, "hidden");
+  // cursorArrow.classList.add("visible");
+
+  showUp(cursorText);
+  // removeClassFrom(cursorText, "hidden");
+  // cursorText.classList.add("visible");
+
+  shyAway(this);
+  // removeClassFrom(this, "visible");
+  // this.classList.add("hidden");
+
+  cursorShyAway();
+  // removeClassFrom(bodyClass, "cursorReturn");
+  // bodyClass.classList.add("cursorNone");
+  },
+
+        function(){
+
+  shyAway(cursorArrow);
+  // removeClassFrom(cursorArrow, "visible");
+  // cursorArrow.classList.add("hidden");
+
+  shyAway(cursorText);
+  // removeClassFrom(cursorText, "visible");
+  // cursorText.classList.add("hidden");
+
+  showUp(this);
+  // removeClassFrom(this, "hidden");
+  // this.classList.add("visible");
+
+  cursorShowUp();
+  // removeClassFrom(bodyClass, "cursorNone");
+  // bodyClass.classList.add("cursorReturn");
+
+});
 
 </script>

@@ -73,6 +73,32 @@ function removeClassFrom(element, className) {
     }
 }
 
+function showUp(cursorArrow) {
+    removeClassFrom(cursorArrow, "hidden");
+    cursorArrow.classList.add("visible");
+}
+
+function shyAway(elem) {
+    removeClassFrom(elem, "visible");
+    elem.classList.add("hidden");
+}
+
+function cursorShyAway() {
+    var bodyClass = document.body;
+    removeClassFrom(bodyClass, "cursorReturn");
+    bodyClass.classList.add("cursorNone");
+}
+
+function cursorShowUp() {
+    var bodyClass = document.body;
+    removeClassFrom(bodyClass, "cursorNone");
+    bodyClass.classList.add("cursorReturn");
+}
+
+
+
+
+
 function immerseOverlayControl(videoID, textContent, firstHotspot, secondHotspot) {
 
 
