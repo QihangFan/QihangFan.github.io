@@ -5,42 +5,66 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../css/style.css">
   <script src="../../JavaScript/navComponents.js"></script>
+  <script src="../../JavaScript/isoOverlayController.js"></script>
+  <script src="../../JavaScript/jquery-3.6.0.min.js"></script>
   <title>Marfet Topview</title>
+
 </head>
 <body>
-<nav-menu></nav-menu>
+  <nav-menu></nav-menu>
 
-<div id="Marfetsolo_div" class="fullScreenVideo" >
-  <video id="MarfetTopviewSolo" class="pageSolo" width=100% height=100% autoplay muted>
-    <source src="/Materials/Video/Marfet/MarfetTopview.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <div id="Marfetsolo_div" class="fullScreenVideo" >
+    <video id="MarfetTopviewSolo" class="pageSolo" width=100% height=100% autoplay muted>
+      <source src="/Materials/Video/Marfet/MarfetTopview.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
-  <div class="overlayLayer">
-    <div id="marfetTopviewNavIcons" class="navIcons" style="visibility: hidden; opacity: 0;">
-      <div class="navButtonDiv" style = "right:20%; top:6%">
-        <div>
-          <img id="MarfetTopviewReturn" class="navButton" src="/Materials/Icon/door-enter-line-right.png"
-               alt="Enter"
-               onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
+    <div class="overlayLayer">
+      <div id="marfetTopviewNavIcons" class="navIcons" style="visibility: hidden; opacity: 0;">
+        <div id="MarfetTopviewReturn" class="navButtonDiv" style = "right:20%; top:6%">
+          <div>
+            <img class="navButton" src="/Materials/Icon/door-enter-line-right.png"
+                 alt="Enter"
+                 onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
+          </div>
+        </div>
+
+        <div id="MarfetTopviewCloseup" class="navButtonDiv" style = "left:30%; bottom:35%">
+          <div>
+            <img class="navButton" src="/Materials/Icon/close-up.png"
+                 alt="Enter"
+                 onclick="location.href='/Pages/Marfet/MarfetCommodity.html';">
+          </div>
         </div>
       </div>
 
-      <div class="navButtonDiv" style = "left:30%; bottom:35%">
-        <div>
-          <img id="MarfetTopviewCloseup" class="navButton" src="/Materials/Icon/close-up.png"
-               alt="Enter"
-               onclick="location.href='/Pages/Marfet/MarfetCommodity.html';">
-        </div>
+      <div id="marfetTopviewText" class="textContent" style="visibility: hidden; opacity: 0;">
+
       </div>
-    </div>
-
-    <div id="marfetTopviewText" class="textContent" style="visibility: hidden; opacity: 0;">
 
     </div>
-
   </div>
-</div>
+
+  <!--hover content first to show-->
+  <div id="cursorBoothBrowseArrow" class="pointer" style="visibility: hidden; opacity: 0;">
+    <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(90deg) translate(-50%, 50%);">
+  </div>
+
+  <div id="cursorBoothBrowseText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-55%, 5%);">
+    <h1 class="h1-navDir">
+      The Booth
+    </h1>
+  </div>
+
+  <div id="cursorBoothCommodity" class="pointer" style="visibility: hidden; opacity: 0;">
+    <img src="/Materials/Icon/clarity_eye-show-solid.png" class="cursorStyle" alt="" style="transform-origin: center; transform: translate(-50%, -50%);">
+  </div>
+
+  <div id="cursorBoothCommodityText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-38%, -26%);">
+    <h1 class="h1-navDir">
+      Commodity
+    </h1>
+  </div>
 
 </body>
 </html>
@@ -54,4 +78,14 @@
     setTimeout(function(){
       document.getElementById("marfetTopviewText").classList.add("visible");}, 500);
   });
+
+
+
+  $(document).mousemove(function (e) {
+    $(".pointer").css({ left: e.pageX, top: e.pageY });
+    $(".pointerText").css({ left: e.pageX, top: e.pageY });
+  });
+
+  cursorShowShy("#MarfetTopviewReturn", document.getElementById("cursorBoothBrowseArrow"), document.getElementById("cursorBoothBrowseText"));
+  cursorShowShy("#MarfetTopviewCloseup", document.getElementById("cursorBoothCommodity"), document.getElementById("cursorBoothCommodityText"));
 </script>

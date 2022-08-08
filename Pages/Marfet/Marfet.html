@@ -329,4 +329,20 @@
             cursorShowUp();
         });
 
+    $("#navUnderg2").hover(function(){
+
+            showUp(cursorArrow);
+            showUp(cursorTextUnderground);
+            shyAway(this);
+            cursorShyAway();
+        },
+
+        function(){
+
+            shyAway(cursorArrow);
+            shyAway(cursorTextUnderground);
+            showUp(this);
+            cursorShowUp();
+        });
+
 </script>

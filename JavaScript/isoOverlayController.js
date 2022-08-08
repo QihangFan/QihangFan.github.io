@@ -95,7 +95,21 @@ function cursorShowUp() {
     bodyClass.classList.add("cursorReturn");
 }
 
+function cursorShowShy(hoverID, cursorArchToBoothArrow, cursorArchToBoothText) {
+    $(hoverID).hover(function(){
+            showUp(cursorArchToBoothArrow);
+            showUp(cursorArchToBoothText);
+            shyAway(this);
+            cursorShyAway();
+        },
 
+        function(){
+            shyAway(cursorArchToBoothArrow);
+            shyAway(cursorArchToBoothText);
+            showUp(this);
+            cursorShowUp();
+        });
+}
 
 
 

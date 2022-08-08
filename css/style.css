@@ -20,6 +20,7 @@ h1 {
 .h1-navDir {
   color: #B0C2FF;
   font-weight: 300;
+  font-size: 64px;
   transform: translate(10%, -40%);
 }
 
@@ -55,6 +56,20 @@ p {
   position: absolute;
   top: 8vh;
   right: 5vw;
+}
+
+.textContent {
+  position:absolute;
+  z-index:3;
+}
+
+.centerContent {
+  text-align:center;
+  padding: 40vh 0;
+  width:100vw;
+  height:100vh;
+  top:0;
+  left:0;
 }
 
 #home-videoContainer {

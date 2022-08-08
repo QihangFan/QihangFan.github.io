@@ -7,55 +7,87 @@
     <script src="../../JavaScript/navComponents.js"></script>
     <script src="../../JavaScript/isoOverlayController.js"></script>
     <title>Marfet Arch</title>
+    <script src="../../JavaScript/jquery-3.6.0.min.js"></script>
 
 </head>
 <body>
-<nav-menu></nav-menu>
+    <nav-menu></nav-menu>
 
-<div id="Marfetsolo_div" class="fullScreenVideo" >
-    <video id="MarfetArchSolo" class="pageSolo" width=100% height=100% autoplay muted>
-        <source src="/Materials/Video/Marfet/MarfetArch.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <div id="Marfetsolo_div" class="fullScreenVideo" >
+        <video id="MarfetArchSolo" class="pageSolo" width=100% height=100% autoplay muted>
+            <source src="/Materials/Video/Marfet/MarfetArch.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
-    <div class="overlayLayer">
+        <div class="overlayLayer">
 
-        <div id="marfetArchNavIconsFirst" class="navIcons" style="visibility: hidden; opacity: 0;">
-            <div class="navButtonDiv" style = "right:6%; top:34%">
-                <div>
-                    <img id="MarfetArchToBooth" class="navButton" src="/Materials/Icon/door-enter-line-right.png"
-                         alt="Enter"
-                         onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
+            <div id="marfetArchNavIconsFirst" class="navIcons" style="visibility: hidden; opacity: 0;">
+                <div id="MarfetArchToBooth" class="navButtonDiv" style = "right:6%; top:34%">
+                    <div>
+                        <img  class="navButton" src="/Materials/Icon/door-enter-line-right.png"
+                             alt="Enter"
+                             onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
+                    </div>
+                </div>
+
+                <div id="MarfetArchEnter" class="navButtonDiv" style = "left:calc(35vw - 120px); bottom:30%">
+                    <div>
+                        <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"
+                             alt="Enter"
+                             onclick="MarfetArchSolo.play()">
+                    </div>
                 </div>
             </div>
 
-            <div class="navButtonDiv" style = "left:calc(35vw - 120px); bottom:30%">
-                <div>
-                    <img id="MarfetArchEnter" class="navButton" src="/Materials/Icon/door-enter-line-left.png"
-                         alt="Enter"
-                         onclick="MarfetArchSolo.play()">
+            <div id="marfetArchNavIconsSecond" class="navIcons" style="visibility: hidden; opacity: 0;">
+                <div id="MarfetArchExit" class="navButtonDiv" style = "right:10vw; bottom:10vh">
+                    <div>
+                        <img class="navButton" src="/Materials/Icon/door-enter-line-right.png"
+                             alt="Enter"
+                             onclick="MarfetArchSolo.play(); pauseIndex = 0;">
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="marfetArchNavIconsSecond" class="navIcons" style="visibility: hidden; opacity: 0;">
-            <div class="navButtonDiv" style = "right:10vw; bottom:10vh">
-                <div>
-                    <img id="MarfetArchExit" class="navButton" src="/Materials/Icon/door-enter-line-right.png"
-                         alt="Enter"
-                         onclick="MarfetArchSolo.play(); pauseIndex = 0;">
-                </div>
+            <div id="marfetArchText" class="textContent centerContent" style="visibility: hidden; opacity: 0;">
+                <h1>
+                    Marfet
+                </h1>
             </div>
-        </div>
 
-        <div id="marfetArchText" class="textContent" style="text-align:center; padding: 40vh 0; position:absolute; width:100vw; height:100vh; z-index:3; top:0; left:0; visibility: hidden; opacity: 0;">
-            <h1>
-                Marfet
-            </h1>
         </div>
-
     </div>
-</div>
+
+    <!--hover content to show-->
+    <div id="cursorArchToBoothArrow" class="pointer" style="visibility: hidden; opacity: 0;">
+        <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(90deg) translate(-50%, 50%);">
+    </div>
+
+    <div id="cursorArchToBoothText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-55%, 5%);">
+        <h1 class="h1-navDir">
+            The Booth
+        </h1>
+    </div>
+
+    <div id="cursorArchEnterArrow" class="pointer" style="visibility: hidden; opacity: 0;">
+        <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(270deg) translate(50%, -50%);">
+    </div>
+
+    <div id="cursorArchEnterText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-5%, 5%);">
+        <h1 class="h1-navDir">
+            Enter
+        </h1>
+    </div>
+
+    <div id="cursorArchExitArrow" class="pointer" style="visibility: hidden; opacity: 0;">
+        <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(180deg) translate(50%, 50%);">
+    </div>
+
+    <div id="cursorArchExitText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-35%, -15%);">
+        <h1 class="h1-navDir">
+            Exit
+        </h1>
+    </div>
 
 </body>
 </html>
@@ -81,4 +113,68 @@
             console.log("videoPause");
         }
     }
+
+
+
+    //hover - cursor change
+    const cursorArchToBoothArrow = document.getElementById("cursorArchToBoothArrow"),
+            cursorArchToBoothText = document.getElementById("cursorArchToBoothText"),
+            cursorArchEnterArrow = document.getElementById("cursorArchEnterArrow"),
+            cursorArchEnterText = document.getElementById("cursorArchEnterText"),
+            cursorArchExitArrow = document.getElementById("cursorArchExitArrow"),
+            cursorArchExitText = document.getElementById("cursorArchExitText");
+
+
+    $(document).mousemove(function (e) {
+        $(".pointer").css({ left: e.pageX, top: e.pageY });
+        $(".pointerText").css({ left: e.pageX, top: e.pageY });
+    });
+
+    cursorShowShy("#MarfetArchToBooth", cursorArchToBoothArrow, cursorArchToBoothText);
+
+    // $("#MarfetArchToBooth").hover(function(){
+    //         showUp(cursorArchToBoothArrow);
+    //         showUp(cursorArchToBoothText);
+    //         shyAway(this);
+    //         cursorShyAway();
+    //     },
+    //
+    //     function(){
+    //         shyAway(cursorArchToBoothArrow);
+    //         shyAway(cursorArchToBoothText);
+    //         showUp(this);
+    //         cursorShowUp();
+    //     });
+
+    cursorShowShy("#MarfetArchEnter", cursorArchEnterArrow, cursorArchEnterText);
+
+    // $("#MarfetArchEnter").hover(function(){
+    //         showUp(cursorArchEnterArrow);
+    //         showUp(cursorArchEnterText);
+    //         shyAway(this);
+    //         cursorShyAway();
+    //     },
+    //
+    //     function(){
+    //         shyAway(cursorArchEnterArrow);
+    //         shyAway(cursorArchEnterText);
+    //         showUp(this);
+    //         cursorShowUp();
+    //     });
+
+    cursorShowShy("#MarfetArchExit", cursorArchExitArrow, cursorArchExitText);
+
+    // $("#MarfetArchExit").hover(function(){
+    //         showUp(cursorArchExitArrow);
+    //         showUp(cursorArchExitText);
+    //         shyAway(this);
+    //         cursorShyAway();
+    //     },
+    //
+    //     function(){
+    //         shyAway(cursorArchExitArrow);
+    //         shyAway(cursorArchExitText);
+    //         showUp(this);
+    //         cursorShowUp();
+    //     });
 </script>
