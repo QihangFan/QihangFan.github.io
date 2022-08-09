@@ -112,7 +112,18 @@ p {
 .grid-video:hover {
   transform: scale(1.1);
   transition-duration: 500ms;
-  cursor: pointer;
+  /*cursor: pointer;*/
+}
+
+.isoPointerText {
+  position: absolute;
+  height: 480px; top:100px;
+  width: 480px; left:50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 7;
+
+  transition: all 0.5s ease-out;
 }
 
 /*children pages*/
@@ -190,7 +201,7 @@ p {
   height: 480px; top:100px;
   width: 480px; left:50%;
   pointer-events: none;
-  mix-blend-mode: difference;
+  mix-blend-mode: exclusion;
   z-index: 7;
 
   transition: all 0.3s ease-out;
@@ -201,7 +212,7 @@ p {
   height: 480px; top:100px;
   width: 480px; left:50%;
   pointer-events: none;
-  mix-blend-mode: difference;
+  mix-blend-mode: exclusion;
   z-index: 7;
 
   transition: all 0.8s ease-out;

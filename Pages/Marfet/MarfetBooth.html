@@ -11,8 +11,11 @@
 
 </head>
 <body>
+
+<!-- nav menu-->
 <nav-menu></nav-menu>
 
+<!--  background-->
 <div id="Marfetsolo_div" class="fullScreenVideo" >
     <video id="MarfetBoothSolo" class="pageSolo" width=100% height=100% autoplay muted>
         <source src="/Materials/Video/Marfet/MarfetBooth.mp4" type="video/mp4">
@@ -21,73 +24,88 @@
 
     <div class="overlayLayer">
         <div id="marfetBoothNavIconsFirst" class="navIcons" style="visibility: hidden; opacity: 0;">
-            <div id="MarfetBoothLeftEnter" class="navButtonDiv" style = "left:6%; bottom:40%">
-                <div>
-                    <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"
-                         alt="Enter"
-                         onclick="location.href='/Pages/Marfet/MarfetArch.html';">
+
+            <!--            hover receiver-->
+            <div onclick="location.href='/Pages/Marfet/MarfetArch.html';">
+                <div id="MarfetBoothLeftEnter" class="navButtonDiv" style = "left:6%; bottom:40%">
+                    <div>
+                        <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"
+                             alt="Enter">
+                    </div>
                 </div>
             </div>
 
-            <div id="MarfetBoothRightEnter" class="navButtonDiv" style = "right:6%; top:40%">
-                <div>
-                    <img class="navButton" src="/Materials/Icon/door-enter-line-right.png"
-                         alt="Enter"
-                         onclick="MarfetBoothSolo.play()">
+            <div onclick="MarfetBoothSolo.play()">
+                <div id="MarfetBoothRightEnter" class="navButtonDiv" style = "right:6%; top:40%">
+                    <div>
+                        <img class="navButton" src="/Materials/Icon/door-enter-line-right.png"
+                             alt="Enter">
+                    </div>
                 </div>
             </div>
 
-            <div id="MarfetBoothTopview" class="navButtonDiv" style = "right:30%; top:6%">
-                <div>
-                    <img class="navButton" src="/Materials/Icon/top-view.png"
-                         alt="Enter"
-                         onclick="location.href='/Pages/Marfet/MarfetTopview.html';">
+            <div onclick="location.href='/Pages/Marfet/MarfetTopview.html';">
+                <div id="MarfetBoothTopview" class="navButtonDiv" style = "right:30%; top:6%">
+                    <div>
+                        <img class="navButton" src="/Materials/Icon/top-view.png"
+                             alt="Enter">
+                    </div>
                 </div>
             </div>
 
-            <div id="MarfetBoothCloseup" class="navButtonDiv" style = "left:30%; bottom:6%">
-                <div>
-                    <img class="navButton" src="/Materials/Icon/close-up.png"
-                         alt="Enter"
-                         onclick="location.href='/Pages/Marfet/MarfetCommodity.html';">
+            <div onclick="location.href='/Pages/Marfet/MarfetCommodity.html';">
+                <div id="MarfetBoothCloseup" class="navButtonDiv" style = "left:30%; bottom:6%">
+                    <div>
+                        <img class="navButton" src="/Materials/Icon/close-up.png"
+                             alt="Enter">
+                    </div>
                 </div>
             </div>
         </div>
+
 
         <div id="marfetBoothNavIconsSecond" class="navIcons" style="visibility: hidden; opacity: 0;">
-            <div id="MarfetBoothReturn" class="navButtonDiv" style = "left:6%; bottom:40%">
-                <div>
-                    <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"
-                         alt="Enter"
-                         onclick="MarfetBoothSolo.play(); pauseIndex = 0;">
+
+            <!--            hover receiver-->
+            <div onclick="MarfetBoothSolo.play(); pauseIndex = 0;">
+                <div id="MarfetBoothReturn" class="navButtonDiv" style = "left:6%; bottom:40%">
+                    <div>
+                        <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"
+                             alt="Enter">
+                    </div>
                 </div>
             </div>
 
-            <div id="MarfetBoothToUnderground" class="navButtonDiv" style = "right:6%; top:40%">
-                <div>
-                    <img class="navButton" src="/Materials/Icon/door-enter-line-right.png"
-                         alt="Enter"
-                         onclick="location.href='/Pages/Marfet/MarfetUnderground.html';">
+            <div onclick="location.href='/Pages/Marfet/MarfetUnderground.html';">
+                <div id="MarfetBoothToUnderground" class="navButtonDiv" style = "right:6%; top:40%">
+                    <div>
+                        <img class="navButton" src="/Materials/Icon/door-enter-line-right.png"
+                             alt="Enter">
+                    </div>
                 </div>
             </div>
 
-            <div id="MarfetBoothTopviewSecond" class="navButtonDiv" style = "right:30%; top:6%">
-                <div>
-                    <img class="navButton" src="/Materials/Icon/top-view.png"
-                         alt="Enter"
-                         onclick="location.href='/Pages/Marfet/MarfetTopview.html';">
+            <div onclick="location.href='/Pages/Marfet/MarfetTopview.html';">
+                <div id="MarfetBoothTopviewSecond" class="navButtonDiv" style = "right:30%; top:6%">
+                    <div>
+                        <img class="navButton" src="/Materials/Icon/top-view.png"
+                             alt="Enter">
+                    </div>
                 </div>
             </div>
 
-            <div id="MarfetBoothCloseupSecond" class="navButtonDiv" style = "left:30%; bottom:6%">
-                <div>
-                    <img class="navButton" src="/Materials/Icon/close-up.png"
-                         alt="Enter"
-                         onclick="location.href='/Pages/Marfet/MarfetCommodity.html';">
+            <div onclick="location.href='/Pages/Marfet/MarfetCommodity.html';">
+                <div id="MarfetBoothCloseupSecond" class="navButtonDiv" style = "left:30%; bottom:6%">
+                    <div>
+                        <img class="navButton" src="/Materials/Icon/close-up.png"
+                             alt="Enter">
+                    </div>
                 </div>
             </div>
+
         </div>
 
+<!--        text Content-->
         <div id="marfetBoothText" class="textContent">
 
         </div>
@@ -99,7 +117,7 @@
         <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(90deg) translate(-50%, 50%);">
     </div>
 
-    <div id="cursorBoothBrowseText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-55%, 5%);">
+    <div id="cursorBoothBrowseText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-50%, 0%);">
         <h1 class="h1-navDir">
             Browse
         </h1>
@@ -140,7 +158,7 @@
         <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(90deg) translate(-50%, 50%);">
     </div>
 
-    <div id="cursorBoothUnderText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-80%, 5%);">
+    <div id="cursorBoothUnderText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-80%, 0%);">
         <h1 class="h1-navDir">
             The Underground
         </h1>
@@ -190,6 +208,7 @@
     //     cursorArchExitArrow = document.getElementById("cursorArchExitArrow"),
     //     cursorArchExitText = document.getElementById("cursorArchExitText");
 
+    //cursor change
     $(document).mousemove(function (e) {
         $(".pointer").css({ left: e.pageX, top: e.pageY });
         $(".pointerText").css({ left: e.pageX, top: e.pageY });

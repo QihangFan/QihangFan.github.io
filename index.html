@@ -4,6 +4,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="JavaScript/navComponents.js"></script>
+    <script src="JavaScript/isoOverlayController.js"></script>
+    <script src="JavaScript/jquery-3.6.0.min.js"></script>
     <title>Four-Typos</title>
 
   </head>
@@ -15,7 +17,6 @@
       <div class="grid-item" onclick="location.href='Pages/Marfet/Marfet.html';">
         <video id="Marfet" class="grid-video" width=100% height=100% loop muted>
           <source src="Materials/Video/Marfet_isoFull.mp4" type="video/mp4">
-          <source src="Materials/Video/Marfet_isoFull.ogg" type="video/ogg">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -23,7 +24,6 @@
       <div class="grid-item" onclick="location.href='Pages/Exhifition/Exhifition.html';">
         <video id="Exhifition" class="grid-video" width=100% height=100% loop muted>
           <source src="Materials/Video/Exhifition_isoFull.mp4" type="video/mp4">
-          <source src="Materials/Video/Exhifition_isoFull.ogg" type="video/ogg">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -31,7 +31,6 @@
       <div class="grid-item" onclick="location.href='Pages/Stufio/Stufio.html';">
         <video id="Stufio" class="grid-video" width=100% height=100% loop muted>
           <source src="Materials/Video/Stufio_isoFull.mp4" type="video/mp4">
-          <source src="Materials/Video/Stufio_isoFull.ogg" type="video/ogg">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -39,10 +38,35 @@
       <div class="grid-item" onclick="location.href='Pages/Tofer/Tofer.html';">
         <video id="Tofer" class="grid-video" width=100% height=100% loop muted>
           <source src="Materials/Video/Tofer_isoFull.mp4" type="video/mp4">
-          <source src="Materials/Video/Tofer_isoFull.ogg" type="video/ogg">
           Your browser does not support the video tag.
         </video>
       </div>
+    </div>
+
+    <!--hover content first to show-->
+
+    <div id="marfetArrowText" class="isoPointerText" style="visibility: hidden; opacity: 0; transform: translate(-30%, -10%); mix-blend-mode: exclusion;">
+      <h1 class="h1-navDir" style="font-size: 80px;text-decoration-line: line-through;">
+        Market
+      </h1>
+    </div>
+
+    <div id="exhifitionArrowText" class="isoPointerText" style="visibility: hidden; opacity: 0; transform: translate(-40%, -10%); mix-blend-mode: exclusion;">
+      <h1 class="h1-navDir" style="font-size: 80px;text-decoration-line: line-through;">
+        Exhibition
+      </h1>
+    </div>
+
+    <div id="studioArrowText" class="isoPointerText" style="visibility: hidden; opacity: 0; transform: translate(-25%, -10%); mix-blend-mode: exclusion;">
+      <h1 class="h1-navDir" style="font-size: 80px;text-decoration-line: line-through;">
+        Studio
+      </h1>
+    </div>
+
+    <div id="toferArrowText" class="isoPointerText" style="visibility: hidden; opacity: 0; transform: translate(-30%, -10%); mix-blend-mode: exclusion;">
+      <h1 class="h1-navDir" style="font-size: 80px;text-decoration-line: line-through;">
+        Tower
+      </h1>
     </div>
 
   </body>
@@ -76,4 +100,52 @@
       // clearInterval(simulVidPlayer);
     }
   }, 100)
+
+
+  //hover cursor change
+
+  $(document).mousemove(function (e) {
+    // $(".pointer").css({ left: e.pageX, top: e.pageY });
+    $(".isoPointerText").css({ left: e.pageX, top: e.pageY });
+  });
+
+  $("#Marfet").hover(function(){
+            showUp(document.getElementById("marfetArrowText"));
+            cursorShyAway();
+          },
+
+          function(){
+            shyAway(document.getElementById("marfetArrowText"));
+            cursorShowUp();
+          });
+
+  $("#Exhifition").hover(function(){
+            showUp(document.getElementById("exhifitionArrowText"));
+            cursorShyAway();
+          },
+
+          function(){
+            shyAway(document.getElementById("exhifitionArrowText"));
+            cursorShowUp();
+          });
+
+  $("#Stufio").hover(function(){
+            showUp(document.getElementById("studioArrowText"));
+            cursorShyAway();
+          },
+
+          function(){
+            shyAway(document.getElementById("studioArrowText"));
+            cursorShowUp();
+          });
+
+  $("#Tofer").hover(function(){
+            showUp(document.getElementById("toferArrowText"));
+            cursorShyAway();
+          },
+
+          function(){
+            shyAway(document.getElementById("toferArrowText"));
+            cursorShowUp();
+          });
 </script>

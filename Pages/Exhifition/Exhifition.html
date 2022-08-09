@@ -5,15 +5,18 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
     <script src="../../JavaScript/navComponents.js"></script>
+    <script src="../../JavaScript/isoOverlayController.js"></script>
+    <script src="../../JavaScript/jquery-3.6.0.min.js"></script>
+
     <title>Exhifition</title>
 </head>
 <body>
     <nav-menu></nav-menu>
 
+<!--    background-->
     <div id="Exhifitionsolo_div" class="fullScreenVideo" >
         <video id="ExhifitionSolo" class="pageSolo" width=100% height=100% autoplay muted>
             <source src="/Materials/Video/Exhifition_isoFull.mp4" type="video/mp4">
-            <source src="/Materials/Video/Exhifition_isoFull.mp4" type="video/ogg">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -21,14 +24,14 @@
     <div class="overlayLayer">
 
 <!--        rotate button-->
-        <div id="rotateButton_div_exhifition" class="rotateButton_div" >
+        <div id="rotateButtonWrapper" class="rotateButton_div" style="visibility: hidden; opacity: 0;">
             <div>
                 <img class="rotateButton" src="/Materials/Icon/RotateButton.png" alt="Rotate" onclick="ExhifitionSolo.play()">
             </div>
         </div>
 
 <!--        text content-->
-        <div class="isoProjectText" style = "width:400px">
+        <div id="textContentWrapper" class="isoProjectText" style = "width:400px; visibility: hidden; opacity: 0;">
             <div class="h1Wrapper" style = "width:100%; text-align: right;">
                 <h1>
                     The Exhifition
@@ -46,29 +49,94 @@
         </div>
 
 <!--        hotspot-->
-        <div class="overlayLayerIso">
-            <div class="navButtonDiv" style = "left:calc(-5vw - 130px); top:calc(-4vh - 20px)">
-                <div>
-                    <img id="MarfetArch" class="navHotSpot" src="/Materials/Icon/HotSpot.png"
-                         alt="Enter"
-                         onclick="location.href='/Pages/Marfet/MarfetArch.html';">
+        <div id="hotspotFirst" class="overlayLayerIso" style="visibility: hidden; opacity: 0;">
+<!--            hover receiver-->
+            <div onclick="location.href='/Pages/Marfet/MarfetArch.html';">
+                <div id="hotSpot1-1" class="navButtonDiv" style = "left:calc(-5vw - 130px); top:calc(-4vh - 20px)">
+                    <div>
+                        <img class="navHotSpot" src="/Materials/Icon/HotSpot.png"
+                             alt="Enter">
+                    </div>
                 </div>
             </div>
-            <div class="navButtonDiv" style = "left:calc(-5vw - 80px); bottom:calc(-4vh - 40px)">
-                <div>
-                    <img id="MarfetBooth" class="navHotSpot" src="/Materials/Icon/HotSpot.png"
-                         alt="Enter"
-                         onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
+
+            <div onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
+                <div id="hotSpot1-2" class="navButtonDiv" style = "right:calc(-2vw - 20px); bottom:calc(-4vh - 40px)">
+                    <div>
+                        <img class="navHotSpot" src="/Materials/Icon/HotSpot.png"
+                             alt="Enter">
+                    </div>
                 </div>
             </div>
-            <div class="navButtonDiv" style = "right:calc(-7vw - 130px); bottom:calc(-5vh - 80px)">
-                <div>
-                    <img id="MarfetUnderground" class="navHotSpot" src="/Materials/Icon/HotSpot.png"
-                         alt="Enter"
-                         onclick="location.href='/Pages/Marfet/MarfetUnderground.html';">
+
+            <div onclick="location.href='/Pages/Marfet/MarfetUnderground.html';">
+                <div id="hotSpot1-3" class="navButtonDiv" style = "right:calc(-7vw - 30px); top:calc(-5vh - 20px)">
+                    <div>
+                        <img  class="navHotSpot" src="/Materials/Icon/HotSpot.png"
+                             alt="Enter">
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div id="hotspotSecond" class="overlayLayerIso">
+            <!--            hover receiver-->
+            <div onclick="location.href='/Pages/Marfet/MarfetArch.html';">
+                <div id="hotSpot2-1" class="navButtonDiv" style = "left:calc(-5vw - 100px); top:calc(-4vh - 120px)">
+                    <div>
+                        <img class="navHotSpot" src="/Materials/Icon/HotSpot.png"
+                             alt="Enter">
+                    </div>
+                </div>
+            </div>
+
+            <div onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
+                <div id="hotSpot2-2" class="navButtonDiv" style = "right:calc(-5vw - 110px); top:calc(-4vh - 40px)">
+                    <div>
+                        <img class="navHotSpot" src="/Materials/Icon/HotSpot.png"
+                             alt="Enter">
+                    </div>
+                </div>
+            </div>
+
+            <div onclick="location.href='/Pages/Marfet/MarfetUnderground.html';">
+                <div id="hotSpot2-3" class="navButtonDiv" style = "right:calc(-7vw - 130px); bottom:calc(-5vh - 130px)">
+                    <div>
+                        <img  class="navHotSpot" src="/Materials/Icon/HotSpot.png"
+                              alt="Enter">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--hover content to show-->
+    <div id="cursorArrow" class="pointer" style="visibility: hidden; opacity: 0;">
+        <img src="/Materials/Icon/zoom-in.png" class="cursorStyle  isoPoint" alt="">
+    </div>
+
+    <div id="cursorText1" class="pointerText" style="visibility: hidden; opacity: 0;">
+        <h1 class="h1-navDir h1-navDir-iso">
+            The Sidewalk
+        </h1>
+    </div>
+
+    <div id="cursorText2" class="pointerText" style="visibility: hidden; opacity: 0;">
+        <h1 class="h1-navDir h1-navDir-iso">
+            The Warehouse
+        </h1>
+    </div>
+
+    <div id="cursorText3" class="pointerText" style="visibility: hidden; opacity: 0;">
+        <h1 class="h1-navDir h1-navDir-iso">
+            The Showcase
+        </h1>
+    </div>
+
+    <div id="cursorText4" class="pointerText" style="visibility: hidden; opacity: 0;">
+        <h1 class="h1-navDir h1-navDir-iso">
+            The Facade
+        </h1>
     </div>
 </body>
 </html>
@@ -81,12 +149,12 @@
 
     var videoTracker = setInterval(() => {
         checkTime();
-        console.log(ExhifitionSolo.currentTime);
-        console.log(currentStopTime);
+        // console.log(ExhifitionSolo.currentTime);
+        // console.log(currentStopTime);
 
         ExhifitionSolo.addEventListener('ended', (event) => {
             videoReset();
-            console.log("videoReset");
+            // console.log("videoReset");
             ExhifitionSolo.play();
         })
     }, 10)
@@ -108,4 +176,21 @@
         pauseIndex = 0
         currentStopTime = pausePoint[pauseIndex]
     }
+
+    //info-overlay controller
+    isoOverlayControl(ExhifitionSolo, "rotateButtonWrapper", "textContentWrapper", "hotspotFirst", "hotspotSecond");
+
+    //hover - cursor change
+    $(document).mousemove(function (e) {
+        $(".pointer").css({ left: e.pageX, top: e.pageY });
+        $(".pointerText").css({ left: e.pageX, top: e.pageY });
+    });
+
+    cursorShowShy("#hotSpot1-1", document.getElementById("cursorArrow"), document.getElementById("cursorText1"));
+    cursorShowShy("#hotSpot1-2", document.getElementById("cursorArrow"), document.getElementById("cursorText2"));
+    cursorShowShy("#hotSpot1-3", document.getElementById("cursorArrow"), document.getElementById("cursorText3"));
+
+    cursorShowShy("#hotSpot2-1", document.getElementById("cursorArrow"), document.getElementById("cursorText3"));
+    cursorShowShy("#hotSpot2-2", document.getElementById("cursorArrow"), document.getElementById("cursorText2"));
+    cursorShowShy("#hotSpot2-3", document.getElementById("cursorArrow"), document.getElementById("cursorText4"));
 </script>
