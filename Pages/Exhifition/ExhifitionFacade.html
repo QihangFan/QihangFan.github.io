@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <script src="../../JavaScript/isoOverlayController.js"></script>
+  <script src="../../JavaScript/jquery-3.6.0.min.js"></script>
+  <script src="../../JavaScript/navComponents.js"></script>
+
+  <title>The Facade</title>
+
+</head>
+<body>
+
+<!--  nav menu-->
+<nav-menu></nav-menu>
+
+<!--  background-->
+<div id="videoWrapper" class="fullScreenVideo" >
+  <video id="videoContent" class="pageSolo" width=100% height=100% autoplay muted>
+    <source src="/Materials/Video/Exhifition/ExhifitionFacade.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="overlayLayer">
+    <div id="navIconWrapper" class="navIcons" style="visibility: hidden; opacity: 0;">
+
+<!--      hover receiver-->
+      <div onclick="location.href='/Pages/Exhifition/ExhifitionRooftop.html';">
+          <div id="leftIcon" class="navButtonDiv" style = "left:6%; bottom:10%">
+              <div class="iconWrapper">
+                  <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"
+                       alt="Enter">
+              </div>
+          </div>
+      </div>
+
+<!--      <div onclick="MarfetBoothSolo.play()">-->
+<!--        <div id="rightIcon" class="navButtonDiv" style = "right:3%; bottom:10%">-->
+<!--          <div class="iconWrapper">-->
+<!--            <img class="navButton" src="/Materials/Icon/door-enter-line-right.png"-->
+<!--                 alt="Enter">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+      <div onclick="location.href='/Pages/Exhifition/ExhifitionSidewalk.html';">
+        <div id="topIcon" class="navButtonDiv" style = "right:10%; top:3%">
+          <div class="iconWrapper">
+            <img class="navButton" src="/Materials/Icon/upstairs.png"
+                 alt="Enter">
+          </div>
+        </div>
+      </div>
+
+      <!--      <div onclick="location.href='/Pages/Marfet/MarfetCommodity.html';">-->
+      <!--        <div id="bottomIcon" class="navButtonDiv" style = "left:20%; bottom:3%">-->
+      <!--          <div class="iconWrapper">-->
+      <!--            <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"-->
+      <!--                 alt="Enter">-->
+      <!--          </div>-->
+      <!--        </div>-->
+      <!--      </div>-->
+
+    </div>
+
+    <!--      text content-->
+    <div id="textContentWrapper" class="textContent" style="visibility: hidden; opacity: 0;">
+
+    </div>
+  </div>
+</div>
+
+
+<!--hover content first to show-->
+<!--  left-->
+<div id="leftArrow" class="pointer" style="visibility: hidden; opacity: 0;">
+    <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(270deg) translate(50%, -50%);">
+</div>
+
+<div id="leftArrowText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-5%, 5%);">
+    <h1 class="h1-navDir">
+        The Rooftop
+    </h1>
+</div>
+
+<!--  right-->
+<!--<div id="rightArrow" class="pointer" style="visibility: hidden; opacity: 0;">-->
+<!--  <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(90deg) translate(-50%, 50%);">-->
+<!--</div>-->
+
+<!--<div id="rightArrowText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-50%, 2%); ">-->
+<!--  <h1 class="h1-navDir">-->
+<!--    The Facade-->
+<!--  </h1>-->
+<!--</div>-->
+
+<!--  top-->
+<div id="topArrow" class="pointer" style="visibility: hidden; opacity: 0; transition: all 0.5s ease-out;">
+  <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform:rotate(35deg) translate(-120%, -30%);">
+</div>
+
+<div id="topStair" class="pointer" style="visibility: hidden; opacity: 0;">
+  <img src="/Materials/Icon/stair.png" class="cursorStyle" alt="" style="transform-origin: center; transform: translate(-50%, -40%);">
+</div>
+
+<div id="topArrowText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-60%, 5%);">
+  <h1 class="h1-navDir">
+    The Sidewalk
+  </h1>
+</div>
+
+<!--  bottom-->
+<!--<div id="bottomArrow" class="pointer" style="visibility: hidden; opacity: 0;">-->
+<!--  <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform:rotate(180deg) translate(50%, 50%);">-->
+<!--</div>-->
+
+<!--<div id="bottomArrowText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-5%, -22%);">-->
+<!--  <h1 class="h1-navDir">-->
+<!--    The Warehouse-->
+<!--  </h1>-->
+<!--</div>-->
+
+</body>
+</html>
+
+
+<script type="text/javascript">
+  const videoContent = document.getElementById("videoContent");
+
+  videoContent.addEventListener('ended', (event) => {
+    setTimeout(function(){
+      document.getElementById("navIconWrapper").classList.add("visible");}, 0);
+    setTimeout(function(){
+      document.getElementById("textContentWrapper").classList.add("visible");}, 500);
+  });
+
+
+
+  $(document).mousemove(function (e) {
+    $(".pointer").css({ left: e.pageX, top: e.pageY });
+    $(".pointerText").css({ left: e.pageX, top: e.pageY });
+  });
+
+  cursorShowShy("#leftIcon", document.getElementById("leftArrow"), document.getElementById("leftArrowText"));
+  // cursorShowShy("#rightIcon", document.getElementById("rightArrow"), document.getElementById("rightArrowText"));
+  cursorShowShy("#topIcon", document.getElementById("topArrow"), document.getElementById("topArrowText"));
+  // cursorShowShy("#bottomIcon", document.getElementById("bottomArrow"), document.getElementById("bottomArrowText"));
+
+  $("#topIcon").hover(function(){showUp(document.getElementById("topStair"));}, function(){shyAway(document.getElementById("topStair"));});
+</script>
+
+

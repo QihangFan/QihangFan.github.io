@@ -42,8 +42,12 @@
   </div>
 
   <!--hover content to show-->
-  <div id="cursorArrow" class="pointer" style="visibility: hidden; opacity: 0;">
-    <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="">
+  <div id="cursorArrow" class="pointer" style="visibility: hidden; opacity: 0; transition: all 0.5s ease-out;">
+    <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform:rotate(35deg) translate(-120%, -30%);">
+  </div>
+
+  <div id="topStair" class="pointer" style="visibility: hidden; opacity: 0;">
+    <img src="/Materials/Icon/stair.png" class="cursorStyle" alt="" style="transform-origin: center; transform: translate(-50%, -40%);">
   </div>
 
   <div id="cursorText" class="pointerText" style="visibility: hidden; opacity: 0;">
@@ -91,6 +95,8 @@ $("#marfetUndergroundNavIcon").hover(function(){
   cursorShyAway();
   // removeClassFrom(bodyClass, "cursorReturn");
   // bodyClass.classList.add("cursorNone");
+
+  showUp(document.getElementById("topStair"));
   },
 
         function(){
@@ -111,6 +117,7 @@ $("#marfetUndergroundNavIcon").hover(function(){
   // removeClassFrom(bodyClass, "cursorNone");
   // bodyClass.classList.add("cursorReturn");
 
+  shyAway(document.getElementById("topStair"));
 });
 
 </script>
