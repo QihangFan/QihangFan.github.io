@@ -7,15 +7,13 @@
   <script src="../JavaScript/isoOverlayController.js"></script>
   <script src="../JavaScript/jquery-3.6.0.min.js"></script>
   <script src="../JavaScript/navComponents.js"></script>
+  <script src="../JavaScript/dropdownMenu.js"></script>
   <meta name = "viewport" content = "width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
 
   <title>Template</title>
 
 </head>
 <body>
-
-  <!--  nav menu-->
-  <nav-menu></nav-menu>
 
   <!--  background-->
   <div id="videoWrapper" class="fullScreenVideo" >
@@ -121,6 +119,28 @@
     </h1>
   </div>
 
+
+<!--  nav menu-->
+  <nav-menu></nav-menu>
+
+  <dropdown-menu id="menuDropdown" style="visibility: hidden; opacity: 0;"></dropdown-menu>
+
+  <div id="hoverInfoDiv" class="hoverInfoPos" style="visibility: hidden; opacity: 0;">
+    <div class="hoverInfoWrapper">
+      <h2>
+        Expand the Upcycling Business
+      </h2>
+
+      <p class="p-HoverInfo">
+        After the 4 typologies are identified, we begin to transform them into project-specific spaces.
+      </p>
+      <p class="p-HoverInfo">
+        Like how upcycling is done, we dismantle the box of walls, rotate, displace and scale. The camera is set up to look at both the micro-level activities and macro-level spatial organizations. Taking architectural elements as spatial furniture (trusses, arches, window frames, stairs, columns…), we mix-match to create an illusion of familiarity.
+      </p>
+    </div>
+  </div>
+
+
 </body>
 </html>
 
@@ -128,11 +148,14 @@
 <script type="text/javascript">
   const videoContent = document.getElementById("videoContent");
 
+  videoContent.addEventListener('play', (event) => {
+    setTimeout(function(){
+      document.getElementById("textContentWrapper").classList.add("visible");}, 2000);
+  });
+
   videoContent.addEventListener('ended', (event) => {
     setTimeout(function(){
       document.getElementById("navIconWrapper").classList.add("visible");}, 0);
-    setTimeout(function(){
-      document.getElementById("textContentWrapper").classList.add("visible");}, 500);
   });
 
 

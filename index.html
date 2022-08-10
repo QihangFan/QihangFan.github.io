@@ -13,7 +13,6 @@
   </head>
 
   <body>
-    <nav-menu></nav-menu>
 
     <div id="home-videoContainer" class="grid-container">
       <div class="grid-item" onclick="location.href='Pages/Marfet/Marfet.html';">
@@ -71,6 +70,50 @@
       </h1>
     </div>
 
+    <!--  nav menu-->
+    <nav-menu></nav-menu>
+
+    <dropdown-menu id="menuDropdown" style="visibility: hidden; opacity: 0;"></dropdown-menu>
+
+    <div id="hoverInfoDiv" class="hoverInfoPos" style="visibility: hidden; opacity: 0;">
+      <div class="hoverInfoWrapper">
+        <h2>
+          Four Typos
+        </h2>
+
+        <p class="p-HoverInfo">
+          After a careful study of Duran Lantink's approach to upcycling, we summarized the process into 7 stages. Duran Lantink starts design thinking from the very first step and he goes through multiple iterations. His workflow is nonlinear and circular.
+        </p>
+        <p class="p-HoverInfo">
+          Although Duran Lantink indicates an upscaling of his small handicraft workflow, we find the current factory typology insufficient for covering all the designers' activities.
+        </p>
+        <p class="p-HoverInfo">
+          The ordinary factory is largely mechanical, automated and unfriendly to human. Spaces are more general as it values production over thinking.
+        </p>
+        <p class="p-HoverInfo">
+          A direct scaling up would not work, because the two show different images. Space need to be redefined.
+        </p>
+      </div>
+      <div class="hoverInfoWrapper">
+        <h2>
+          Credit
+        </h2>
+
+        <p class="p-HoverInfo">
+          Project Designer: Qihang Fan, Kangxin Wu
+        </p>
+        <p class="p-HoverInfo">
+          Web Developer: Qihang Fan
+        </p>
+        <p class="p-HoverInfo">
+          Project Instructor: Peter Testa, Nero He
+        </p>
+        <p class="p-HoverInfo">
+          Web Development Instructor: Anthony Tran
+        </p>
+      </div>
+    </div>
+
   </body>
 </html>
 
@@ -81,7 +124,7 @@
   const Marfet = document.getElementById("Marfet");
   const Exhifition = document.getElementById("Exhifition");
   const Stufio = document.getElementById("Stufio");
-  var videoList = [Tofer, Marfet, Exhifition, Stufio];
+  let videoList = [Tofer, Marfet, Exhifition, Stufio];
 
   console.log(videoList);
 

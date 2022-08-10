@@ -8,18 +8,20 @@ function isoOverlayControl(videoID, rotateButton, textContent, firstHotspot, sec
     const marfetHotspot = document.getElementById(firstHotspot);
     const marfetHotspotSecond = document.getElementById(secondHotspot);
 
+    //event controller
     hotspotController = 0;
 
+    //when video starts to play
     videoID.addEventListener('play', (event) => {
         console.log("videoPlay");
 
         removeClassFrom(marfetRotateButton, "visible");
-        removeClassFrom(marfetTextContent, "visible");
+        // removeClassFrom(marfetTextContent, "visible");
         removeClassFrom(marfetHotspot, "visible");
         removeClassFrom(marfetHotspotSecond, "visible");
 
         marfetRotateButton.classList.add("hidden");
-        marfetTextContent.classList.add("hidden");
+        // marfetTextContent.classList.add("hidden");
 
         marfetHotspot.classList.add("hidden");
         marfetHotspotSecond.classList.add("hidden");
@@ -27,36 +29,45 @@ function isoOverlayControl(videoID, rotateButton, textContent, firstHotspot, sec
         ++hotspotController;
     });
 
+    //text shows up after video starts to play - delay
+    videoID.addEventListener('play', (event) => {
+        setTimeout(function(){
+            marfetTextContent.classList.add("visible");
+            removeClassFrom(marfetTextContent, "hidden");
+        }, 1000);
+    });
+
+    //interaction components show up when video pauses
     videoID.addEventListener('pause', (event) => {
 
         console.log("videoPause");
 
         if (hotspotController === 1) {
             setTimeout(function(){
-                removeClassFrom(marfetRotateButton, "hidden");
+                removeClassFrom(marfetHotspot, "hidden");
                 marfetRotateButton.classList.add("visible");
             }, 500);
 
-            setTimeout(function(){
-                marfetTextContent.classList.add("visible");
-                removeClassFrom(marfetTextContent, "hidden");
-            }, 1000);
+            // setTimeout(function(){
+            //     marfetTextContent.classList.add("visible");
+            //     removeClassFrom(marfetTextContent, "hidden");
+            // }, 1000);
 
-            removeClassFrom(marfetHotspot, "hidden");
+            removeClassFrom(marfetRotateButton, "hidden");
             marfetHotspot.classList.add("visible");
         }
         else if (hotspotController === 2) {
             setTimeout(function(){
-                removeClassFrom(marfetRotateButton, "hidden");
+                removeClassFrom(marfetHotspotSecond, "hidden");
                 marfetRotateButton.classList.add("visible");
             }, 500);
 
-            setTimeout(function(){
-                marfetTextContent.classList.add("visible");
-                removeClassFrom(marfetTextContent, "hidden");
-            }, 1000);
+            // setTimeout(function(){
+            //     marfetTextContent.classList.add("visible");
+            //     removeClassFrom(marfetTextContent, "hidden");
+            // }, 1000);
 
-            removeClassFrom(marfetHotspotSecond, "hidden");
+            removeClassFrom(marfetRotateButton, "hidden");
             marfetHotspotSecond.classList.add("visible");
         }
         else {
@@ -112,49 +123,71 @@ function cursorShowShy(hoverID, cursorArchToBoothArrow, cursorArchToBoothText) {
 }
 
 
+//when text contents are show in both sections
+function immerseOverlayControl(videoID, textContent, timeShowFirst, textContentSecond, timeShowSecond, firstHotspot, secondHotspot) {
 
-function immerseOverlayControl(videoID, textContent, firstHotspot, secondHotspot) {
 
+    const marfetTextContent = document.getElementById(textContent),
+        marfetTextContentSecond = document.getElementById(textContentSecond);
 
-    const marfetTextContent = document.getElementById(textContent);
-    const marfetHotspot = document.getElementById(firstHotspot);
-    const marfetHotspotSecond = document.getElementById(secondHotspot);
+    const marfetHotspot = document.getElementById(firstHotspot),
+        marfetHotspotSecond = document.getElementById(secondHotspot);
 
     hotspotController = 0;
 
     videoID.addEventListener('play', (event) => {
         console.log("videoPlay");
 
+        //clear visible classes
         removeClassFrom(marfetTextContent, "visible");
+        removeClassFrom(marfetTextContentSecond, "visible");
         removeClassFrom(marfetHotspot, "visible");
         removeClassFrom(marfetHotspotSecond, "visible");
 
+        //add hidden classes to all variables
         marfetTextContent.classList.add("hidden");
+        marfetTextContentSecond.classList.add("hidden");
 
         marfetHotspot.classList.add("hidden");
         marfetHotspotSecond.classList.add("hidden");
 
+        //controller
         ++hotspotController;
+        console.log(hotspotController);
+        //text shows up after 1s
+        if (hotspotController === 1) {
+            setTimeout(function(){
+                marfetTextContent.classList.add("visible");
+                removeClassFrom(marfetTextContent, "hidden");
+            }, timeShowFirst);
+        }
+        else if (hotspotController === 2) {
+            setTimeout(function(){
+                marfetTextContentSecond.classList.add("visible");
+                removeClassFrom(marfetTextContentSecond, "hidden");
+            }, timeShowSecond);
+        }
     });
 
+    //interaction components show up when video pauses
     videoID.addEventListener('pause', (event) => {
 
         console.log("videoPause");
 
         if (hotspotController === 1) {
-            setTimeout(function(){
-                marfetTextContent.classList.add("visible");
-                removeClassFrom(marfetTextContent, "hidden");
-            }, 500);
+            // setTimeout(function(){
+            //     marfetTextContent.classList.add("visible");
+            //     removeClassFrom(marfetTextContent, "hidden");
+            // }, 500);
 
             removeClassFrom(marfetHotspot, "hidden");
             marfetHotspot.classList.add("visible");
         }
         else if (hotspotController === 2) {
-            setTimeout(function(){
-                marfetTextContent.classList.add("visible");
-                removeClassFrom(marfetTextContent, "hidden");
-            }, 500);
+            // setTimeout(function(){
+            //     marfetTextContentSecond.classList.add("visible");
+            //     removeClassFrom(marfetTextContent, "hidden");
+            // }, 500);
 
             removeClassFrom(marfetHotspotSecond, "hidden");
             marfetHotspotSecond.classList.add("visible");
@@ -164,6 +197,10 @@ function immerseOverlayControl(videoID, textContent, firstHotspot, secondHotspot
     });
 
 }
+
+
+
+
 
 function immerseOverlayControlTextSecond(videoID, textContent, firstHotspot, secondHotspot) {
 

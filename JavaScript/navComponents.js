@@ -2,37 +2,37 @@ const navTemplate = document.createElement('template');
 navTemplate.innerHTML = `
 
 <style>
-    #menu {
+    .flex-container {
       display: flex;
       gap: 10px;
       position: absolute;
       top: 10px;
       right: 10px;
-      z-index: 3;
+      z-index: 10;
     }
     
     .Icon {
       width: 28px;
       cursor: pointer;
     }
+   
 </style>
 
 <div id="menu" class="flex-container" >
     <div>
         <img class="Icon" src="/Materials/Icon/Home.png" alt="Home" onclick="location.href='/index.html';">
     </div>
-    <div>
-        <img class="Icon" src="/Materials/Icon/Info.png" alt="Info">
+    <div id="infoIcon">
+        <img class="Icon" src="/Materials/Icon/Info.png" alt="Info" onclick="showHideChecker(getElementById('hoverInfoDiv'), this, '/Materials/Icon/Info-invert.png', '/Materials/Icon/Info.png');">
     </div>
     <div>
         <img class="Icon" src="/Materials/Icon/sound-disabled.png" alt="SoundDisabled">
-    </div>
+    </div id="menuIcon">
     <div>
-        <img class="Icon" src="/Materials/Icon/Menu.png" alt="Menu">
+        <img class="Icon" src="/Materials/Icon/Menu.png" alt="Menu" onclick="showHideChecker(getElementById('menuDropdown'), this, '/Materials/Icon/Menu-revert.png', '/Materials/Icon/Menu.png');">
     </div>
 </div>
 `
-
 
 class navMenu extends HTMLElement {
     constructor() {
@@ -46,41 +46,38 @@ class navMenu extends HTMLElement {
     }
 }
 
-
 customElements.define('nav-menu', navMenu);
 
 
+function infoShowAnim(hoverContentDiv) {
+    // console.log("run show function");
+    if (hoverContentDiv.classList.contains("hidden-slide")) {
+        hoverContentDiv.classList.remove("hidden-slide");
+    }
+    hoverContentDiv.classList.add("visible-slide");
+}
 
+function infoShyAnim(hoverContentDiv) {
+    // console.log("run hide function");
+    if (hoverContentDiv.classList.contains("visible-slide")) {
+        hoverContentDiv.classList.remove("visible-slide");
+    }
+    hoverContentDiv.classList.add("hidden-slide");
+}
 
-// const headerTemplate = document.createElement('template');
-// headerTemplate.innerHTML = `
-//
-// <style>
-//     .header{
-//         text-align: center;
-//     }
-//     h1{
-//         color: blue;
-//     }
-// </style>
-//
-// <div>
-//     <div class="header">
-//         <h1> Header - My First Blog on Web Component </h1>
-//     </div>
-// </div>
-// `
-//
-// class Header extends HTMLElement {
-//     constructor() {
-//         // Always call super first in constructor
-//         super();
-//     }
-//
-//     connectedCallback() {
-//         const shadowRoot = this.attachShadow({ mode: 'open' });
-//         shadowRoot.appendChild(headerTemplate.content);
-//     }
-// }
-//
-// customElements.define('header-component', Header);
+var showHideController = 0;
+
+function showHideChecker(hoverContent, icon, iconNewAddress, iconPrevAddress) {
+    // console.log("run checker");
+
+    if (showHideController === 0) {
+        icon.src = iconNewAddress;
+        infoShowAnim(hoverContent);
+        ++showHideController;
+    }
+    else if(showHideController === 1) {
+        icon.src = iconPrevAddress;
+        infoShyAnim(hoverContent);
+        showHideController = 0;
+    }
+}

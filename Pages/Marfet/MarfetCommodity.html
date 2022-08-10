@@ -82,13 +82,15 @@
 <script type="text/javascript">
   const marfetComoditySolo = document.getElementById("MarfetCommoditySolo");
 
+  marfetComoditySolo.addEventListener('play', (event) => {
+    setTimeout(function(){
+      document.getElementById("marfetCommodityText").classList.add("visible");}, 2000);
+  });
+
   marfetComoditySolo.addEventListener('ended', (event) => {
     setTimeout(function(){
       document.getElementById("marfetCommodityNavIcons").classList.add("visible");}, 0);
-    setTimeout(function(){
-      document.getElementById("marfetCommodityText").classList.add("visible");}, 500);
   });
-
 
 
   $(document).mousemove(function (e) {

@@ -63,6 +63,10 @@
 
 <!--            text Content-->
             <div id="marfetArchText" class="textContent centerContent" style="visibility: hidden; opacity: 0;">
+
+            </div>
+
+            <div id="marfetArchTextSecond" class="textContent centerContent" style="visibility: hidden; opacity: 0;">
                 <h1>
                     Marfet
                 </h1>
@@ -112,7 +116,7 @@
         pauseIndex = 0;
 
     setInterval(videoControl, 10, MarfetArchSolo, pausePoint);
-    immerseOverlayControlTextSecond(MarfetArchSolo, "marfetArchText", "marfetArchNavIconsFirst", "marfetArchNavIconsSecond");
+    immerseOverlayControl(MarfetArchSolo, "marfetArchText", 1000, "marfetArchTextSecond", 5000, "marfetArchNavIconsFirst", "marfetArchNavIconsSecond");
 
     function videoControl (videoID, pauseArray) {
         currentStopTime = pauseArray[pauseIndex];

@@ -19,7 +19,7 @@ h1 {
 
 .h1-navDir {
   color: #B0C2FF;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 64px;
   transform: translate(10%, -40%);
 }
@@ -28,14 +28,24 @@ h1 {
   font-size: 30px;
 }
 
+h2 {
+  font-family: garamond-premier-pro-display, serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 28px;
+  color: #425080;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
 p {
   font-family: open-sans, sans-serif;
   font-weight: 300;
   font-style: normal;
   font-size: 16px;
   color: #425080;
-  margin-bottom: 0;
-  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 /*fade in and fade out animation*/
@@ -177,7 +187,7 @@ p {
 }
 
 .iconWrapper {
-  padding:80px;
+  padding:40px;
 }
 
 .navButton {
@@ -199,7 +209,7 @@ p {
   height: 480px; top:100px;
   width: 480px; left:50%;
   pointer-events: none;
-  mix-blend-mode: exclusion;
+  mix-blend-mode: difference;
   z-index: 7;
 
   transition: all 0.3s ease-out;
@@ -210,7 +220,7 @@ p {
   height: 480px; top:100px;
   width: 480px; left:50%;
   pointer-events: none;
-  mix-blend-mode: exclusion;
+  mix-blend-mode: difference;
   z-index: 7;
 
   transition: all 0.8s ease-out;
@@ -246,4 +256,38 @@ p {
   100% {
     cursor: default;
   }
+}
+
+/*hover info layer*/
+.hoverInfoPos{
+  position:absolute;
+  top:50px;
+  right:50px;
+  width:350px;
+  z-index:9;
+}
+
+.hoverInfoWrapper {
+  padding: 20px 40px 25px 40px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  background-color: rgba(237, 243, 255);
+}
+
+.p-HoverInfo {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.visible-slide {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: opacity 0.2s linear;
+}
+
+.hidden-slide {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transition: visibility 0s 0.2s, opacity 0.2s linear;
 }

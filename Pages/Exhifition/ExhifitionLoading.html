@@ -126,11 +126,14 @@
 <script type="text/javascript">
     const videoContent = document.getElementById("videoContent");
 
+    videoContent.addEventListener('play', (event) => {
+        setTimeout(function(){
+            document.getElementById("textContentWrapper").classList.add("visible");}, 2000);
+    });
+
     videoContent.addEventListener('ended', (event) => {
         setTimeout(function(){
             document.getElementById("navIconWrapper").classList.add("visible");}, 0);
-        setTimeout(function(){
-            document.getElementById("textContentWrapper").classList.add("visible");}, 500);
     });
 
 

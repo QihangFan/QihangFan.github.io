@@ -82,11 +82,14 @@
 <script type="text/javascript">
   const marfetTopviewSolo = document.getElementById("MarfetTopviewSolo");
 
+  marfetTopviewSolo.addEventListener('play', (event) => {
+    setTimeout(function(){
+      document.getElementById("marfetTopviewText").classList.add("visible");}, 2000);
+  });
+
   marfetTopviewSolo.addEventListener('ended', (event) => {
     setTimeout(function(){
       document.getElementById("marfetTopviewNavIcons").classList.add("visible");}, 0);
-    setTimeout(function(){
-      document.getElementById("marfetTopviewText").classList.add("visible");}, 500);
   });
 
 

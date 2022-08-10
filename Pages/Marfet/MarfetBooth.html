@@ -111,6 +111,10 @@
         <div id="marfetBoothText" class="textContent">
 
         </div>
+
+        <div id="marfetBoothTextSecond" class="textContent">
+
+        </div>
     </div>
 
 
@@ -193,7 +197,7 @@
         pauseIndex = 0;
 
     setInterval(videoControl, 10, MarfetBoothSolo, pausePoint);
-    immerseOverlayControl(MarfetBoothSolo, "marfetBoothText", "marfetBoothNavIconsFirst", "marfetBoothNavIconsSecond");
+    immerseOverlayControl(MarfetBoothSolo, "marfetBoothText", 2000, "marfetBoothTextSecond", 2000, "marfetBoothNavIconsFirst", "marfetBoothNavIconsSecond");
 
     function videoControl (videoID, pauseArray) {
         currentStopTime = pauseArray[pauseIndex];
