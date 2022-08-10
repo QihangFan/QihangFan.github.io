@@ -131,12 +131,18 @@
   let vidReady = [false, false, false, false];
 
   console.log(vidReady);
-
-  for (let i = 0; i < videoList.length; i++){
-    videoList[i].addEventListener("canplaythrough", function(){
-      vidReady[i] = true;
-      console.log(vidReady);
+  // Mobile
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    videoList.forEach(function(elem){
+      elem.play();
     });
+  } else {
+    for (let i = 0; i < videoList.length; i++){
+      videoList[i].addEventListener("canplaythrough", function(){
+        vidReady[i] = true;
+        console.log(vidReady);
+      });
+    }
   }
   
   var simulVidPlayer = setInterval(() => {
