@@ -83,7 +83,11 @@
   const Stufio = document.getElementById("Stufio");
   var videoList = [Tofer, Marfet, Exhifition, Stufio];
 
-  var vidReady = [false, false, false, false];
+  console.log(videoList);
+
+  let vidReady = [false, false, false, false];
+
+  console.log(vidReady);
 
   for (let i = 0; i < videoList.length; i++){
     videoList[i].addEventListener("canplaythrough", function(){
