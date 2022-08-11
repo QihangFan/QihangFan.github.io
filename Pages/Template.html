@@ -4,16 +4,21 @@
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
-  <script src="../JavaScript/isoOverlayController.js"></script>
-  <script src="../JavaScript/jquery-3.6.0.min.js"></script>
-  <script src="../JavaScript/navComponents.js"></script>
-  <script src="../JavaScript/dropdownMenu.js"></script>
+  <script src="../../JavaScript/isoOverlayController.js"></script>
+  <script src="../../JavaScript/jquery-3.6.0.min.js"></script>
+  <script src="../../JavaScript/navComponents.js"></script>
+  <script src="../../JavaScript/dropdownMenu.js"></script>
+  <script src="../../JavaScript/overlayInfoCredit.js"></script>
   <meta name = "viewport" content = "width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
 
   <title>Template</title>
 
 </head>
+
 <body>
+
+<!-- site container to control overflow-->
+<div id="siteDiv" class="site">
 
   <!--  background-->
   <div id="videoWrapper" class="fullScreenVideo" >
@@ -21,61 +26,63 @@
       <source src="/Materials/Video/Marfet/MarfetCommodity.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
+  </div>
 
-    <div class="overlayLayer">
-      <div id="navIconWrapper" class="navIcons" style="visibility: hidden; opacity: 0;">
+  <!--    overlay contents-->
+  <div class="overlayLayer">
+    <div id="navIconWrapper" class="navIcons" style="visibility: hidden; opacity: 0;">
 
-        <!--            hover receiver-->
-        <div onclick="location.href='/Pages/Marfet/MarfetArch.html';">
-          <div id="leftIcon" class="navButtonDiv" style = "left:3%; bottom:40%">
-            <div class="iconWrapper">
-              <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"
-                   alt="Enter">
-            </div>
+      <!--            hover receiver-->
+      <div onclick="location.href='/Pages/Marfet/MarfetArch.html';">
+        <div id="leftIcon" class="navButtonDiv" style = "left:3%; bottom:40%">
+          <div class="iconWrapper">
+            <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"
+                 alt="Enter">
           </div>
         </div>
-
-        <div onclick="MarfetBoothSolo.play()">
-          <div id="rightIcon" class="navButtonDiv" style = "right:3%; top:40%">
-            <div class="iconWrapper">
-              <img class="navButton" src="/Materials/Icon/door-enter-line-right.png"
-                   alt="Enter">
-            </div>
-          </div>
-        </div>
-
-        <div onclick="location.href='/Pages/Marfet/MarfetTopview.html';">
-          <div id="topIcon" class="navButtonDiv" style = "right:30%; top:3%">
-            <div class="iconWrapper">
-              <img class="navButton" src="/Materials/Icon/top-view.png"
-                   alt="Enter">
-            </div>
-          </div>
-        </div>
-
-        <div onclick="location.href='/Pages/Marfet/MarfetCommodity.html';">
-          <div id="bottomIcon" class="navButtonDiv" style = "left:30%; bottom:3%">
-            <div class="iconWrapper">
-              <img class="navButton" src="/Materials/Icon/close-up.png"
-                   alt="Enter">
-            </div>
-          </div>
-        </div>
-
       </div>
 
-      <!--      text content-->
-      <div id="textContentWrapper" class="textContent centerContent" style="visibility: hidden; opacity: 0;">
-        <h1>
-          Marfet
-        </h1>
+      <div onclick="MarfetBoothSolo.play()">
+        <div id="rightIcon" class="navButtonDiv" style = "right:3%; top:40%">
+          <div class="iconWrapper">
+            <img class="navButton" src="/Materials/Icon/door-enter-line-right.png"
+                 alt="Enter">
+          </div>
+        </div>
       </div>
+
+      <div onclick="location.href='/Pages/Marfet/MarfetTopview.html';">
+        <div id="topIcon" class="navButtonDiv" style = "right:30%; top:3%">
+          <div class="iconWrapper">
+            <img class="navButton" src="/Materials/Icon/top-view.png"
+                 alt="Enter">
+          </div>
+        </div>
+      </div>
+
+      <div onclick="location.href='/Pages/Marfet/MarfetCommodity.html';">
+        <div id="bottomIcon" class="navButtonDiv" style = "left:30%; bottom:3%">
+          <div class="iconWrapper">
+            <img class="navButton" src="/Materials/Icon/close-up.png"
+                 alt="Enter">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!--      text content-->
+    <div id="textContentWrapper" class="textContent centerContent" style="visibility: hidden; opacity: 0;">
+      <h1>
+        Marfet
+      </h1>
     </div>
   </div>
 
 
-  <!--hover content first to show-->
-<!--  left-->
+
+<!--hover content shows up-->
+  <!--  left-->
   <div id="leftArrow" class="pointer" style="visibility: hidden; opacity: 0;">
     <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(270deg) translate(50%, -50%);">
   </div>
@@ -86,7 +93,7 @@
     </h1>
   </div>
 
-<!--  right-->
+  <!--  right-->
   <div id="rightArrow" class="pointer" style="visibility: hidden; opacity: 0;">
     <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(90deg) translate(-50%, 50%);">
   </div>
@@ -97,7 +104,7 @@
     </h1>
   </div>
 
-<!--  top-->
+  <!--  top-->
   <div id="topArrow" class="pointer" style="visibility: hidden; opacity: 0;">
     <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform:translate(-50%, -50%);">
   </div>
@@ -108,7 +115,7 @@
     </h1>
   </div>
 
-<!--  bottom-->
+  <!--  bottom-->
   <div id="bottomArrow" class="pointer" style="visibility: hidden; opacity: 0;">
     <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform:rotate(180deg) translate(50%, 50%);">
   </div>
@@ -120,11 +127,14 @@
   </div>
 
 
-<!--  nav menu-->
+
+  <!--  nav menu-->
   <nav-menu></nav-menu>
 
+  <!--  dropdown menu-->
   <dropdown-menu id="menuDropdown" style="visibility: hidden; opacity: 0;"></dropdown-menu>
 
+  <!--  dropdown info extra-->
   <div id="hoverInfoDiv" class="hoverInfoPos" style="visibility: hidden; opacity: 0;">
     <div class="hoverInfoWrapper">
       <h2>
@@ -138,14 +148,24 @@
         Like how upcycling is done, we dismantle the box of walls, rotate, displace and scale. The camera is set up to look at both the micro-level activities and macro-level spatial organizations. Taking architectural elements as spatial furniture (trusses, arches, window frames, stairs, columns…), we mix-match to create an illusion of familiarity.
       </p>
     </div>
+
+    <div class="hoverInfoWrapper">
+      <overlay-credit></overlay-credit>
+    </div>
   </div>
 
+</div>
 
 </body>
 </html>
 
 
 <script type="text/javascript">
+
+  //overflow controller
+  overflowController();
+
+  //overlay animation
   const videoContent = document.getElementById("videoContent");
 
   videoContent.addEventListener('play', (event) => {
@@ -159,7 +179,7 @@
   });
 
 
-
+  //hover effects
   $(document).mousemove(function (e) {
     $(".pointer").css({ left: e.pageX, top: e.pageY });
     $(".pointerText").css({ left: e.pageX, top: e.pageY });

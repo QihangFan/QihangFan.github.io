@@ -5,7 +5,7 @@ navTemplate2.innerHTML = `
     .flex-container {
       display: flex;
       gap: 10px;
-      position: absolute;
+      position: fixed;
       top: 10px;
       right: 10px;
       z-index: 10;
@@ -34,6 +34,7 @@ navTemplate2.innerHTML = `
 `
 
 class dropdownMenu extends HTMLElement {
+
     constructor() {
         // Always call super first in constructor
         super();

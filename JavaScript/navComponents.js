@@ -5,7 +5,7 @@ navTemplate.innerHTML = `
     .flex-container {
       display: flex;
       gap: 10px;
-      position: absolute;
+      position: fixed;
       top: 10px;
       right: 10px;
       z-index: 10;
@@ -20,7 +20,7 @@ navTemplate.innerHTML = `
 
 <div id="menu" class="flex-container" >
     <div>
-        <img class="Icon" src="/Materials/Icon/Home.png" alt="Home" onclick="location.href='/index.html';">
+        <img class="Icon" src="/Materials/Icon/Home.png" alt="Home" onclick="this.src='/Materials/Icon/Home-invert.png'; location.href='/index.html';">
     </div>
     <div id="infoIcon">
         <img class="Icon" src="/Materials/Icon/Info.png" alt="Info" onclick="showHideChecker(getElementById('hoverInfoDiv'), this, '/Materials/Icon/Info-invert.png', '/Materials/Icon/Info.png');">
@@ -29,7 +29,7 @@ navTemplate.innerHTML = `
         <img class="Icon" src="/Materials/Icon/sound-disabled.png" alt="SoundDisabled">
     </div id="menuIcon">
     <div>
-        <img class="Icon" src="/Materials/Icon/Menu.png" alt="Menu" onclick="showHideChecker(getElementById('menuDropdown'), this, '/Materials/Icon/Menu-revert.png', '/Materials/Icon/Menu.png');">
+        <img class="Icon" src="/Materials/Icon/Menu.png" alt="Menu" onclick="showHideCheckerDropDown(getElementById('menuDropdown'), this, '/Materials/Icon/Menu-revert.png', '/Materials/Icon/Menu.png');">
     </div>
 </div>
 `
@@ -79,5 +79,22 @@ function showHideChecker(hoverContent, icon, iconNewAddress, iconPrevAddress) {
         icon.src = iconPrevAddress;
         infoShyAnim(hoverContent);
         showHideController = 0;
+    }
+}
+
+var showHideControllerDropDown = 0;
+
+function showHideCheckerDropDown(hoverContent, icon, iconNewAddress, iconPrevAddress) {
+    // console.log("run checker");
+
+    if (showHideControllerDropDown === 0) {
+        icon.src = iconNewAddress;
+        infoShowAnim(hoverContent);
+        ++showHideControllerDropDown;
+    }
+    else if(showHideControllerDropDown === 1) {
+        icon.src = iconPrevAddress;
+        infoShyAnim(hoverContent);
+        showHideControllerDropDown = 0;
     }
 }

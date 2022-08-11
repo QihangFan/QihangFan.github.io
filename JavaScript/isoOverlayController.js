@@ -27,6 +27,7 @@ function isoOverlayControl(videoID, rotateButton, textContent, firstHotspot, sec
         marfetHotspotSecond.classList.add("hidden");
 
         ++hotspotController;
+        console.log(hotspotController);
     });
 
     //text shows up after video starts to play - delay
@@ -44,30 +45,20 @@ function isoOverlayControl(videoID, rotateButton, textContent, firstHotspot, sec
 
         if (hotspotController === 1) {
             setTimeout(function(){
-                removeClassFrom(marfetHotspot, "hidden");
+                removeClassFrom(marfetRotateButton, "hidden");
                 marfetRotateButton.classList.add("visible");
             }, 500);
 
-            // setTimeout(function(){
-            //     marfetTextContent.classList.add("visible");
-            //     removeClassFrom(marfetTextContent, "hidden");
-            // }, 1000);
-
-            removeClassFrom(marfetRotateButton, "hidden");
+            removeClassFrom(marfetHotspot, "hidden");
             marfetHotspot.classList.add("visible");
         }
         else if (hotspotController === 2) {
             setTimeout(function(){
-                removeClassFrom(marfetHotspotSecond, "hidden");
+                removeClassFrom(marfetRotateButton, "hidden");
                 marfetRotateButton.classList.add("visible");
             }, 500);
 
-            // setTimeout(function(){
-            //     marfetTextContent.classList.add("visible");
-            //     removeClassFrom(marfetTextContent, "hidden");
-            // }, 1000);
-
-            removeClassFrom(marfetRotateButton, "hidden");
+            removeClassFrom(marfetHotspotSecond, "hidden");
             marfetHotspotSecond.classList.add("visible");
         }
         else {
@@ -199,6 +190,13 @@ function immerseOverlayControl(videoID, textContent, timeShowFirst, textContentS
 }
 
 
+//overflow controller
+function overflowController() {
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {}
+    else {
+        document.querySelector("body").classList.add("overflowHidden");
+    }
+}
 
 
 

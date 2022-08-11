@@ -5,7 +5,22 @@ body {
   font-family: 'Roboto Mono', monospace;
   width: 100vw;
   height: 100vh;
+}
+
+.site {
+  overflow-x: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: -8px;
+}
+
+.overflowHidden {
   overflow: hidden;
+}
+
+.overflowXHidden {
+  overflow-x: hidden;
 }
 
 h1 {
@@ -34,7 +49,28 @@ h2 {
   font-style: normal;
   font-size: 28px;
   color: #425080;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.h2-Dec {
+  font-family: garamond-premier-pro-display, serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  color: rgba(66, 80, 128, 0.5);
+  margin-bottom: 20px;
+  margin-top: -25px;
+  line-height: 20px;
+}
+
+h3 {
+  font-family: open-sans, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  color: #425080;
+  margin-bottom: 10px;
   margin-top: 20px;
 }
 
@@ -46,6 +82,10 @@ p {
   color: #425080;
   margin-bottom: 10px;
   margin-top: 10px;
+}
+
+.paraBold {
+  font-weight: 600;
 }
 
 /*fade in and fade out animation*/
@@ -63,13 +103,15 @@ p {
 
 /*homepage*/
 .isoProjectText {
-  position: absolute;
-  top: 8vh;
+  position: fixed;
+  max-width:400px;
+  padding: 10px;
+  top: 7vh;
   right: 5vw;
 }
 
 .textContent {
-  position:absolute;
+  position:fixed;
   z-index:3;
 }
 
@@ -89,23 +131,23 @@ p {
   grid-gap: 0;
   width: 100vw;
   height: 100vh;
-  margin: -8px;
+  position: fixed;
 }
 
-#menuIndex {
-  display: flex;
-  gap: 10px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 3;
+/*#menuIndex {*/
+/*  display: flex;*/
+/*  gap: 10px;*/
+/*  position: absolute;*/
+/*  top: 10px;*/
+/*  right: 10px;*/
+/*  z-index: 3;*/
 
-}
+/*}*/
 
-.IconIndex {
-  width: 28px;
-  cursor: pointer;
-}
+/*.IconIndex {*/
+/*  width: 28px;*/
+/*  cursor: pointer;*/
+/*}*/
 
 .grid-item {
   overflow: hidden;
@@ -130,7 +172,7 @@ p {
   height: 480px; top:100px;
   width: 480px; left:50%;
   pointer-events: none;
-  mix-blend-mode: difference;
+  mix-blend-mode: exclusion;
   z-index: 7;
 
   transition: all 0.2s ease-out;
@@ -140,8 +182,9 @@ p {
 .fullScreenVideo {
   width: 100vw;
   height: 100vh;
-  margin: -8px;
+  /*margin: -8px;*/
   overflow: hidden;
+  position: fixed;
 }
 
 .navHotSpot {
@@ -154,7 +197,7 @@ p {
 .overlayLayerIso {
   width:50px;
   height:50px;
-  position: absolute;
+  position: fixed;
   left:50%;
   top:50%;
 }
@@ -166,7 +209,7 @@ p {
 }
 
 .rotateButton_div {
-  position: absolute;
+  position: fixed;
   bottom: 5vh;
   width: 100%;
   text-align: center;
@@ -261,10 +304,13 @@ p {
 /*hover info layer*/
 .hoverInfoPos{
   position:absolute;
-  top:50px;
-  right:50px;
-  width:350px;
+  top:0;
+  right:0;
+  margin: 50px;
+  max-width:350px;
   z-index:9;
+
+  overflow: auto;
 }
 
 .hoverInfoWrapper {

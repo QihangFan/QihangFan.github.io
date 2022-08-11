@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="JavaScript/navComponents.js"></script>
     <script src="JavaScript/isoOverlayController.js"></script>
     <script src="JavaScript/jquery-3.6.0.min.js"></script>
+    <script src="JavaScript/dropdownMenu.js"></script>
     <meta name = "viewport" content = "width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
 
     <title>Four-Typos</title>
@@ -13,104 +15,138 @@
   </head>
 
   <body>
+    <div id="siteDiv" class="site">
+      <div id="home-videoContainer" class="grid-container">
+        <div class="grid-item" onclick="location.href='Pages/Marfet/Marfet.html';">
+          <video id="Marfet" class="grid-video" width=100% height=100% loop muted playsinline>
+            <source src="Materials/Video/Marfet_isoFull.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
 
-    <div id="home-videoContainer" class="grid-container">
-      <div class="grid-item" onclick="location.href='Pages/Marfet/Marfet.html';">
-        <video id="Marfet" class="grid-video" width=100% height=100% loop muted playsinline>
-          <source src="Materials/Video/Marfet_isoFull.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <div class="grid-item" onclick="location.href='Pages/Exhifition/Exhifition.html';">
+          <video id="Exhifition" class="grid-video" width=100% height=100% loop muted playsinline>
+            <source src="Materials/Video/Exhifition_isoFull.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="grid-item" onclick="location.href='Pages/Stufio/Stufio.html';">
+          <video id="Stufio" class="grid-video" width=100% height=100% loop muted playsinline>
+            <source src="Materials/Video/Stufio_isoFull.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="grid-item" onclick="location.href='Pages/Tofer/Tofer.html';">
+          <video id="Tofer" class="grid-video" width=100% height=100% loop muted playsinline>
+            <source src="Materials/Video/Tofer_isoFull.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
 
-      <div class="grid-item" onclick="location.href='Pages/Exhifition/Exhifition.html';">
-        <video id="Exhifition" class="grid-video" width=100% height=100% loop muted playsinline>
-          <source src="Materials/Video/Exhifition_isoFull.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <!--hover content first to show-->
+
+      <div id="marfetArrowText" class="isoPointerText" style="visibility: hidden; opacity: 0; transform: translate(-30%, -10%);">
+        <h1 class="h1-navDir" style="font-size: 80px;text-decoration-line: line-through;">
+          Market
+        </h1>
       </div>
 
-      <div class="grid-item" onclick="location.href='Pages/Stufio/Stufio.html';">
-        <video id="Stufio" class="grid-video" width=100% height=100% loop muted playsinline>
-          <source src="Materials/Video/Stufio_isoFull.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <div id="exhifitionArrowText" class="isoPointerText" style="visibility: hidden; opacity: 0; transform: translate(-40%, -10%);">
+        <h1 class="h1-navDir" style="font-size: 80px;text-decoration-line: line-through;">
+          Exhibition
+        </h1>
       </div>
 
-      <div class="grid-item" onclick="location.href='Pages/Tofer/Tofer.html';">
-        <video id="Tofer" class="grid-video" width=100% height=100% loop muted playsinline>
-          <source src="Materials/Video/Tofer_isoFull.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <div id="studioArrowText" class="isoPointerText" style="visibility: hidden; opacity: 0; transform: translate(-25%, -10%);">
+        <h1 class="h1-navDir" style="font-size: 80px;text-decoration-line: line-through;">
+          Studio
+        </h1>
       </div>
-    </div>
 
-    <!--hover content first to show-->
-
-    <div id="marfetArrowText" class="isoPointerText" style="visibility: hidden; opacity: 0; transform: translate(-30%, -10%); mix-blend-mode: exclusion;">
-      <h1 class="h1-navDir" style="font-size: 80px;text-decoration-line: line-through;">
-        Market
-      </h1>
-    </div>
-
-    <div id="exhifitionArrowText" class="isoPointerText" style="visibility: hidden; opacity: 0; transform: translate(-40%, -10%); mix-blend-mode: exclusion;">
-      <h1 class="h1-navDir" style="font-size: 80px;text-decoration-line: line-through;">
-        Exhibition
-      </h1>
-    </div>
-
-    <div id="studioArrowText" class="isoPointerText" style="visibility: hidden; opacity: 0; transform: translate(-25%, -10%); mix-blend-mode: exclusion;">
-      <h1 class="h1-navDir" style="font-size: 80px;text-decoration-line: line-through;">
-        Studio
-      </h1>
-    </div>
-
-    <div id="toferArrowText" class="isoPointerText" style="visibility: hidden; opacity: 0; transform: translate(-30%, -10%); mix-blend-mode: exclusion;">
-      <h1 class="h1-navDir" style="font-size: 80px;text-decoration-line: line-through;">
-        Tower
-      </h1>
-    </div>
-
-    <!--  nav menu-->
-    <nav-menu></nav-menu>
-
-    <dropdown-menu id="menuDropdown" style="visibility: hidden; opacity: 0;"></dropdown-menu>
-
-    <div id="hoverInfoDiv" class="hoverInfoPos" style="visibility: hidden; opacity: 0;">
-      <div class="hoverInfoWrapper">
-        <h2>
-          Four Typos
-        </h2>
-
-        <p class="p-HoverInfo">
-          After a careful study of Duran Lantink's approach to upcycling, we summarized the process into 7 stages. Duran Lantink starts design thinking from the very first step and he goes through multiple iterations. His workflow is nonlinear and circular.
-        </p>
-        <p class="p-HoverInfo">
-          Although Duran Lantink indicates an upscaling of his small handicraft workflow, we find the current factory typology insufficient for covering all the designers' activities.
-        </p>
-        <p class="p-HoverInfo">
-          The ordinary factory is largely mechanical, automated and unfriendly to human. Spaces are more general as it values production over thinking.
-        </p>
-        <p class="p-HoverInfo">
-          A direct scaling up would not work, because the two show different images. Space need to be redefined.
-        </p>
+      <div id="toferArrowText" class="isoPointerText" style="visibility: hidden; opacity: 0; transform: translate(-30%, -10%);">
+        <h1 class="h1-navDir" style="font-size: 80px;text-decoration-line: line-through;">
+          Tower
+        </h1>
       </div>
-      <div class="hoverInfoWrapper">
-        <h2>
-          Credit
-        </h2>
 
-        <p class="p-HoverInfo">
-          Project Designer: Qihang Fan, Kangxin Wu
-        </p>
-        <p class="p-HoverInfo">
-          Web Developer: Qihang Fan
-        </p>
-        <p class="p-HoverInfo">
-          Project Instructor: Peter Testa, Nero He
-        </p>
-        <p class="p-HoverInfo">
-          Web Development Instructor: Anthony Tran
-        </p>
+      <!--  nav menu-->
+      <nav-menu></nav-menu>
+
+      <dropdown-menu id="menuDropdown" style="visibility: hidden; opacity: 0;"></dropdown-menu>
+
+      <div id="hoverInfoDiv" class="hoverInfoPos" style="visibility: hidden; opacity: 0;">
+        <div class="hoverInfoWrapper">
+          <h2>
+            Four Typos
+          </h2>
+          <h2 class="h2-Dec">
+            Garden Factory: Fashioning the Phygital
+          </h2>
+
+          <h3>
+            Studio Introduction
+          </h3>
+
+          <p class="p-HoverInfo">
+            The studio will design a new Garden Factory for emerging fashion houses Duran Lantink and Collina Strada to produce small batch upcycled collections under the umbrella of Prada Group S.p.A.
+          </p>
+
+          <h3>
+            Studio Discourses
+          </h3>
+
+          <p class="p-HoverInfo">
+            <span class="paraBold">Topic 01.</span> Architectural Types — (Fashion) House & Factory <br>
+            <span class="paraBold">Topic 02.</span> Motion Space — Runways IRL, AR, VR <br>
+            <span class="paraBold">Topic 03.</span> Interfaces — Physical/Digital Cameras, Rigs <br>
+            <span class="paraBold">Topic 04.</span> Phygital Material Creation <br>
+            <span class="paraBold">Topic 05.</span> Upcycling — New Forms of Luxury <br>
+            <span class="paraBold">Topic 06.</span> Production Landscapes
+          </p>
+
+        </div>
+        <div class="hoverInfoWrapper">
+          <h2>
+            Narrative
+          </h2>
+          <h2 class="h2-Dec">
+            Chapter I: Fashion Grows from the Field
+          </h2>
+
+          <p class="p-HoverInfo">
+            After a careful study of Duran Lantink's approach to upcycling, we summarized the process into 7 stages. Duran Lantink starts design thinking from the very first step and he goes through multiple iterations. His workflow is nonlinear and circular.
+          </p>
+          <p class="p-HoverInfo">
+            Although Duran Lantink indicates an upscaling of his small handicraft workflow, we find the current factory typology insufficient for covering all the designers' activities.
+          </p>
+          <p class="p-HoverInfo">
+            The ordinary factory is largely mechanical, automated and unfriendly to human. Spaces are more general as it values production over thinking.
+          </p>
+          <p class="p-HoverInfo">
+            A direct scaling up would not work, because the two show different images. Space need to be redefined.
+          </p>
+        </div>
+        <div class="hoverInfoWrapper">
+          <h2>
+            Credit
+          </h2>
+          <h2 class="h2-Dec">
+            Amazing End-to-end Experience
+          </h2>
+          <p class="p-HoverInfo">
+            Project Designer: Qihang Fan, Kangxin Wu<br>
+            Project Instructor: Peter Testa, Nero He<br>
+            Web Developer: Qihang Fan<br>
+            Web Development Instructor: Anthony Tran
+          </p>
+          <p class="p-HoverInfo">
+            Copyright © 2020 Qihang Fan. All Rights Reserved
+          </p>
+
+        </div>
       </div>
     </div>
 
@@ -118,7 +154,10 @@
 </html>
 
 <script type="text/javascript">
-  console.log("reading");
+
+  overflowController();
+
+  // console.log("reading");
 
   const Tofer = document.getElementById("Tofer");
   const Marfet = document.getElementById("Marfet");
@@ -126,11 +165,11 @@
   const Stufio = document.getElementById("Stufio");
   let videoList = [Tofer, Marfet, Exhifition, Stufio];
 
-  console.log(videoList);
+  // console.log(videoList);
 
   let vidReady = [false, false, false, false];
 
-  console.log(vidReady);
+  // console.log(vidReady);
   // Mobile
   if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     videoList.forEach(function(elem){

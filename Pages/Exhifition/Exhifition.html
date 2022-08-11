@@ -7,14 +7,21 @@
     <script src="../../JavaScript/navComponents.js"></script>
     <script src="../../JavaScript/isoOverlayController.js"></script>
     <script src="../../JavaScript/jquery-3.6.0.min.js"></script>
+    <script src="../../JavaScript/dropdownMenu.js"></script>
+    <script src="../../JavaScript/overlayInfoCoreConceptI.js"></script>
+    <script src="../../JavaScript/overlayInfoCredit.js"></script>
     <meta name = "viewport" content = "width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
 
     <title>Exhifition</title>
-</head>
-<body>
-    <nav-menu></nav-menu>
 
-<!--    background-->
+</head>
+
+<body>
+
+<!-- site container to control overflow-->
+<div id="siteDiv" class="site">
+
+    <!--    background-->
     <div id="Exhifitionsolo_div" class="fullScreenVideo" >
         <video id="ExhifitionSolo" class="pageSolo" width=100% height=100% autoplay muted playsinline>
             <source src="/Materials/Video/Exhifition_isoFull.mp4" type="video/mp4">
@@ -24,15 +31,15 @@
 
     <div class="overlayLayer">
 
-<!--        rotate button-->
+        <!--        rotate button-->
         <div id="rotateButtonWrapper" class="rotateButton_div" style="visibility: hidden; opacity: 0;">
             <div>
                 <img class="rotateButton" src="/Materials/Icon/RotateButton.png" alt="Rotate" onclick="ExhifitionSolo.play()">
             </div>
         </div>
 
-<!--        text content-->
-        <div id="textContentWrapper" class="isoProjectText" style = "width:400px; visibility: hidden; opacity: 0;">
+        <!--        text content-->
+        <div id="textContentWrapper" class="isoProjectText" style = "visibility: hidden; opacity: 0;">
             <div class="h1Wrapper" style = "width:100%; text-align: right;">
                 <h1>
                     The Exhifition
@@ -49,9 +56,9 @@
             </div>
         </div>
 
-<!--        hotspot-->
+        <!--        hotspot-->
         <div id="hotspotFirst" class="overlayLayerIso" style="visibility: hidden; opacity: 0;">
-<!--            hover receiver-->
+            <!--            hover receiver-->
             <div onclick="location.href='/Pages/Exhifition/ExhifitionSidewalk.html';">
                 <div id="hotSpot1-1" class="navButtonDiv" style = "left:calc(-5vw - 130px); top:calc(-4vh - 20px)">
                     <div>
@@ -71,15 +78,16 @@
             </div>
 
             <div onclick="location.href='/Pages/Exhifition/ExhifitionShowcase.html';">
-                <div id="hotSpot1-3" class="navButtonDiv" style = "right:calc(-7vw - 30px); top:calc(-5vh - 20px)">
+                <div id="hotSpot1-3" class="navButtonDiv" style = "right:calc(-7vw - 30px); top:calc(-5vh - 60px)">
                     <div>
                         <img  class="navHotSpot" src="/Materials/Icon/HotSpot.png"
-                             alt="Enter">
+                              alt="Enter">
                     </div>
                 </div>
             </div>
         </div>
 
+        <!--        hotspot second-->
         <div id="hotspotSecond" class="overlayLayerIso" style="visibility: hidden; opacity: 0;">
             <!--            hover receiver-->
             <div onclick="location.href='/Pages/Exhifition/ExhifitionShowcase.html';">
@@ -92,7 +100,7 @@
             </div>
 
             <div onclick="location.href='/Pages/Exhifition/ExhifitionWarehouse.html';">
-                <div id="hotSpot2-2" class="navButtonDiv" style = "right:calc(-5vw - 110px); top:calc(-4vh - 40px)">
+                <div id="hotSpot2-2" class="navButtonDiv" style = "right:calc(-8vw - 60px); top:calc(-4vh - 40px)">
                     <div>
                         <img class="navHotSpot" src="/Materials/Icon/HotSpot.png"
                              alt="Enter">
@@ -101,7 +109,7 @@
             </div>
 
             <div onclick="location.href='/Pages/Exhifition/ExhifitionFacade.html';">
-                <div id="hotSpot2-3" class="navButtonDiv" style = "right:calc(-7vw - 130px); bottom:calc(-5vh - 130px)">
+                <div id="hotSpot2-3" class="navButtonDiv" style = "right:calc(-10vw - 70px); bottom:calc(-5vh - 130px)">
                     <div>
                         <img  class="navHotSpot" src="/Materials/Icon/HotSpot.png"
                               alt="Enter">
@@ -139,10 +147,49 @@
             The Facade
         </h1>
     </div>
+</div>
+
+<!--  nav menu-->
+<nav-menu></nav-menu>
+
+<!-- dropdown menu-->
+<dropdown-menu id="menuDropdown" style="visibility: hidden; opacity: 0;"></dropdown-menu>
+
+<!-- hover information-->
+<div id="hoverInfoDiv" class="hoverInfoPos" style="visibility: hidden; opacity: 0;">
+    <div class="hoverInfoWrapper">
+        <h2>
+            Narrative
+        </h2>
+        <h2 class="h2-Dec">
+            Chapter III: Rethink the Factory Typology
+        </h2>
+        <p class="p-HoverInfo">
+            In order to get out of the factory stereotype, we turn to something familiar for spatial inspiration. We start to imagine what a designer's daily routine would be, and extract entertaining spaces that they would enjoy to stay in.
+        </p>
+        <p class="p-HoverInfo">
+            With a human-centered approach, the summarized upcycling processes are grouped and linked to new architecture typologies. Each area distinguishable and specific to its function.
+        </p>
+    </div>
+
+    <div class="hoverInfoWrapper">
+        <core-concept-i></core-concept-i>
+    </div>
+
+    <div class="hoverInfoWrapper">
+        <overlay-credit></overlay-credit>
+    </div>
+</div>
+
 </body>
 </html>
 
 <script type="text/javascript">
+
+    //overflow controller
+    overflowController();
+
+    //animation controller
     const ExhifitionSolo = document.getElementById("ExhifitionSolo");
     var pausePoint = [5,11,13],
         pauseIndex = 0,
