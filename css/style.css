@@ -269,7 +269,7 @@ p {
 /*}*/
 
 .pointer {
-  position: fixed;
+  position: absolute;
   height: 480px; top:100px;
   width: 480px; left:50%;
   pointer-events: none;
@@ -280,7 +280,7 @@ p {
 }
 
 .pointerText {
-  position: fixed;
+  position: absolute;
   height: 480px; top:100px;
   width: 480px; left:50%;
   pointer-events: none;

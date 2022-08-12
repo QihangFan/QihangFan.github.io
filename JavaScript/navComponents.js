@@ -79,6 +79,7 @@ function showHideChecker(hoverContent, icon, iconNewAddress, iconPrevAddress) {
         icon.src = iconPrevAddress;
         infoShyAnim(hoverContent);
         showHideController = 0;
+        topFunction();
     }
 }
 
@@ -97,4 +98,12 @@ function showHideCheckerDropDown(hoverContent, icon, iconNewAddress, iconPrevAdd
         infoShyAnim(hoverContent);
         showHideControllerDropDown = 0;
     }
+}
+
+function topFunction() {
+    console.log("scroll to top");
+
+    document.getElementById("siteDiv").scrollTo({top: 0, behavior: 'smooth'});
+    document.body.scrollTo({top: 0, behavior: 'smooth'}); // For Safari
+    document.documentElement.scrollTo({top: 0, behavior: 'smooth'}); // For Chrome, Firefox, IE and Opera
 }

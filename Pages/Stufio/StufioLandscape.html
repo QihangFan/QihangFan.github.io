@@ -22,7 +22,7 @@
     <!--  background-->
     <div id="Marfetsolo_div" class="fullScreenVideo" >
         <video id="MarfetBoothSolo" class="pageSolo" width=100% height=100% autoplay muted playsinline>
-            <source src="/Materials/Video/Marfet/MarfetBooth.mp4" type="video/mp4">
+            <source src="/Materials/Video/Stufio/StufioInterior.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -110,13 +110,55 @@
 
         </div>
 
+
+        <div id="marfetBoothNavIconsThird" class="navIcons" style="visibility: hidden; opacity: 0;">
+
+            <!--            hover receiver-->
+            <div onclick="MarfetBoothSolo.play(); pauseIndex = 0;">
+                <div id="Stufio_01" class="navButtonDiv" style = "left:3%; bottom:30%">
+                    <div class="iconWrapper">
+                        <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"
+                             alt="Enter">
+                    </div>
+                </div>
+            </div>
+
+            <div onclick="location.href='/Pages/Marfet/MarfetUnderground.html';">
+                <div id="Stufio_02" class="navButtonDiv" style = "right:3%; top:30%">
+                    <div class="iconWrapper">
+                        <img class="navButton" src="/Materials/Icon/downstairs.png"
+                             alt="Enter">
+                    </div>
+                </div>
+            </div>
+
+            <div onclick="location.href='/Pages/Marfet/MarfetTopview.html';">
+                <div id="Stufio_03" class="navButtonDiv" style = "right:30%; top:3%">
+                    <div class="iconWrapper">
+                        <img class="navButton" src="/Materials/Icon/top-view.png"
+                             alt="Enter">
+                    </div>
+                </div>
+            </div>
+
+            <div onclick="location.href='/Pages/Marfet/MarfetCommodity.html';">
+                <div id="Stufio_04" class="navButtonDiv" style = "left:30%; bottom:10%">
+                    <div class="iconWrapper">
+                        <img class="navButton" src="/Materials/Icon/close-up.png"
+                             alt="Enter">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
         <!--        text Content-->
         <div id="marfetBoothText" class="textContent centerContent hidden">
             <h1 class="h1Talking">
                 Welcome
             </h1>
             <p class="paraTalking" style="margin-top: -40px;">
-                to the [Marfet]
+                to the [Stufio]
             </p>
         </div>
 
@@ -126,74 +168,83 @@
             </p>
         </div>
 
-
-        <!--hover content first to show-->
-        <div id="cursorBoothBrowseArrow" class="pointer" style="visibility: hidden; opacity: 0;">
-            <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(90deg) translate(-50%, 50%);">
-        </div>
-
-        <div id="cursorBoothBrowseText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-50%, 0%);">
-            <h1 class="h1-navDir">
-                Browse
-            </h1>
-        </div>
-
-        <div id="cursorArchArrow" class="pointer" style="visibility: hidden; opacity: 0;">
-            <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(270deg) translate(50%, -50%);">
-        </div>
-
-        <div id="cursorArchText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-5%, 5%);">
-            <h1 class="h1-navDir">
-                The Arch
-            </h1>
-        </div>
-
-        <div id="cursorBoothCommodity" class="pointer" style="visibility: hidden; opacity: 0;">
-            <img src="/Materials/Icon/clarity_eye-show-solid.png" class="cursorStyle" alt="" style="transform-origin: center; transform: translate(-50%, -50%);">
-        </div>
-
-        <div id="cursorBoothCommodityText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-38%, -26%);">
-            <h1 class="h1-navDir">
-                Commodity
-            </h1>
-        </div>
-
-        <div id="cursorBoothTopview" class="pointer" style="visibility: hidden; opacity: 0;">
-            <img src="/Materials/Icon/topview.png" class="cursorStyle" alt="" style="transform-origin: center; transform: translate(-50%, -50%);">
-        </div>
-
-        <div id="cursorBoothTopviewText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-35%, 10%);">
-            <h1 class="h1-navDir">
-                Topview
-            </h1>
-        </div>
-
-        <!--hover content second to show-->
-        <div id="cursorBoothUnderArrow" class="pointer" style="visibility: hidden; opacity: 0; transition: all 0.5s ease-out;">
-            <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(145deg) translate(-40%, 60%);">
-        </div>
-
-        <div id="cursorBoothUnderStair" class="pointer" style="visibility: hidden; opacity: 0;">
-            <img src="/Materials/Icon/stair.png" class="cursorStyle" alt="" style="transform-origin: center; transform: translate(-50%, -40%) scale(-1, 1);">
-        </div>
-
-        <div id="cursorBoothUnderText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-65%, 7%);">
-            <h1 class="h1-navDir">
-                The Underground
-            </h1>
-        </div>
-
-
-        <div id="cursorBoothReturnArrow" class="pointer" style="visibility: hidden; opacity: 0;">
-            <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(270deg) translate(50%, -50%);">
-        </div>
-
-        <div id="cursorBoothReturnText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-5%, 5%);">
-            <h1 class="h1-navDir">
-                Return
-            </h1>
+        <div id="marfetBoothTextThird" class="textContent hidden">
+            <p class="paraTalking topLeftCorner">
+                New life starts from here[Marfet].
+            </p>
         </div>
     </div>
+
+
+    <!--hover content first to show-->
+    <div id="cursorBoothBrowseArrow" class="pointer" style="visibility: hidden; opacity: 0;">
+        <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(90deg) translate(-50%, 50%);">
+    </div>
+
+    <div id="cursorBoothBrowseText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-50%, 0%);">
+        <h1 class="h1-navDir">
+            Browse
+        </h1>
+    </div>
+
+    <div id="cursorArchArrow" class="pointer" style="visibility: hidden; opacity: 0;">
+        <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(270deg) translate(50%, -50%);">
+    </div>
+
+    <div id="cursorArchText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-5%, 5%);">
+        <h1 class="h1-navDir">
+            The Arch
+        </h1>
+    </div>
+
+    <div id="cursorBoothCommodity" class="pointer" style="visibility: hidden; opacity: 0;">
+        <img src="/Materials/Icon/clarity_eye-show-solid.png" class="cursorStyle" alt="" style="transform-origin: center; transform: translate(-50%, -50%);">
+    </div>
+
+    <div id="cursorBoothCommodityText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-38%, -26%);">
+        <h1 class="h1-navDir">
+            Commodity
+        </h1>
+    </div>
+
+    <div id="cursorBoothTopview" class="pointer" style="visibility: hidden; opacity: 0;">
+        <img src="/Materials/Icon/topview.png" class="cursorStyle" alt="" style="transform-origin: center; transform: translate(-50%, -50%);">
+    </div>
+
+    <div id="cursorBoothTopviewText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-35%, 10%);">
+        <h1 class="h1-navDir">
+            Topview
+        </h1>
+    </div>
+
+    <!--hover content second to show-->
+    <div id="cursorBoothUnderArrow" class="pointer" style="visibility: hidden; opacity: 0; transition: all 0.5s ease-out;">
+        <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(145deg) translate(-40%, 60%);">
+    </div>
+
+    <div id="cursorBoothUnderStair" class="pointer" style="visibility: hidden; opacity: 0;">
+        <img src="/Materials/Icon/stair.png" class="cursorStyle" alt="" style="transform-origin: center; transform: translate(-50%, -40%) scale(-1, 1);">
+    </div>
+
+    <div id="cursorBoothUnderText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-65%, 7%);">
+        <h1 class="h1-navDir">
+            The Underground
+        </h1>
+    </div>
+
+
+    <div id="cursorBoothReturnArrow" class="pointer" style="visibility: hidden; opacity: 0;">
+        <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(270deg) translate(50%, -50%);">
+    </div>
+
+    <div id="cursorBoothReturnText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-5%, 5%);">
+        <h1 class="h1-navDir">
+            Return
+        </h1>
+    </div>
+
+    <!--hover content third to show-->
+
 
     <!--  nav menu-->
     <nav-menu></nav-menu>
@@ -205,10 +256,10 @@
     <div id="hoverInfoDiv" class="hoverInfoPos" style="visibility: hidden; opacity: 0;">
         <div class="hoverInfoWrapper">
             <h2>
-                The Booth
+                The Landscape
             </h2>
             <h2 class="h2-Dec">
-                The Marfet
+                The Stufio
             </h2>
             <overlay-credit></overlay-credit>
         </div>
@@ -222,6 +273,7 @@
 
     //site overflow setup
     overflowController();
+
 
     //intro animation
     const MarfetBoothSolo = document.getElementById("MarfetBoothSolo");
@@ -244,12 +296,6 @@
         }
     }
 
-    // const cursorArchToBoothArrow = document.getElementById("cursorArchToBoothArrow"),
-    //     cursorArchToBoothText = document.getElementById("cursorArchToBoothText"),
-    //     cursorArchEnterArrow = document.getElementById("cursorArchEnterArrow"),
-    //     cursorArchEnterText = document.getElementById("cursorArchEnterText"),
-    //     cursorArchExitArrow = document.getElementById("cursorArchExitArrow"),
-    //     cursorArchExitText = document.getElementById("cursorArchExitText");
 
     //cursor change
     $(document).mousemove(function (e) {
