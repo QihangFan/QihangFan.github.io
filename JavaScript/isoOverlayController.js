@@ -194,8 +194,13 @@ function immerseOverlayControl(videoID, textContent, timeShowFirst, textContentS
 function overflowController() {
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {}
     else {
+        console.log("overflowHidden");
         document.querySelector("body").classList.add("overflowHidden");
     }
+}
+
+function overflowHidden() {
+    document.querySelector("body").classList.add("overflowHidden");
 }
 
 

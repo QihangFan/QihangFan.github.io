@@ -5,7 +5,7 @@ creditInfo.innerHTML = `
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
     
-      <p class="p-HoverInfo" style="margin-bottom:0;">
+      <p class="p-HoverInfo" style="margin-bottom:10px;">
         Copyright © 2020 Qihang Fan. All Rights Reserved
       </p>
 `

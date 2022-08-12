@@ -7,6 +7,8 @@
     <script src="../../JavaScript/isoOverlayController.js"></script>
     <script src="../../JavaScript/jquery-3.6.0.min.js"></script>
     <script src="../../JavaScript/navComponents.js"></script>
+    <script src="../../JavaScript/dropdownMenu.js"></script>
+    <script src="../../JavaScript/overlayInfoCredit.js"></script>
     <meta name = "viewport" content = "width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
 
     <title>Exhifition Loading Area</title>
@@ -14,116 +16,145 @@
 </head>
 <body>
 
-<!--  nav menu-->
-<nav-menu></nav-menu>
+<div id="siteDiv" class="site">
 
-<!--  background-->
-<div id="videoWrapper" class="fullScreenVideo" >
-    <video id="videoContent" class="pageSolo" width=100% height=100% autoplay muted>
-        <source src="/Materials/Video/Exhifition/ExhifitionLoadingArea.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <!--  background-->
+    <div id="videoWrapper" class="fullScreenVideo" >
+        <video id="videoContent" class="pageSolo" width=100% height=100% autoplay muted playsinline>
+            <source src="/Materials/Video/Exhifition/ExhifitionLoadingArea.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
-    <div class="overlayLayer">
-        <div id="navIconWrapper" class="navIcons" style="visibility: hidden; opacity: 0;">
+        <div class="overlayLayer">
+            <div id="navIconWrapper" class="navIcons" style="visibility: hidden; opacity: 0;">
 
-            <!--            hover receiver-->
-<!--            <div onclick="location.href='/Pages/Marfet/MarfetArch.html';">-->
-<!--                <div id="leftIcon" class="navButtonDiv" style = "left:6%; bottom:40%">-->
-<!--                    <div class="iconWrapper">-->
-<!--                        <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"-->
-<!--                             alt="Enter">-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
+                <!--            hover receiver-->
+                <!--            <div onclick="location.href='/Pages/Marfet/MarfetArch.html';">-->
+                <!--                <div id="leftIcon" class="navButtonDiv" style = "left:6%; bottom:40%">-->
+                <!--                    <div class="iconWrapper">-->
+                <!--                        <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"-->
+                <!--                             alt="Enter">-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--            </div>-->
 
-            <div onclick="location.href='/Pages/Exhifition/ExhifitionWarehouse.html';">
-                <div id="rightIcon" class="navButtonDiv" style = "right:3%; top:30%">
-                    <div class="iconWrapper">
-                        <img class="navButton" src="/Materials/Icon/door-enter-line-right.png"
-                             alt="Enter">
+                <div onclick="location.href='/Pages/Exhifition/ExhifitionRoad.html';">
+                    <div id="rightIcon" class="navButtonDiv" style = "right:3%; top:30%">
+                        <div class="iconWrapper">
+                            <img class="navButton" src="/Materials/Icon/door-enter-line-right.png"
+                                 alt="Enter">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-<!--            <div onclick="location.href='/Pages/Marfet/MarfetTopview.html';">-->
-<!--                <div id="topIcon" class="navButtonDiv" style = "right:30%; top:6%">-->
-<!--                    <div class="iconWrapper">-->
-<!--                        <img class="navButton" src="/Materials/Icon/top-view.png"-->
-<!--                             alt="Enter">-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
+                <!--            <div onclick="location.href='/Pages/Marfet/MarfetTopview.html';">-->
+                <!--                <div id="topIcon" class="navButtonDiv" style = "right:30%; top:6%">-->
+                <!--                    <div class="iconWrapper">-->
+                <!--                        <img class="navButton" src="/Materials/Icon/top-view.png"-->
+                <!--                             alt="Enter">-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--            </div>-->
 
-            <div onclick="location.href='/Pages/Exhifition/ExhifitionWarehouse.html';">
-                <div id="bottomIcon" class="navButtonDiv" style = "left:20%; bottom:3%">
-                    <div class="iconWrapper">
-                        <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"
-                             alt="Enter">
+                <div onclick="location.href='/Pages/Exhifition/ExhifitionWarehouse.html';">
+                    <div id="bottomIcon" class="navButtonDiv" style = "left:20%; bottom:10%">
+                        <div class="iconWrapper">
+                            <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"
+                                 alt="Enter">
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <!--      text content-->
-        <div id="textContentWrapper" class="textContent" style="visibility: hidden; opacity: 0;">
-
+            <!--      text content-->
+            <div id="textContentWrapper" class="textContent" style="visibility: hidden; opacity: 0;">
+                <p class="paraTalking topLeftCorner" style="padding-right: 140px; top: 16vh;">
+                    Dust cleaning sparks with inspirations and discoveries.
+                </p>
+            </div>
         </div>
     </div>
+
+
+    <!--hover content first to show-->
+    <!--  left-->
+    <!--<div id="leftArrow" class="pointer" style="visibility: hidden; opacity: 0;">-->
+    <!--    <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(270deg) translate(50%, -50%);">-->
+    <!--</div>-->
+
+    <!--<div id="leftArrowText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-5%, 5%);">-->
+    <!--    <h1 class="h1-navDir">-->
+    <!--        The Arch-->
+    <!--    </h1>-->
+    <!--</div>-->
+
+    <!--  right-->
+    <div id="rightArrow" class="pointer" style="visibility: hidden; opacity: 0;">
+        <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(90deg) translate(-50%, 50%);">
+    </div>
+
+    <div id="rightArrowText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-50%, 2%); ">
+        <h1 class="h1-navDir">
+            The Road
+        </h1>
+    </div>
+
+    <!--  top-->
+    <!--<div id="topArrow" class="pointer" style="visibility: hidden; opacity: 0;">-->
+    <!--    <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform:translate(-50%, -50%);">-->
+    <!--</div>-->
+
+    <!--<div id="topArrowText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-5%, 0%);">-->
+    <!--    <h1 class="h1-navDir">-->
+    <!--        Topview-->
+    <!--    </h1>-->
+    <!--</div>-->
+
+    <!--  bottom-->
+    <div id="bottomArrow" class="pointer" style="visibility: hidden; opacity: 0;">
+        <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform:rotate(180deg) translate(50%, 50%);">
+    </div>
+
+    <div id="bottomArrowText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-5%, -22%);">
+        <h1 class="h1-navDir">
+            The Warehouse
+        </h1>
+    </div>
+
+
+    <!--  nav menu-->
+    <nav-menu></nav-menu>
+
+    <!--  dropdown menu-->
+    <dropdown-menu id="menuDropdown" style="visibility: hidden; opacity: 0;"></dropdown-menu>
+
+    <!--  dropdown info extra-->
+    <div id="hoverInfoDiv" class="hoverInfoPos" style="visibility: hidden; opacity: 0;">
+        <div class="hoverInfoWrapper">
+            <h2>
+                The Loading Area
+            </h2>
+            <h2 class="h2-Dec">
+                The Exhifition
+            </h2>
+            <overlay-credit></overlay-credit>
+        </div>
+    </div>
+
 </div>
 
-
-<!--hover content first to show-->
-<!--  left-->
-<!--<div id="leftArrow" class="pointer" style="visibility: hidden; opacity: 0;">-->
-<!--    <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(270deg) translate(50%, -50%);">-->
-<!--</div>-->
-
-<!--<div id="leftArrowText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-5%, 5%);">-->
-<!--    <h1 class="h1-navDir">-->
-<!--        The Arch-->
-<!--    </h1>-->
-<!--</div>-->
-
-<!--  right-->
-<div id="rightArrow" class="pointer" style="visibility: hidden; opacity: 0;">
-    <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(90deg) translate(-50%, 50%);">
-</div>
-
-<div id="rightArrowText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-50%, 2%); ">
-    <h1 class="h1-navDir">
-        The Road
-    </h1>
-</div>
-
-<!--  top-->
-<!--<div id="topArrow" class="pointer" style="visibility: hidden; opacity: 0;">-->
-<!--    <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform:translate(-50%, -50%);">-->
-<!--</div>-->
-
-<!--<div id="topArrowText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-5%, 0%);">-->
-<!--    <h1 class="h1-navDir">-->
-<!--        Topview-->
-<!--    </h1>-->
-<!--</div>-->
-
-<!--  bottom-->
-<div id="bottomArrow" class="pointer" style="visibility: hidden; opacity: 0;">
-    <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform:rotate(180deg) translate(50%, 50%);">
-</div>
-
-<div id="bottomArrowText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-5%, -22%);">
-    <h1 class="h1-navDir">
-        The Warehouse
-    </h1>
-</div>
 
 </body>
 </html>
 
 
 <script type="text/javascript">
+
+    //site overflow setup
+    overflowController();
+
+    //intro animation
     const videoContent = document.getElementById("videoContent");
 
     videoContent.addEventListener('play', (event) => {

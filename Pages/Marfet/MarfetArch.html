@@ -8,6 +8,7 @@
     <script src="../../JavaScript/isoOverlayController.js"></script>
     <script src="../../JavaScript/jquery-3.6.0.min.js"></script>
     <script src="../../JavaScript/dropdownMenu.js"></script>
+    <script src="../../JavaScript/overlayInfoCredit.js"></script>
     <meta name = "viewport" content = "width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
 
     <title>Marfet Arch</title>
@@ -65,14 +66,21 @@
         </div>
 
         <!--            text Content-->
-        <div id="marfetArchText" class="textContent centerContent" style="visibility: hidden; opacity: 0;">
-
+        <div id="marfetArchText" class="textContent" style="visibility: hidden; opacity: 0;">
+            <p class="paraTalking topLeftCorner" style="padding-right: 50px;">
+                Architecture leads the useless to the invaluable.
+            </p>
         </div>
 
-        <div id="marfetArchTextSecond" class="textContent centerContent" style="visibility: hidden; opacity: 0;">
-            <h1>
+        <div id="marfetArchTextSecond" class="textContent centerContent" style="visibility: hidden; opacity: 0; padding: 30vh 0;">
+            <h1 class="h1Talking accentColor">
                 The Marfet
             </h1>
+            <p class="paraTalking accentColor">
+                Where upcycled merchandises reinvent<br>
+                materials born as essence,<br>
+                and deadstock spring to life.
+            </p>
         </div>
 
     </div>
@@ -119,12 +127,12 @@
     <div id="hoverInfoDiv" class="hoverInfoPos" style="visibility: hidden; opacity: 0;">
         <div class="hoverInfoWrapper">
             <h2>
+                The Arch
+            </h2>
+            <h2 class="h2-Dec">
                 The Marfet
             </h2>
-
-            <p class="p-HoverInfo">
-                Copyright © 2020 Qihang Fan. All Rights Reserved
-            </p>
+            <overlay-credit></overlay-credit>
         </div>
     </div>
 </div>
