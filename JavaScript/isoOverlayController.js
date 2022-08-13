@@ -192,6 +192,7 @@ function immerseOverlayControl(videoID, textContent, timeShowFirst, textContentS
 
 //overflow controller
 function overflowController() {
+
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {}
     else {
         console.log("overflowHidden");
@@ -204,98 +205,4 @@ function overflowHidden() {
 }
 
 
-
-function immerseOverlayControlTextSecond(videoID, textContent, firstHotspot, secondHotspot) {
-
-
-    const marfetTextContent = document.getElementById(textContent);
-    const marfetHotspot = document.getElementById(firstHotspot);
-    const marfetHotspotSecond = document.getElementById(secondHotspot);
-
-    hotspotController = 0;
-
-    videoID.addEventListener('play', (event) => {
-        console.log("videoPlay");
-
-        removeClassFrom(marfetTextContent, "visible");
-        removeClassFrom(marfetHotspot, "visible");
-        removeClassFrom(marfetHotspotSecond, "visible");
-
-        marfetTextContent.classList.add("hidden");
-
-        marfetHotspot.classList.add("hidden");
-        marfetHotspotSecond.classList.add("hidden");
-
-        ++hotspotController;
-    });
-
-    videoID.addEventListener('pause', (event) => {
-
-        console.log("videoPause");
-
-        if (hotspotController === 1) {
-            removeClassFrom(marfetHotspot, "hidden");
-            marfetHotspot.classList.add("visible");
-        }
-        else if (hotspotController === 2) {
-            setTimeout(function(){
-                marfetTextContent.classList.add("visible");
-                removeClassFrom(marfetTextContent, "hidden");
-            }, 500);
-
-            removeClassFrom(marfetHotspotSecond, "hidden");
-            marfetHotspotSecond.classList.add("visible");
-
-            hotspotController = 0;
-        }
-    });
-
-}
-
-function immerseOverlayControlTextFirst(videoID, textContent, firstHotspot, secondHotspot) {
-
-
-    const marfetTextContent = document.getElementById(textContent);
-    const marfetHotspot = document.getElementById(firstHotspot);
-    const marfetHotspotSecond = document.getElementById(secondHotspot);
-
-    hotspotController = 0;
-
-    videoID.addEventListener('play', (event) => {
-        console.log("videoPlay");
-
-        removeClassFrom(marfetTextContent, "visible");
-        removeClassFrom(marfetHotspot, "visible");
-        removeClassFrom(marfetHotspotSecond, "visible");
-
-        marfetTextContent.classList.add("hidden");
-
-        marfetHotspot.classList.add("hidden");
-        marfetHotspotSecond.classList.add("hidden");
-
-        ++hotspotController;
-    });
-
-    videoID.addEventListener('pause', (event) => {
-
-        console.log("videoPause");
-
-        if (hotspotController === 1) {
-            setTimeout(function(){
-                marfetTextContent.classList.add("visible");
-                removeClassFrom(marfetTextContent, "hidden");
-            }, 500);
-
-            removeClassFrom(marfetHotspot, "hidden");
-            marfetHotspot.classList.add("visible");
-        }
-        else if (hotspotController === 2) {
-            removeClassFrom(marfetHotspotSecond, "hidden");
-            marfetHotspotSecond.classList.add("visible");
-
-            hotspotController = 0;
-        }
-    });
-
-}
 

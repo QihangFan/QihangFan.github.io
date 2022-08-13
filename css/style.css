@@ -90,10 +90,11 @@ p {
 
 .paraTalking {
   color: rgba(237, 243, 255);
-  font-weight:500;
-  font-size: 2vh;
+  font-weight:300;
+  font-size: 16px;
   /*position: fixed;*/
   padding: 20px;
+  line-height: 1.6;
 }
 
 .paraBold {
@@ -129,7 +130,7 @@ p {
 
 .centerContent {
   text-align:center;
-  padding: 40vh 0;
+  padding: 35vh 0;
   width:100vw;
   height:100vh;
   top:0;
@@ -250,6 +251,12 @@ p {
   z-index: 6;
 }
 
+.centerButton {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
 .iconWrapper {
   padding:40px;
 }
@@ -269,25 +276,33 @@ p {
 /*}*/
 
 .pointer {
-  position: absolute;
   height: 480px; top:100px;
   width: 480px; left:50%;
   pointer-events: none;
   mix-blend-mode: difference;
   z-index: 7;
+  position: fixed;
 
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .pointerText {
-  position: absolute;
   height: 480px; top:100px;
   width: 480px; left:50%;
   pointer-events: none;
   mix-blend-mode: difference;
   z-index: 7;
+  position: fixed;
 
-  transition: all 0.8s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.posAbsolute {
+  position: absolute;
+}
+
+.posFixed {
+  position: fixed;
 }
 
 .cursorStyle {
@@ -330,8 +345,6 @@ p {
   margin: 50px;
   max-width:350px;
   z-index:9;
-  min-height: 77vh;
-  padding-bottom: 17vh;
 
   overflow: auto;
 }
@@ -371,30 +384,90 @@ p {
   position: fixed;
   top: 20vh;
   left: calc(15vw - 50px);
-  max-width: 400px;
+  max-width: 500px;
 }
 
 .topRightCorner {
   position: fixed;
   top: 20vh;
   right: calc(15vw - 50px);
-  max-width: 400px;
+  max-width: 500px;
 }
 
 .bottomRightCorner {
   position: fixed;
   bottom: 25vh;
   right: calc(15vw - 50px);
-  max-width: 400px;
+  max-width: 500px;
 }
 
 .bottomLeftCorner {
   position: fixed;
   bottom: 25vh;
   left: calc(15vw - 50px);
-  max-width: 400px;
+  max-width: 500px;
 }
 
 .accentColor {
   color: #425080;
+}
+
+
+
+@media (max-width: 450px) {
+  .navButton {
+    width: 60px;
+    height: 60px;
+  }
+
+  .h1-navDir {
+    font-size: 48px;
+  }
+
+  .cursorStyle {
+    width: 100px;
+  }
+
+  .isoPoint {
+    width: 70px;
+  }
+
+  .hoverInfoPos {
+    min-height: 77vh;
+    padding-bottom: 17vh;
+  }
+
+  .topLeftCorner {
+    max-width: 400px;
+  }
+
+  .topRightCorner {
+    max-width: 400px;
+  }
+
+  .bottomRightCorner {
+    max-width: 400px;
+  }
+
+  .bottomLeftCorner {
+    max-width: 400px;
+  }
+
+  .paraTalking {
+    font-size: 2vh;
+    font-weight: 500;
+  }
+
+  .pointer {
+    position: absolute;
+  }
+
+  .pointerText {
+    position: absolute;
+  }
+
+  .centerContent {
+    padding-top: 30vh;
+  }
+
 }

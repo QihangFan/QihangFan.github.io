@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../JavaScript/navComponents.js"></script>
     <script src="../../JavaScript/isoOverlayController.js"></script>
     <script src="../../JavaScript/jquery-3.6.0.min.js"></script>
-    <script src="../../JavaScript/navComponents.js"></script>
     <script src="../../JavaScript/dropdownMenu.js"></script>
     <script src="../../JavaScript/overlayInfoCredit.js"></script>
     <meta name = "viewport" content = "width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
 
     <title>Stufio Workstation</title>
+
 
 </head>
 <body>
@@ -19,105 +20,172 @@
 <div id="siteDiv" class="site">
 
     <!--  background-->
-    <div id="videoWrapper" class="fullScreenVideo" >
-        <video id="videoContent" class="pageSolo" width=100% height=100% autoplay muted playsinline>
+    <div id="Marfetsolo_div" class="fullScreenVideo" >
+        <video id="MarfetBoothSolo" class="pageSolo" width=100% height=100% autoplay muted playsinline>
             <source src="/Materials/Video/Stufio/StufioWhiteboard.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+    </div>
 
-        <div class="overlayLayer">
-            <div id="navIconWrapper" class="navIcons" style="visibility: hidden; opacity: 0;">
+    <div class="overlayLayer">
+        <div id="marfetBoothNavIconsFirst" class="navIcons" style="visibility: hidden; opacity: 0;">
 
-                <!--            hover receiver-->
-                <div onclick="location.href='/Pages/Marfet/MarfetArch.html';">
-                    <div id="leftIcon" class="navButtonDiv" style = "left:3%; bottom:40%">
-                        <div class="iconWrapper">
-                            <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"
-                                 alt="Enter">
-                        </div>
+            <!--            hover receiver-->
+            <div onclick="location.href='/Pages/Stufio/StufioMonument.html';">
+                <div id="MarfetBoothLeftEnter" class="navButtonDiv" style = "left:3%; bottom:30%">
+                    <div class="iconWrapper">
+                        <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"
+                             alt="Enter">
                     </div>
                 </div>
-
-                <div onclick="MarfetBoothSolo.play()">
-                    <div id="rightIcon" class="navButtonDiv" style = "right:3%; top:40%">
-                        <div class="iconWrapper">
-                            <img class="navButton" src="/Materials/Icon/door-enter-line-right.png"
-                                 alt="Enter">
-                        </div>
-                    </div>
-                </div>
-
-                <div onclick="location.href='/Pages/Marfet/MarfetTopview.html';">
-                    <div id="topIcon" class="navButtonDiv" style = "right:30%; top:3%">
-                        <div class="iconWrapper">
-                            <img class="navButton" src="/Materials/Icon/top-view.png"
-                                 alt="Enter">
-                        </div>
-                    </div>
-                </div>
-
-                <div onclick="location.href='/Pages/Marfet/MarfetCommodity.html';">
-                    <div id="bottomIcon" class="navButtonDiv" style = "left:30%; bottom:3%">
-                        <div class="iconWrapper">
-                            <img class="navButton" src="/Materials/Icon/close-up.png"
-                                 alt="Enter">
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
-            <!--      text content-->
-            <div id="textContentWrapper" class="textContent centerContent" style="visibility: hidden; opacity: 0;">
-
+            <div onclick="MarfetBoothSolo.play()">
+                <div id="MarfetBoothRightEnter" class="navButtonDiv" style = "right:3%; top:30%">
+                    <div class="iconWrapper">
+                        <img class="navButton" src="/Materials/Icon/door-enter-line-right.png"
+                             alt="Enter">
+                    </div>
+                </div>
             </div>
+
+            <div onclick="location.href='/Pages/Stufio/StufioLandscape.html';">
+                <div id="MarfetBoothTopview" class="navButtonDiv" style = "right:20%; top:10%">
+                    <div class="iconWrapper">
+                        <img class="navButton" src="/Materials/Icon/close-up.png"
+                             alt="Enter">
+                    </div>
+                </div>
+            </div>
+
+<!--            <div onclick="location.href='/Pages/Marfet/MarfetCommodity.html';">-->
+<!--                <div id="MarfetBoothCloseup" class="navButtonDiv" style = "left:30%; bottom:10%">-->
+<!--                    <div class="iconWrapper">-->
+<!--                        <img class="navButton" src="/Materials/Icon/close-up.png"-->
+<!--                             alt="Enter">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
-    </div>
 
 
-    <!--hover content first to show-->
-    <!--  left-->
-    <div id="leftArrow" class="pointer" style="visibility: hidden; opacity: 0;">
-        <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(270deg) translate(50%, -50%);">
-    </div>
+        <div id="marfetBoothNavIconsSecond" class="navIcons" style="visibility: hidden; opacity: 0;">
 
-    <div id="leftArrowText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-5%, 5%);">
-        <h1 class="h1-navDir">
-            The Arch
-        </h1>
-    </div>
+            <!--            hover receiver-->
+            <div onclick="MarfetBoothSolo.play(); pauseIndex = 0;">
+                <div id="MarfetBoothReturn" class="navButtonDiv" style = "left:3%; bottom:30%">
+                    <div class="iconWrapper">
+                        <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"
+                             alt="Enter">
+                    </div>
+                </div>
+            </div>
 
-    <!--  right-->
-    <div id="rightArrow" class="pointer" style="visibility: hidden; opacity: 0;">
-        <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(90deg) translate(-50%, 50%);">
-    </div>
+            <div onclick="location.href='/Pages/Stufio/StufioLandscapeZoomIn.html';">
+                <div id="MarfetBoothToUnderground" class="navButtonDiv" style = "right:3%; top:30%">
+                    <div class="iconWrapper">
+                        <img class="navButton" src="/Materials/Icon/door-enter-line-right.png"
+                             alt="Enter">
+                    </div>
+                </div>
+            </div>
 
-    <div id="rightArrowText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-50%, 0%); ">
-        <h1 class="h1-navDir">
-            Browse
-        </h1>
-    </div>
+            <div onclick="location.href='/Pages/Stufio/StufioLandscape.html';">
+                <div id="MarfetBoothTopviewSecond" class="navButtonDiv" style = "right:30%; top:3%">
+                    <div class="iconWrapper">
+                        <img class="navButton" src="/Materials/Icon/close-up.png"
+                             alt="Enter">
+                    </div>
+                </div>
+            </div>
 
-    <!--  top-->
-    <div id="topArrow" class="pointer" style="visibility: hidden; opacity: 0;">
-        <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform:translate(-50%, -50%);">
-    </div>
+<!--            <div onclick="location.href='/Pages/Marfet/MarfetCommodity.html';">-->
+<!--                <div id="MarfetBoothCloseupSecond" class="navButtonDiv" style = "left:30%; bottom:10%">-->
+<!--                    <div class="iconWrapper">-->
+<!--                        <img class="navButton" src="/Materials/Icon/close-up.png"-->
+<!--                             alt="Enter">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
 
-    <div id="topArrowText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-5%, 0%);">
-        <h1 class="h1-navDir">
-            Topview
-        </h1>
-    </div>
+        </div>
 
-    <!--  bottom-->
-    <div id="bottomArrow" class="pointer" style="visibility: hidden; opacity: 0;">
-        <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform:rotate(180deg) translate(50%, 50%);">
-    </div>
+        <!--        text Content-->
+        <div id="marfetBoothText" class="textContent hidden">
+            <p class="paraTalking bottomLeftCorner" style="padding-right: 140px; max-width: 450px; transform: translate(0, 140px)">
+                Flowers spread and blend into material patterns.
+            </p>
+        </div>
 
-    <div id="bottomArrowText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-5%, -22%);">
-        <h1 class="h1-navDir">
-            Commodity
-        </h1>
+        <div id="marfetBoothTextSecond" class="textContent hidden">
+            <p class="paraTalking bottomRightCorner accentColor" style="max-width: 450px; text-align: right; transform: translate(0, 140px)">
+                Plants keep design fresh and sweet.
+            </p>
+        </div>
+
+
+        <!--hover content first to show-->
+        <div id="cursorBoothBrowseArrow" class="pointer" style="visibility: hidden; opacity: 0;">
+            <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(90deg) translate(-50%, 50%);">
+        </div>
+
+        <div id="cursorBoothBrowseText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-50%, 0%);">
+            <h1 class="h1-navDir">
+                Whiteboard
+            </h1>
+        </div>
+
+        <div id="cursorArchArrow" class="pointer" style="visibility: hidden; opacity: 0;">
+            <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(270deg) translate(50%, -50%);">
+        </div>
+
+        <div id="cursorArchText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-5%, 5%);">
+            <h1 class="h1-navDir">
+                The Monument
+            </h1>
+        </div>
+
+<!--        <div id="cursorBoothCommodity" class="pointer" style="visibility: hidden; opacity: 0;">-->
+<!--            <img src="/Materials/Icon/clarity_eye-show-solid.png" class="cursorStyle" alt="" style="transform-origin: center; transform: translate(-50%, -50%);">-->
+<!--        </div>-->
+
+<!--        <div id="cursorBoothCommodityText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-38%, -26%);">-->
+<!--            <h1 class="h1-navDir">-->
+<!--                Commodity-->
+<!--            </h1>-->
+<!--        </div>-->
+
+        <div id="cursorBoothTopview" class="pointer" style="visibility: hidden; opacity: 0;">
+            <img src="/Materials/Icon/clarity_eye-show-solid.png" class="cursorStyle" alt="" style="transform-origin: center; transform: translate(-50%, -50%);">
+        </div>
+
+        <div id="cursorBoothTopviewText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-35%, 10%);">
+            <h1 class="h1-navDir">
+                The Landscape
+            </h1>
+        </div>
+
+        <!--hover content second to show-->
+        <div id="cursorBoothUnderArrow" class="pointer" style="visibility: hidden; opacity: 0;">
+            <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(145deg) translate(-40%, 60%);">
+        </div>
+
+        <div id="cursorBoothUnderText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-65%, 7%);">
+            <h1 class="h1-navDir">
+                Zoom Out
+            </h1>
+        </div>
+
+
+        <div id="cursorBoothReturnArrow" class="pointer" style="visibility: hidden; opacity: 0;">
+            <img src="/Materials/Icon/arrow-dif.png" class="cursorStyle" alt="" style="transform-origin: center; transform: rotate(270deg) translate(50%, -50%);">
+        </div>
+
+        <div id="cursorBoothReturnText" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-5%, 5%);">
+            <h1 class="h1-navDir">
+                The Workstation
+            </h1>
+        </div>
     </div>
 
     <!--  nav menu-->
@@ -143,38 +211,45 @@
 </body>
 </html>
 
-
 <script type="text/javascript">
 
     //site overflow setup
     overflowController();
 
     //intro animation
-    const videoContent = document.getElementById("videoContent");
+    const MarfetBoothSolo = document.getElementById("MarfetBoothSolo");
+    var pausePoint = [8,18],
+        pauseIndex = 0;
 
-    videoContent.addEventListener('play', (event) => {
-        setTimeout(function(){
-            document.getElementById("textContentWrapper").classList.add("visible");}, 2000);
-    });
+    setInterval(videoControl, 10, MarfetBoothSolo, pausePoint);
+    immerseOverlayControl(MarfetBoothSolo, "marfetBoothText", 2000, "marfetBoothTextSecond", 2000, "marfetBoothNavIconsFirst", "marfetBoothNavIconsSecond");
 
-    videoContent.addEventListener('ended', (event) => {
-        setTimeout(function(){
-            document.getElementById("navIconWrapper").classList.add("visible");}, 0);
-    });
+    function videoControl (videoID, pauseArray) {
+        currentStopTime = pauseArray[pauseIndex];
+
+        console.log(videoID.currentTime);
+        console.log(currentStopTime);
+
+        if (videoID.currentTime >= currentStopTime) {
+            videoID.pause();
+            ++pauseIndex;
+            console.log("videoPause");
+        }
+    }
 
 
-
+    //cursor change
     $(document).mousemove(function (e) {
         $(".pointer").css({ left: e.pageX, top: e.pageY });
         $(".pointerText").css({ left: e.pageX, top: e.pageY });
     });
 
-    cursorShowShy("#leftIcon", document.getElementById("leftArrow"), document.getElementById("leftArrowText"));
-    cursorShowShy("#rightIcon", document.getElementById("rightArrow"), document.getElementById("rightArrowText"));
-    cursorShowShy("#topIcon", document.getElementById("topArrow"), document.getElementById("topArrowText"));
-    cursorShowShy("#bottomIcon", document.getElementById("bottomArrow"), document.getElementById("bottomArrowText"));
+    cursorShowShy("#MarfetBoothLeftEnter", document.getElementById("cursorArchArrow"), document.getElementById("cursorArchText"));
+    cursorShowShy("#MarfetBoothRightEnter", document.getElementById("cursorBoothBrowseArrow"), document.getElementById("cursorBoothBrowseText"));
+    cursorShowShy("#MarfetBoothTopview", document.getElementById("cursorBoothTopview"), document.getElementById("cursorBoothTopviewText"));
 
+    cursorShowShy("#MarfetBoothReturn", document.getElementById("cursorBoothReturnArrow"), document.getElementById("cursorBoothReturnText"));
+    cursorShowShy("#MarfetBoothToUnderground", document.getElementById("cursorBoothUnderArrow"), document.getElementById("cursorBoothUnderText"));
+    cursorShowShy("#MarfetBoothTopviewSecond", document.getElementById("cursorBoothTopview"), document.getElementById("cursorBoothTopviewText"));
 
 </script>
-
-
