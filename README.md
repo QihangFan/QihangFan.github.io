@@ -14,8 +14,7 @@ The studio aims at designing a new Garden Factory for emerging fashion houses Du
   - Topic 03. Interfaces — Physical/Digital Cameras, Rigs
   - Topic 04. Phygital Material Creation
   - Topic 05. Upcycling — New Forms of Luxury
-  - Topic 06. Production Landscapes
-  
+  - Topic 06. Production Landscapes <br>
 
 ## For Us
 After a careful study of Duran Lantink's approach to upcycling, we summarized the process into 7 stages. Duran Lantink starts design thinking from the very first step and he goes through multiple iterations. His workflow is nonlinear and circular.
