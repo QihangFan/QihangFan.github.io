@@ -16,11 +16,15 @@ The studio aims at designing a new Garden Factory for emerging fashion houses Du
   - Topic 05. Upcycling — New Forms of Luxury
   - Topic 06. Production Landscapes
 <br>
+
+
 ## For Us
 After a careful study of Duran Lantink's approach to upcycling, we summarized the process into 7 stages. Duran Lantink starts design thinking from the very first step and he goes through multiple iterations. His workflow is nonlinear and circular.
 
 Although Duran Lantink indicates an upscaling of his small handicraft workflow, we find the current factory typology insufficient for covering all the designers' activities. We further splited the entire factory, reinvent the facotory typology blending with local environments, the factory, the city, the nature, and the farm to be specific (This is how four-typos come into being).
 <br>
+
+
 ## Major Concepts
 - **Macro vs Micro**
 
