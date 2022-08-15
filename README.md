@@ -3,7 +3,7 @@
 This web project results from the exploration in the overlapping fields of architecture design, digital media practice, user experience design, and immersive web experience. It allows audiences to discover design features interactively and responsively within a website presentation format. Users can navigate in the virtual environment in terms of both macro and micro observation level. It suggests the possible format of future NFT architectural products following the Web 3.0 tides.
 
 [Website Portal](https://qihangfan.github.io)
-<br><br>
+<br><br><br>
 
 # About Design
 
@@ -21,7 +21,7 @@ The studio aims at designing a new Garden Factory for emerging fashion houses Du
 After a careful study of Duran Lantink's approach to upcycling, we summarized the process into 7 stages. Duran Lantink starts design thinking from the very first step and he goes through multiple iterations. His workflow is nonlinear and circular.
 
 Although Duran Lantink indicates an upscaling of his small handicraft workflow, we find the current factory typology insufficient for covering all the designers' activities. We further splited the entire factory, reinvent the facotory typology blending with local environments, the factory, the city, the nature, and the farm to be specific (This is how four-typos come into being).
-<br>
+<br><br>
 
 ## Major Concepts
 - **Macro vs Micro**
@@ -31,7 +31,7 @@ A factory that resists mechanization trend should maintain original functionalit
 - **Decentralization**
 
 Centralized factory seeks the best efficiency. It highlights the simplification of the production process in order to maximize profit. Commercialization resulting from centralization damages human interaction and creativity. Therefore, we emphasize decentralization in the quazi-autonomous factory system to evoke the consciousness of humanity’s sustainability.
-<br><br>
+<br><br><br>
 
 
 # Production
@@ -41,7 +41,7 @@ Multiple skills are involved in the entire production process.
   - Figma for the responsive web and user experience design
   - Webstorm for the front-end development
   - Visual Studio Code to achieve the local hosting for the mobile-end development
-<br><br>
+<br><br><br>
 
 
 # Credit
