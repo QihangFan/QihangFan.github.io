@@ -319,7 +319,7 @@ p {
 }
 
 .cursorReturn {
-  animation: delay-pointer-events 1s;
+  animation: delay-pointer-events 0.5s;
   cursor: default;
   /*transition: cursor 0s 0.5s;*/
   /*transition-delay: 0.3s;*/
