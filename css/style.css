@@ -118,7 +118,7 @@ p {
 .isoProjectText {
   position: fixed;
   max-width:400px;
-  padding: 10px 60px 0;
+  padding: 10px;
   top: 7vh;
   right: 5vw;
 }
@@ -497,5 +497,13 @@ p {
     justify-content: center;
     left: 0;
     top:50vh
+  }
+
+  .isoProjectText {
+    padding: 10px 10px 10px 60px;
+  }
+
+  .isoPara {
+    font-weight: 500;
   }
 }
