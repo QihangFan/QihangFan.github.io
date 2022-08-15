@@ -20,7 +20,7 @@
 
   <!--  background-->
   <div id="videoWrapper" class="fullScreenVideo" >
-    <video id="videoContent" class="pageSolo" width=100% height=100% autoplay muted playsinline>
+    <video id="videoContent" class="pageSolo" width=100% height=100% autoplay muted playsinline loop>
       <source src="/Materials/Video/Exhifition/ExhifitionShowcase.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -169,17 +169,10 @@
   //intro animation
   const videoContent = document.getElementById("videoContent");
 
+  //video content timeline
   videoContent.addEventListener('play', (event) => {
-    setTimeout(function(){
-      document.getElementById("textContentWrapper").classList.add("visible");}, 2000);
+    immersiveVideoControl("textContentWrapper", 1000,"navIconWrapper" , 2000);
   });
-
-  videoContent.addEventListener('ended', (event) => {
-    setTimeout(function(){
-      document.getElementById("navIconWrapper").classList.add("visible");}, 0);
-  });
-
-
 
   $(document).mousemove(function (e) {
     $(".pointer").css({ left: e.pageX, top: e.pageY });

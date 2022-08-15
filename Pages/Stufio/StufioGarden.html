@@ -166,16 +166,10 @@
     //overlay animation
     const videoContent = document.getElementById("videoContent");
 
+    //video content timeline
     videoContent.addEventListener('play', (event) => {
-        setTimeout(function(){
-            document.getElementById("textContentWrapper").classList.add("visible");}, 2000);
+        immersiveVideoControl("textContentWrapper", 1000,"navIconWrapper" , 2000);
     });
-
-    videoContent.addEventListener('ended', (event) => {
-        setTimeout(function(){
-            document.getElementById("navIconWrapper").classList.add("visible");}, 0);
-    });
-
 
     //hover effects
     $(document).mousemove(function (e) {

@@ -34,7 +34,7 @@
         <!--        rotate button-->
         <div id="rotateButtonWrapper" class="rotateButton_div" style="visibility: hidden; opacity: 0;">
             <div>
-                <img class="rotateButton" src="/Materials/Icon/RotateButton.png" alt="Rotate" onclick="ExhifitionSolo.play()">
+                <img class="rotateButton" src="/Materials/Icon/RotateButton.png" alt="Rotate" onclick="ExhifitionSolo.pause(); currentStopTime = pausePoint[pauseIndex]; ExhifitionSolo.play()">
             </div>
         </div>
 
@@ -132,21 +132,27 @@
             </h1>
         </div>
 
-        <div id="cursorText2" class="pointerText" style="visibility: hidden; opacity: 0;">
+        <div id="cursorText2" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-200px, 0);">
             <h1 class="h1-navDir h1-navDir-iso">
                 The Warehouse
             </h1>
         </div>
 
-        <div id="cursorText3" class="pointerText" style="visibility: hidden; opacity: 0;">
+        <div id="cursorText3" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-200px, 0);">
             <h1 class="h1-navDir h1-navDir-iso">
                 The Showcase
             </h1>
         </div>
 
-        <div id="cursorText4" class="pointerText" style="visibility: hidden; opacity: 0;">
+        <div id="cursorText4" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-200px, 0);">
             <h1 class="h1-navDir h1-navDir-iso">
                 The Facade
+            </h1>
+        </div>
+
+        <div id="cursorText6" class="pointerText" style="visibility: hidden; opacity: 0;">
+            <h1 class="h1-navDir h1-navDir-iso">
+                The Showcase
             </h1>
         </div>
 
@@ -197,7 +203,22 @@
         </div>
 
         <div class="hoverInfoWrapper">
-            <overlay-credit></overlay-credit>
+            <h2>
+                Credit
+            </h2>
+            <h2 class="h2-Dec">
+                Amazing End-to-end Experience
+            </h2>
+            <p class="p-HoverInfo">
+                Project Designer: Qihang Fan, Kangxin Wu<br>
+                Project Instructor: Peter Testa, Nero He<br>
+                Web Developer: Qihang Fan<br>
+                Web Development Instructor: Anthony Tran
+            </p>
+            <p class="p-HoverInfo">
+                Copyright © 2020 Qihang Fan. All Rights Reserved
+            </p>
+
         </div>
     </div>
 
@@ -220,34 +241,24 @@
         currentStopTime = pausePoint[pauseIndex];
 
     var videoTracker = setInterval(() => {
-        checkTime();
-        // console.log(ExhifitionSolo.currentTime);
-        // console.log(currentStopTime);
-
-        ExhifitionSolo.addEventListener('ended', (event) => {
-            videoReset();
-            // console.log("videoReset");
-            ExhifitionSolo.play();
-        })
-    }, 10)
-
-    function checkTime() {
         if (ExhifitionSolo.currentTime >= currentStopTime) {
             ExhifitionSolo.pause();
-            if (pausePoint.length > ++pauseIndex) {
-                currentStopTime = pausePoint[pauseIndex]
-            }
         }
-    }
+    }, 10)
 
-    function videoPlay(){
+    //loop video
+    ExhifitionSolo.addEventListener('ended', (event) => {
+        pauseIndex = 0;
+        currentStopTime = pausePoint[pauseIndex];
+        // console.log("videoReset");
         ExhifitionSolo.play();
-    }
+    });
 
-    function videoReset(){
-        pauseIndex = 0
-        currentStopTime = pausePoint[pauseIndex]
-    }
+    ExhifitionSolo.addEventListener('pause', (event) => {
+        ExhifitionSolo.currentTime = pausePoint[pauseIndex];
+        ++pauseIndex;
+        currentStopTime = pausePoint[pauseIndex];
+    });
 
     //info-overlay controller
     isoOverlayControl(ExhifitionSolo, "rotateButtonWrapper", "textContentWrapper", "hotspotFirst", "hotspotSecond");
@@ -262,7 +273,7 @@
     cursorShowShy("#hotSpot1-2", document.getElementById("cursorArrow"), document.getElementById("cursorText2"));
     cursorShowShy("#hotSpot1-3", document.getElementById("cursorArrow"), document.getElementById("cursorText3"));
 
-    cursorShowShy("#hotSpot2-1", document.getElementById("cursorArrow"), document.getElementById("cursorText3"));
+    cursorShowShy("#hotSpot2-1", document.getElementById("cursorArrow"), document.getElementById("cursorText6"));
     cursorShowShy("#hotSpot2-2", document.getElementById("cursorArrow"), document.getElementById("cursorText2"));
     cursorShowShy("#hotSpot2-3", document.getElementById("cursorArrow"), document.getElementById("cursorText4"));
 </script>

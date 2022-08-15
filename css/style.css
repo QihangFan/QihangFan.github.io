@@ -90,8 +90,8 @@ p {
 
 .paraTalking {
   color: rgba(237, 243, 255);
-  font-weight:300;
-  font-size: 16px;
+  font-weight:500;
+  font-size: 18px;
   /*position: fixed;*/
   padding: 20px;
   line-height: 1.6;
@@ -130,7 +130,7 @@ p {
 
 .centerContent {
   text-align:center;
-  padding: 35vh 0;
+  padding: 38vh 0;
   width:100vw;
   height:100vh;
   top:0;
@@ -412,12 +412,29 @@ p {
   color: #425080;
 }
 
+/*fade in and fade out animation for elevation icons*/
+.visibleElevation {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: opacity 0.3s linear;
+}
+
+.hiddenElevation {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transition: visibility 0s 0.3s, opacity 0.3s linear;
+}
+
+.elevIconPos {
+  left:3%;
+  top:38vh;
+}
 
 
 @media (max-width: 450px) {
   .navButton {
-    width: 60px;
-    height: 60px;
+    width: 54px;
+    height: 54px;
   }
 
   .h1-navDir {
@@ -467,7 +484,18 @@ p {
   }
 
   .centerContent {
-    padding-top: 30vh;
+    padding-top: 35vh;
   }
 
+  .h1-navDir-iso {
+    font-size: 30px;
+  }
+
+  .elevIconPos {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    top:50vh
+  }
 }

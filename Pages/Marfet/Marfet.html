@@ -34,7 +34,7 @@
         <!--        rotate button-->
         <div id="rotateButton_div_marfet" class="rotateButton_div" style="visibility: hidden; opacity: 0;" >
             <div>
-                <img class="rotateButton" src="/Materials/Icon/RotateButton.png" alt="Rotate" onclick="videoPlay()">
+                <img class="rotateButton" src="/Materials/Icon/RotateButton.png" alt="Rotate" onclick="MarfetSolo.pause(); currentStopTime = pausePoint[pauseIndex]; MarfetSolo.play();">
             </div>
         </div>
 
@@ -132,13 +132,31 @@
         </h1>
     </div>
 
-    <div id="cursorTextUnderground" class="pointerText" style="visibility: hidden; opacity: 0;">
+    <div id="cursorTextUnderground" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-270px, 0);">
         <h1 class="h1-navDir h1-navDir-iso">
             The Underground
         </h1>
     </div>
 
     <div id="cursorTextArch" class="pointerText" style="visibility: hidden; opacity: 0;">
+        <h1 class="h1-navDir h1-navDir-iso">
+            The Arch
+        </h1>
+    </div>
+
+    <div id="cursorTextBoothSecond" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-200px, 0);">
+        <h1 class="h1-navDir h1-navDir-iso">
+            The Booth
+        </h1>
+    </div>
+
+    <div id="cursorTextUndergroundSecond" class="pointerText" style="visibility: hidden; opacity: 0;">
+        <h1 class="h1-navDir h1-navDir-iso">
+            The Underground
+        </h1>
+    </div>
+
+    <div id="cursorTextArchSecond" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-190px, 0);">
         <h1 class="h1-navDir h1-navDir-iso">
             The Arch
         </h1>
@@ -186,7 +204,22 @@
         </div>
 
         <div class="hoverInfoWrapper">
-            <overlay-credit></overlay-credit>
+            <h2>
+                Credit
+            </h2>
+            <h2 class="h2-Dec">
+                Amazing End-to-end Experience
+            </h2>
+            <p class="p-HoverInfo">
+                Project Designer: Qihang Fan, Kangxin Wu<br>
+                Project Instructor: Peter Testa, Nero He<br>
+                Web Developer: Qihang Fan<br>
+                Web Development Instructor: Anthony Tran
+            </p>
+            <p class="p-HoverInfo">
+                Copyright © 2020 Qihang Fan. All Rights Reserved
+            </p>
+
         </div>
     </div>
 
@@ -208,34 +241,47 @@
         currentStopTime = pausePoint[pauseIndex];
 
     var videoTracker = setInterval(() => {
-        checkTime();
+
+        if (MarfetSolo.currentTime >= currentStopTime) {
+            MarfetSolo.pause();
+        }
+
         // console.log(MarfetSolo.currentTime);
         // console.log(currentStopTime);
 
-        MarfetSolo.addEventListener('ended', (event) => {
-            videoReset();
-            // console.log("videoReset");
-            MarfetSolo.play();
-        })
     }, 10)
 
-    function checkTime() {
-        if (MarfetSolo.currentTime >= currentStopTime) {
-            MarfetSolo.pause();
-            if (pausePoint.length > ++pauseIndex) {
-                currentStopTime = pausePoint[pauseIndex];
-            }
-        }
-    }
-
-    function videoPlay(){
-        MarfetSolo.play();
-    }
-
-    function videoReset(){
+    //loop video
+    MarfetSolo.addEventListener('ended', (event) => {
         pauseIndex = 0;
         currentStopTime = pausePoint[pauseIndex];
-    }
+        // console.log("videoReset");
+        MarfetSolo.play();
+    });
+
+    MarfetSolo.addEventListener('pause', (event) => {
+        MarfetSolo.currentTime = pausePoint[pauseIndex];
+        ++pauseIndex;
+        currentStopTime = pausePoint[pauseIndex];
+    });
+
+    // function checkTime() {
+    //     if (MarfetSolo.currentTime >= currentStopTime) {
+    //         MarfetSolo.pause();
+    //         if (pausePoint.length > ++pauseIndex) {
+    //             currentStopTime = pausePoint[pauseIndex];
+    //         }
+    //     }
+    // }
+
+    // function videoPlay(){
+    //     MarfetSolo.play();
+    // }
+
+    // function videoReset(){
+    //     pauseIndex = 0;
+    //     currentStopTime = pausePoint[pauseIndex];
+    // }
 
     //info-overlay controller
     isoOverlayControl(MarfetSolo, "rotateButton_div_marfet", "marfetTextContent", "marfetHotspotFirst", "marfetHotspotSecond");
@@ -244,7 +290,10 @@
     const cursorArrow = document.getElementById("cursorArrow"),
             cursorTextBooth = document.getElementById("cursorTextBooth"),
             cursorTextUnderground = document.getElementById("cursorTextUnderground"),
-            cursorTextArch = document.getElementById("cursorTextArch");
+            cursorTextArch = document.getElementById("cursorTextArch"),
+            cursorTextBoothSecond = document.getElementById("cursorTextBoothSecond"),
+            cursorTextUndergroundSecond = document.getElementById("cursorTextUndergroundSecond"),
+            cursorTextArchSecond = document.getElementById("cursorTextArchSecond");
 
     $(document).mousemove(function (e) {
         $(".pointer").css({ left: e.pageX, top: e.pageY });
@@ -271,7 +320,7 @@
     $("#navArch2").hover(function(){
 
             showUp(cursorArrow);
-            showUp(cursorTextArch);
+            showUp(cursorTextArchSecond);
             shyAway(this);
             cursorShyAway();
         },
@@ -279,7 +328,7 @@
         function(){
 
             shyAway(cursorArrow);
-            shyAway(cursorTextArch);
+            shyAway(cursorTextArchSecond);
             showUp(this);
             cursorShowUp();
         });
@@ -303,7 +352,7 @@
     $("#navBooth2").hover(function(){
 
             showUp(cursorArrow);
-            showUp(cursorTextBooth);
+            showUp(cursorTextBoothSecond);
             shyAway(this);
             cursorShyAway();
         },
@@ -311,7 +360,7 @@
         function(){
 
             shyAway(cursorArrow);
-            shyAway(cursorTextBooth);
+            shyAway(cursorTextBoothSecond);
             showUp(this);
             cursorShowUp();
         });
@@ -335,7 +384,7 @@
     $("#navUnderg2").hover(function(){
 
             showUp(cursorArrow);
-            showUp(cursorTextUnderground);
+            showUp(cursorTextUndergroundSecond);
             shyAway(this);
             cursorShyAway();
         },
@@ -343,7 +392,7 @@
         function(){
 
             shyAway(cursorArrow);
-            shyAway(cursorTextUnderground);
+            shyAway(cursorTextUndergroundSecond);
             showUp(this);
             cursorShowUp();
         });

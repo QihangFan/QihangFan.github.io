@@ -40,7 +40,7 @@
                 </div>
             </div>
 
-            <div onclick="MarfetBoothSolo.play()">
+            <div onclick="pauseWaitThenPlay(MarfetBoothSolo);">
                 <div id="MarfetBoothRightEnter" class="navButtonDiv" style = "right:3%; top:30%">
                     <div class="iconWrapper">
                         <img class="navButton" src="/Materials/Icon/door-enter-line-right.png"
@@ -72,7 +72,7 @@
         <div id="marfetBoothNavIconsSecond" class="navIcons" style="visibility: hidden; opacity: 0;">
 
             <!--            hover receiver-->
-            <div onclick="MarfetBoothSolo.play(); pauseIndex = 0;">
+            <div onclick="pauseWaitThenPlay(MarfetBoothSolo);">
                 <div id="MarfetBoothReturn" class="navButtonDiv" style = "left:3%; bottom:30%">
                     <div class="iconWrapper">
                         <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"
@@ -219,22 +219,32 @@
     //intro animation
     const MarfetBoothSolo = document.getElementById("MarfetBoothSolo");
     var pausePoint = [8,18],
+        startPoint = [0, 8],
         pauseIndex = 0;
 
     setInterval(videoControl, 10, MarfetBoothSolo, pausePoint);
-    immerseOverlayControl(MarfetBoothSolo, "marfetBoothText", 2000, "marfetBoothTextSecond", 2000, "marfetBoothNavIconsFirst", "marfetBoothNavIconsSecond");
+    immerseOverlayControl(MarfetBoothSolo, "marfetBoothText", 2000, "marfetBoothTextSecond", 2000, "marfetBoothNavIconsFirst", 4000, "marfetBoothNavIconsSecond", 4000);
 
     function videoControl (videoID, pauseArray) {
-        currentStopTime = pauseArray[pauseIndex];
-
-        console.log(videoID.currentTime);
-        console.log(currentStopTime);
-
-        if (videoID.currentTime >= currentStopTime) {
+        if (videoID.currentTime >= pauseArray[pauseIndex]) {
             videoID.pause();
-            ++pauseIndex;
-            console.log("videoPause");
         }
+    }
+
+    MarfetBoothSolo.addEventListener('pause', (event) => {
+        if (pausePoint.length === ++pauseIndex) {
+            pauseIndex = 0;
+        }
+        currentStopTime = pausePoint[pauseIndex];
+    });
+
+    function pauseWaitThenPlay(videoID) {
+        videoID.pause();
+
+        setTimeout(function(){
+            videoID.currentTime = startPoint[pauseIndex];
+            videoID.play();
+        }, 100);
     }
 
 

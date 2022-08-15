@@ -28,14 +28,39 @@ function isoOverlayControl(videoID, rotateButton, textContent, firstHotspot, sec
 
         ++hotspotController;
         console.log(hotspotController);
-    });
+
+
 
     //text shows up after video starts to play - delay
-    videoID.addEventListener('play', (event) => {
         setTimeout(function(){
             marfetTextContent.classList.add("visible");
             removeClassFrom(marfetTextContent, "hidden");
         }, 1000);
+
+        if (hotspotController === 1) {
+            setTimeout(function(){
+                removeClassFrom(marfetRotateButton, "hidden");
+                marfetRotateButton.classList.add("visible");
+            }, 2000);
+
+            setTimeout(function(){
+                removeClassFrom(marfetHotspot, "hidden");
+                marfetHotspot.classList.add("visible");
+            }, 1500);
+
+        }
+        else if (hotspotController === 2) {
+            setTimeout(function(){
+                removeClassFrom(marfetRotateButton, "hidden");
+                marfetRotateButton.classList.add("visible");
+            }, 2000);
+
+            setTimeout(function(){
+                removeClassFrom(marfetHotspotSecond, "hidden");
+                marfetHotspotSecond.classList.add("visible");
+            }, 1500);
+        }
+
     });
 
     //interaction components show up when video pauses
@@ -44,22 +69,22 @@ function isoOverlayControl(videoID, rotateButton, textContent, firstHotspot, sec
         console.log("videoPause");
 
         if (hotspotController === 1) {
-            setTimeout(function(){
-                removeClassFrom(marfetRotateButton, "hidden");
-                marfetRotateButton.classList.add("visible");
-            }, 500);
-
-            removeClassFrom(marfetHotspot, "hidden");
-            marfetHotspot.classList.add("visible");
+        //     setTimeout(function(){
+        //         removeClassFrom(marfetRotateButton, "hidden");
+        //         marfetRotateButton.classList.add("visible");
+        //     }, 500);
+        //
+        //     removeClassFrom(marfetHotspot, "hidden");
+        //     marfetHotspot.classList.add("visible");
         }
         else if (hotspotController === 2) {
-            setTimeout(function(){
-                removeClassFrom(marfetRotateButton, "hidden");
-                marfetRotateButton.classList.add("visible");
-            }, 500);
-
-            removeClassFrom(marfetHotspotSecond, "hidden");
-            marfetHotspotSecond.classList.add("visible");
+        //     setTimeout(function(){
+        //         removeClassFrom(marfetRotateButton, "hidden");
+        //         marfetRotateButton.classList.add("visible");
+        //     }, 500);
+        //
+        //     removeClassFrom(marfetHotspotSecond, "hidden");
+        //     marfetHotspotSecond.classList.add("visible");
         }
         else {
             hotspotController = 0;
@@ -83,6 +108,16 @@ function showUp(cursorArrow) {
 function shyAway(elem) {
     removeClassFrom(elem, "visible");
     elem.classList.add("hidden");
+}
+
+function showUpElev(cursorArrow) {
+    removeClassFrom(cursorArrow, "hiddenElevation");
+    cursorArrow.classList.add("visibleElevation");
+}
+
+function shyAwayElev(elem) {
+    removeClassFrom(elem, "hiddenElevation");
+    elem.classList.add("hiddenElevation");
 }
 
 function cursorShyAway() {
@@ -113,10 +148,8 @@ function cursorShowShy(hoverID, cursorArchToBoothArrow, cursorArchToBoothText) {
         });
 }
 
-
 //when text contents are show in both sections
-function immerseOverlayControl(videoID, textContent, timeShowFirst, textContentSecond, timeShowSecond, firstHotspot, secondHotspot) {
-
+function immerseOverlayControl(videoID, textContent, timeShowFirst, textContentSecond, timeShowSecond, firstHotspot, firstHotspotShowTime, secondHotspot, secondHotspotShowTime) {
 
     const marfetTextContent = document.getElementById(textContent),
         marfetTextContentSecond = document.getElementById(textContentSecond);
@@ -151,13 +184,25 @@ function immerseOverlayControl(videoID, textContent, timeShowFirst, textContentS
                 marfetTextContent.classList.add("visible");
                 removeClassFrom(marfetTextContent, "hidden");
             }, timeShowFirst);
+
+            setTimeout(function(){
+                removeClassFrom(marfetHotspot, "hidden");
+                marfetHotspot.classList.add("visible");
+            }, firstHotspotShowTime);
+
         }
         else if (hotspotController === 2) {
             setTimeout(function(){
                 marfetTextContentSecond.classList.add("visible");
                 removeClassFrom(marfetTextContentSecond, "hidden");
             }, timeShowSecond);
+
+            setTimeout(function(){
+                removeClassFrom(marfetHotspotSecond, "hidden");
+                marfetHotspotSecond.classList.add("visible");
+            }, secondHotspotShowTime);
         }
+
     });
 
     //interaction components show up when video pauses
@@ -171,8 +216,8 @@ function immerseOverlayControl(videoID, textContent, timeShowFirst, textContentS
             //     removeClassFrom(marfetTextContent, "hidden");
             // }, 500);
 
-            removeClassFrom(marfetHotspot, "hidden");
-            marfetHotspot.classList.add("visible");
+            // removeClassFrom(marfetHotspot, "hidden");
+            // marfetHotspot.classList.add("visible");
         }
         else if (hotspotController === 2) {
             // setTimeout(function(){
@@ -180,8 +225,8 @@ function immerseOverlayControl(videoID, textContent, timeShowFirst, textContentS
             //     removeClassFrom(marfetTextContent, "hidden");
             // }, 500);
 
-            removeClassFrom(marfetHotspotSecond, "hidden");
-            marfetHotspotSecond.classList.add("visible");
+            // removeClassFrom(marfetHotspotSecond, "hidden");
+            // marfetHotspotSecond.classList.add("visible");
 
             hotspotController = 0;
         }
@@ -204,5 +249,10 @@ function overflowHidden() {
     document.querySelector("body").classList.add("overflowHidden");
 }
 
-
-
+//immersive control
+function immersiveVideoControl(text, textTime, icons, iconsTime) {
+    setTimeout(function(){
+        document.getElementById(text).classList.add("visible");}, textTime);
+    setTimeout(function(){
+        document.getElementById(icons).classList.add("visible");}, iconsTime);
+}

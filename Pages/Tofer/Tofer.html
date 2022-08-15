@@ -34,7 +34,7 @@
         <!--        rotate button-->
         <div id="rotateButtonWrapper" class="rotateButton_div" style="visibility: hidden; opacity: 0;">
             <div>
-                <img class="rotateButton" src="/Materials/Icon/RotateButton.png" alt="Rotate" onclick="ExhifitionSolo.play()">
+                <img class="rotateButton" src="/Materials/Icon/RotateButton.png" alt="Rotate" onclick="ExhifitionSolo.pause(); currentStopTime = pausePoint[pauseIndex]; ExhifitionSolo.play()">
             </div>
         </div>
 
@@ -60,7 +60,7 @@
         <!--        hotspot-->
         <div id="hotspotFirst" class="overlayLayerIso" style="visibility: hidden; opacity: 0;">
             <!--            hover receiver-->
-            <div onclick="location.href='/Pages/Marfet/MarfetArch.html';">
+            <div onclick="location.href='../../Pages/Tofer/ToferGround.html';">
                 <div id="hotSpot1-1" class="navButtonDiv" style = "left:calc(-12vw - 70px); bottom:calc(-4vh - 140px)">
                     <div>
                         <img class="navHotSpot" src="/Materials/Icon/HotSpot.png"
@@ -69,7 +69,7 @@
                 </div>
             </div>
 
-            <div onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
+            <div onclick="location.href='../../Pages/Tofer/ToferElevation.html';">
                 <div id="hotSpot1-2" class="navButtonDiv" style = "left:calc(-5vw - 60px); top:calc(-4vh - 30px)">
                     <div>
                         <img class="navHotSpot" src="/Materials/Icon/HotSpot.png"
@@ -78,7 +78,7 @@
                 </div>
             </div>
 
-            <div onclick="location.href='/Pages/Marfet/MarfetUnderground.html';">
+            <div onclick="location.href='../../Pages/Tofer/ToferHighland.html';">
                 <div id="hotSpot1-3" class="navButtonDiv" style = "right:calc(-9vw - 80px); top:calc(-5vh - 50px)">
                     <div>
                         <img  class="navHotSpot" src="/Materials/Icon/HotSpot.png"
@@ -90,7 +90,7 @@
 
         <div id="hotspotSecond" class="overlayLayerIso" style="visibility: hidden; opacity: 0;">
             <!--            hover receiver-->
-            <div onclick="location.href='/Pages/Marfet/MarfetArch.html';">
+            <div onclick="location.href='../../Pages/Tofer/ToferHighland.html';">
                 <div id="hotSpot2-1" class="navButtonDiv" style = "left:calc(-5vw - 20px); bottom:calc(-4vh - 140px)">
                     <div>
                         <img class="navHotSpot" src="/Materials/Icon/HotSpot.png"
@@ -99,7 +99,7 @@
                 </div>
             </div>
 
-            <div onclick="location.href='/Pages/Marfet/MarfetBooth.html';">
+            <div onclick="location.href='../../Pages/Tofer/ToferFarm.html';">
                 <div id="hotSpot2-2" class="navButtonDiv" style = "right:calc(-6vw - 60px); top:calc(-2vh - 80px)">
                     <div>
                         <img class="navHotSpot" src="/Materials/Icon/HotSpot.png"
@@ -108,7 +108,7 @@
                 </div>
             </div>
 
-            <div onclick="location.href='/Pages/Marfet/MarfetUnderground.html';">
+            <div onclick="location.href='../../Pages/Tofer/ToferElevation.html';">
                 <div id="hotSpot2-3" class="navButtonDiv" style = "right:calc(-11vw - 70px); bottom:calc(-5vh - 90px)">
                     <div>
                         <img  class="navHotSpot" src="/Materials/Icon/HotSpot.png"
@@ -136,15 +136,27 @@
         </h1>
     </div>
 
-    <div id="cursorText3" class="pointerText" style="visibility: hidden; opacity: 0;">
+    <div id="cursorText3" class="pointerText" style="visibility: hidden; opacity: 0;  transform: translate(-180px, 0);">
         <h1 class="h1-navDir h1-navDir-iso">
-            The Field
+            The Highland
         </h1>
     </div>
 
-    <div id="cursorText4" class="pointerText" style="visibility: hidden; opacity: 0;">
+    <div id="cursorText5" class="pointerText" style="visibility: hidden; opacity: 0;">
+        <h1 class="h1-navDir h1-navDir-iso">
+            The Highland
+        </h1>
+    </div>
+
+    <div id="cursorText6" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-180px, 0);">
         <h1 class="h1-navDir h1-navDir-iso">
             The Farm
+        </h1>
+    </div>
+
+    <div id="cursorText7" class="pointerText" style="visibility: hidden; opacity: 0; transform: translate(-180px, 0);">
+        <h1 class="h1-navDir h1-navDir-iso">
+            The Elevation
         </h1>
     </div>
 
@@ -191,7 +203,22 @@
         </div>
 
         <div class="hoverInfoWrapper">
-            <overlay-credit></overlay-credit>
+            <h2>
+                Credit
+            </h2>
+            <h2 class="h2-Dec">
+                Amazing End-to-end Experience
+            </h2>
+            <p class="p-HoverInfo">
+                Project Designer: Qihang Fan, Kangxin Wu<br>
+                Project Instructor: Peter Testa, Nero He<br>
+                Web Developer: Qihang Fan<br>
+                Web Development Instructor: Anthony Tran
+            </p>
+            <p class="p-HoverInfo">
+                Copyright © 2020 Qihang Fan. All Rights Reserved
+            </p>
+
         </div>
     </div>
 
@@ -213,34 +240,24 @@
         currentStopTime = pausePoint[pauseIndex];
 
     var videoTracker = setInterval(() => {
-        checkTime();
-        // console.log(ExhifitionSolo.currentTime);
-        // console.log(currentStopTime);
-
-        ExhifitionSolo.addEventListener('ended', (event) => {
-            videoReset();
-            // console.log("videoReset");
-            ExhifitionSolo.play();
-        })
-    }, 10)
-
-    function checkTime() {
         if (ExhifitionSolo.currentTime >= currentStopTime) {
             ExhifitionSolo.pause();
-            if (pausePoint.length > ++pauseIndex) {
-                currentStopTime = pausePoint[pauseIndex]
-            }
         }
-    }
+    }, 10)
 
-    function videoPlay(){
+    //loop video
+    ExhifitionSolo.addEventListener('ended', (event) => {
+        pauseIndex = 0;
+        currentStopTime = pausePoint[pauseIndex];
+        // console.log("videoReset");
         ExhifitionSolo.play();
-    }
+    });
 
-    function videoReset(){
-        pauseIndex = 0
-        currentStopTime = pausePoint[pauseIndex]
-    }
+    ExhifitionSolo.addEventListener('pause', (event) => {
+        ExhifitionSolo.currentTime = pausePoint[pauseIndex];
+        ++pauseIndex;
+        currentStopTime = pausePoint[pauseIndex];
+    });
 
     //info-overlay controller
     isoOverlayControl(ExhifitionSolo, "rotateButtonWrapper", "textContentWrapper", "hotspotFirst", "hotspotSecond");
@@ -255,7 +272,7 @@
     cursorShowShy("#hotSpot1-2", document.getElementById("cursorArrow"), document.getElementById("cursorText2"));
     cursorShowShy("#hotSpot1-3", document.getElementById("cursorArrow"), document.getElementById("cursorText3"));
 
-    cursorShowShy("#hotSpot2-1", document.getElementById("cursorArrow"), document.getElementById("cursorText3"));
-    cursorShowShy("#hotSpot2-2", document.getElementById("cursorArrow"), document.getElementById("cursorText2"));
-    cursorShowShy("#hotSpot2-3", document.getElementById("cursorArrow"), document.getElementById("cursorText4"));
+    cursorShowShy("#hotSpot2-1", document.getElementById("cursorArrow"), document.getElementById("cursorText5"));
+    cursorShowShy("#hotSpot2-2", document.getElementById("cursorArrow"), document.getElementById("cursorText7"));
+    cursorShowShy("#hotSpot2-3", document.getElementById("cursorArrow"), document.getElementById("cursorText6"));
 </script>

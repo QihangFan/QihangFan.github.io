@@ -64,7 +64,7 @@
                 </div>
             </div>
 
-            <div onclick="MarfetBoothSolo.currentTime = 0; MarfetBoothSolo.play(); hotspotController = 0;">
+            <div onclick=" MarfetBoothSolo.pause(); MarfetBoothSolo.currentTime = 0; MarfetBoothSolo.play(); hotspotController = 0;">
                 <div class="navButtonDiv centerButton" style = "top:3%">
                     <div id="MarfetBoothTopviewSecond" class="iconWrapper">
                         <img class="navButton" src="/Materials/Icon/close-up.png"
@@ -115,7 +115,7 @@
                 </div>
             </div>
 
-            <div onclick="MarfetBoothSolo.currentTime = 8; MarfetBoothSolo.play(); hotspotController = 1;">
+            <div onclick="MarfetBoothSolo.pause(); MarfetBoothSolo.currentTime = 8; MarfetBoothSolo.play(); hotspotController = 1;">
                 <div class="navButtonDiv centerButton" style = "top:3%;">
                     <div id="topIcon" class="iconWrapper">
                         <img class="navButton" src="/Materials/Icon/close-up.png"
@@ -362,19 +362,34 @@
             setTimeout(function(){
                 marfetTextContent.classList.add("visible");
                 removeClassFrom(marfetTextContent, "hidden");
-            }, 2000);
+            }, 1500);
+
+            setTimeout(function(){
+                removeClassFrom(marfetHotspot, "hidden");
+                marfetHotspot.classList.add("visible");
+            }, 3000);
         }
         else if (hotspotController === 2) {
             setTimeout(function(){
                 marfetTextContentSecond.classList.add("visible");
                 removeClassFrom(marfetTextContentSecond, "hidden");
             }, 2000);
+
+            setTimeout(function(){
+                removeClassFrom(marfetHotspotSecond, "hidden");
+                marfetHotspotSecond.classList.add("visible");
+            }, 4000);
         }
         else if (hotspotController === 3) {
             setTimeout(function(){
                 marfetTextContentThird.classList.add("visible");
                 removeClassFrom(marfetTextContentThird, "hidden");
             }, 2000);
+
+            setTimeout(function(){
+                removeClassFrom(marfetHotspotThird, "hidden");
+                marfetHotspotThird.classList.add("visible");
+            }, 4000);
         }
     });
 
@@ -385,23 +400,21 @@
         console.log(hotspotController);
 
         if (hotspotController === 1) {
-            removeClassFrom(marfetHotspot, "hidden");
-            marfetHotspot.classList.add("visible");
+            // removeClassFrom(marfetHotspot, "hidden");
+            // marfetHotspot.classList.add("visible");
         }
         else if (hotspotController === 2) {
-            removeClassFrom(marfetHotspotSecond, "hidden");
-            marfetHotspotSecond.classList.add("visible");
+            // removeClassFrom(marfetHotspotSecond, "hidden");
+            // marfetHotspotSecond.classList.add("visible");
         }
         else if (hotspotController === 3) {
-            removeClassFrom(marfetHotspotThird, "hidden");
-            marfetHotspotThird.classList.add("visible");
+            // removeClassFrom(marfetHotspotThird, "hidden");
+            // marfetHotspotThird.classList.add("visible");
 
             hotspotController = 0;
         }
 
     });
-
-
 
     //cursor change
     $(document).mousemove(function (e) {

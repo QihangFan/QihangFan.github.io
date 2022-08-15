@@ -20,7 +20,7 @@
 
   <!--  background-->
   <div id="Marfetsolo_div" class="fullScreenVideo" >
-    <video id="MarfetTopviewSolo" class="pageSolo" width=100% height=100% autoplay muted playsinline>
+    <video id="MarfetTopviewSolo" class="pageSolo" width=100% height=100% autoplay muted playsinline loop>
       <source src="/Materials/Video/Marfet/MarfetTopview.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -116,15 +116,8 @@
   const marfetTopviewSolo = document.getElementById("MarfetTopviewSolo");
 
   marfetTopviewSolo.addEventListener('play', (event) => {
-    setTimeout(function(){
-      document.getElementById("marfetTopviewText").classList.add("visible");}, 2000);
+    immersiveVideoControl("marfetTopviewText", 2000, "marfetTopviewNavIcons", 4000);
   });
-
-  marfetTopviewSolo.addEventListener('ended', (event) => {
-    setTimeout(function(){
-      document.getElementById("marfetTopviewNavIcons").classList.add("visible");}, 0);
-  });
-
 
 
   $(document).mousemove(function (e) {

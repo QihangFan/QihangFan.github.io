@@ -19,8 +19,8 @@
 <div id="siteDiv" class="site">
 
   <!--  background-->
-  <div id="Marfetsolo_div" class="fullScreenVideo" >
-    <video id="MarfetCommoditySolo" class="pageSolo" width=100% height=100% autoplay muted playsinline>
+  <div id="Marfetsolo_div" class="fullScreenVideo">
+    <video id="MarfetCommoditySolo" class="pageSolo" width=100% height=100% autoplay muted playsinline loop>
       <source src="/Materials/Video/Marfet/MarfetCommodity.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -114,15 +114,8 @@
   const marfetComoditySolo = document.getElementById("MarfetCommoditySolo");
 
   marfetComoditySolo.addEventListener('play', (event) => {
-    setTimeout(function(){
-      document.getElementById("marfetCommodityText").classList.add("visible");}, 2000);
+    immersiveVideoControl("marfetCommodityText", 2000, "marfetCommodityNavIcons", 4000);
   });
-
-  marfetComoditySolo.addEventListener('ended', (event) => {
-    setTimeout(function(){
-      document.getElementById("marfetCommodityNavIcons").classList.add("visible");}, 0);
-  });
-
 
   $(document).mousemove(function (e) {
     $(".pointer").css({ left: e.pageX, top: e.pageY });

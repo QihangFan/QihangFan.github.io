@@ -42,7 +42,7 @@
                 </div>
             </div>
 
-            <div onclick="MarfetArchSolo.play()">
+            <div onclick="MarfetArchSolo.play();">
                 <div id="MarfetArchEnter" class="navButtonDiv" style = "left:calc(35vw - 120px); bottom:30%">
                     <div class="iconWrapper">
                         <img class="navButton" src="/Materials/Icon/door-enter-line-left.png"
@@ -54,7 +54,7 @@
         </div>
 
         <div id="marfetArchNavIconsSecond" class="navIcons" style="visibility: hidden; opacity: 0;">
-            <div onclick="MarfetArchSolo.play(); pauseIndex = 0;">
+            <div onclick="pauseWaitThenPlay(MarfetArchSolo);">
                 <div id="MarfetArchExit" class="navButtonDiv" style = "right:10vw; bottom:10vh">
                     <div class="iconWrapper">
                         <img class="navButton" src="/Materials/Icon/door-enter-line-right.png"
@@ -149,25 +149,38 @@
     const MarfetArchSolo = document.getElementById("MarfetArchSolo");
 
     var pausePoint = [2.15,15],
+        startPoint = [0, 2.15],
         pauseIndex = 0;
 
     setInterval(videoControl, 10, MarfetArchSolo, pausePoint);
-    immerseOverlayControl(MarfetArchSolo, "marfetArchText", 1000, "marfetArchTextSecond", 5000, "marfetArchNavIconsFirst", "marfetArchNavIconsSecond");
+    immerseOverlayControl(MarfetArchSolo, "marfetArchText", 1000, "marfetArchTextSecond", 5000, "marfetArchNavIconsFirst", 2000, "marfetArchNavIconsSecond", 7000);
 
     function videoControl (videoID, pauseArray) {
-        currentStopTime = pauseArray[pauseIndex];
+        // console.log(videoID.currentTime);
+        // console.log(currentStopTime);
 
-        console.log(videoID.currentTime);
-        console.log(currentStopTime);
-
-        if (videoID.currentTime >= currentStopTime) {
+        if (videoID.currentTime >= pauseArray[pauseIndex]) {
             videoID.pause();
-            ++pauseIndex;
-            console.log("videoPause");
+            // ++pauseIndex;
+            // console.log("videoPause");
         }
     }
 
+    MarfetArchSolo.addEventListener('pause', (event) => {
+        if (pausePoint.length === ++pauseIndex) {
+            pauseIndex = 0;
+        }
+        currentStopTime = pausePoint[pauseIndex];
+    });
 
+    function pauseWaitThenPlay(videoID) {
+        videoID.pause();
+
+        setTimeout(function(){
+            videoID.currentTime = startPoint[pauseIndex];
+            videoID.play();
+        }, 100);
+    }
 
     //hover - cursor change
     const cursorArchToBoothArrow = document.getElementById("cursorArchToBoothArrow"),

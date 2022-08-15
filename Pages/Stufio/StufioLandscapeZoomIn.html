@@ -102,7 +102,7 @@
                 </div>
             </div>
 
-            <div onclick="MarfetBoothSolo.play(); hotspotController = 0;">
+            <div onclick="MarfetBoothSolo.pause(); MarfetBoothSolo.currentTime = 0; MarfetBoothSolo.play(); hotspotController = 0;">
                 <div class="navButtonDiv centerButton" style = "top:3%;">
                     <div id="topIcon" class="iconWrapper">
                         <img class="navButton" src="/Materials/Icon/close-up.png"
@@ -315,12 +315,22 @@
                 marfetTextContentSecond.classList.add("visible");
                 removeClassFrom(marfetTextContentSecond, "hidden");
             }, 2000);
+
+            setTimeout(function(){
+                removeClassFrom(marfetHotspotSecond, "hidden");
+                marfetHotspotSecond.classList.add("visible");
+            }, 4000);
         }
         else if (hotspotController === 2) {
             setTimeout(function(){
                 marfetTextContentThird.classList.add("visible");
                 removeClassFrom(marfetTextContentThird, "hidden");
             }, 2000);
+
+            setTimeout(function(){
+                removeClassFrom(marfetHotspotThird, "hidden");
+                marfetHotspotThird.classList.add("visible");
+            }, 4000);
         }
     });
 
@@ -331,12 +341,12 @@
         console.log(hotspotController);
 
         if (hotspotController === 1) {
-            removeClassFrom(marfetHotspotSecond, "hidden");
-            marfetHotspotSecond.classList.add("visible");
+            // removeClassFrom(marfetHotspotSecond, "hidden");
+            // marfetHotspotSecond.classList.add("visible");
         }
         else if (hotspotController === 2) {
-            removeClassFrom(marfetHotspotThird, "hidden");
-            marfetHotspotThird.classList.add("visible");
+            // removeClassFrom(marfetHotspotThird, "hidden");
+            // marfetHotspotThird.classList.add("visible");
 
             hotspotController = 0;
         }
