@@ -48,3 +48,5 @@ Multiple skills are involved in the entire production process.
   - Project Instructor: Peter Testa, Nero He
   - Web Developer: Qihang Fan
   - Web Development Instructor: Anthony Tran
+  
+  Copyright © 2020 Qihang Fan. All Rights Reserved
