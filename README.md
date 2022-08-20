@@ -5,6 +5,15 @@ This web project results from the exploration in the overlapping fields of archi
 [Website Portal](https://qihangfan.github.io)
 <br><br><br>
 
+# Production
+Multiple skills are involved in the entire production process.
+  - 3D software for architecture and digital media production, including Rhino, Cinema 4D, and Redshift.
+  - Adobe Suite for the media post-production
+  - Figma for the responsive web and user experience design
+  - Webstorm for the front-end development
+  - Visual Studio Code to achieve the local hosting for the mobile-end development
+<br><br><br>
+
 # About Design
 
 ## Background
@@ -30,16 +39,6 @@ A factory that resists mechanization trend should maintain original functionalit
 - **Decentralization**
 
 Centralized factory seeks the best efficiency. It highlights the simplification of the production process in order to maximize profit. Commercialization resulting from centralization damages human interaction and creativity. Therefore, we emphasize decentralization in the quazi-autonomous factory system to evoke the consciousness of humanity’s sustainability.
-<br><br><br>
-
-
-# Production
-Multiple skills are involved in the entire production process.
-  - 3D software for architecture and digital media production, including Rhino, Cinema 4D, and Redshift.
-  - Adobe Suite for the media post-production
-  - Figma for the responsive web and user experience design
-  - Webstorm for the front-end development
-  - Visual Studio Code to achieve the local hosting for the mobile-end development
 <br><br><br>
 
 
