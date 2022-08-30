@@ -6,7 +6,9 @@ This web project results from the exploration in the overlapping fields of archi
 
 <br><br>
 <p align="center">
-[<img alt="image-display" width="500px" src="Materials/Image/SocialMediaImage.png" />](https://qihangfan.github.io)
+  <a href="https://qihangfan.github.io">
+  <img alt="image-display" width="600px" src="Materials/Image/SocialMediaImage.png" />
+  </a>
 </p>
 <br><br><br>
 
