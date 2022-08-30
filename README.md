@@ -5,7 +5,9 @@ This web project results from the exploration in the overlapping fields of archi
 [Website Portal](https://qihangfan.github.io)
 
 <br><br>
-[<img alt="image-display" width="100px" src="Materials/Image/SocialMediaImage.png" />](https://qihangfan.github.io)
+<p align="center">
+[<img alt="image-display" width="500px" src="Materials/Image/SocialMediaImage.png" />](https://qihangfan.github.io)
+</p>
 <br><br><br>
 
 # Production
