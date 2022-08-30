@@ -3,6 +3,10 @@
 This web project results from the exploration in the overlapping fields of architecture design, digital media practice, user experience design, and immersive web experience. It allows audiences to discover design features interactively and responsively within a website presentation format. Users can navigate in the virtual environment in terms of both macro and micro observation level. It suggests the possible format of future NFT architectural products following the Web 3.0 tides.
 
 [Website Portal](https://qihangfan.github.io)
+
+Materials/Image/SocialMediaImage.png
+<br>
+[![image-display](Materials/Image/SocialMediaImage.png)](https://qihangfan.github.io)
 <br><br><br>
 
 # Production
