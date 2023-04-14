@@ -12,8 +12,7 @@ This web project results from the exploration in the overlapping fields of archi
 </p>
 <br><br><br>
 
-# Animation Video Portal
-<br>
+# Animation Video Vimeo Portal
 
 ## Marfet
 <p align="center">
@@ -21,7 +20,7 @@ This web project results from the exploration in the overlapping fields of archi
   <img alt="image-display" width="1200px" src="Materials/Image/Marfet.png" />
   </a>
 </p>
-<br><br>
+<br>
 
 ## Exhifition
 <p align="center">
@@ -29,7 +28,7 @@ This web project results from the exploration in the overlapping fields of archi
   <img alt="image-display" width="1200px" src="Materials/Image/Exhifition.png" />
   </a>
 </p>
-<br><br>
+<br>
 
 ## Stufio
 <p align="center">
@@ -37,7 +36,7 @@ This web project results from the exploration in the overlapping fields of archi
   <img alt="image-display" width="1200px" src="Materials/Image/Stufio.png" />
   </a>
 </p>
-<br><br>
+<br>
 
 ## Tofer
 <p align="center">
