@@ -1,4 +1,4 @@
-# Web3 Architecture
+# Four Typologies in Immersive Web3 Architecture Experience
 
 This web project results from the exploration in the overlapping fields of architecture design, digital media practice, user experience design, and immersive web experience. It allows audiences to discover design features interactively and responsively within a website presentation format for desktop, tablet, and mobile devices. Users can navigate in the virtual environment in terms of both macro and micro observation level. It suggests the possible format of future NFT architectural products following the Web 3.0 and Metaverse tides.
 
