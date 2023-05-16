@@ -85,7 +85,7 @@ Centralized factory seeks the best efficiency. It highlights the simplification 
 
 # Credit
   - Project Designer: Qihang Fan, Kangxin Wu
-  - Project Instructor: Peter Testa, Nero He
+  - Project Instructor: Peter Testa
   - Web Developer: Qihang Fan
   - Web Development Instructor: Anthony Tran
   
