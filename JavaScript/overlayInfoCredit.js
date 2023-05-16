@@ -14,7 +14,7 @@ creditInfo.innerHTML = `
     </h2>
     <p class="p-HoverInfo">
         Project Designer: Qihang Fan, Kangxin Wu<br>
-        Project Instructor: Peter Testa, Nero He<br>
+        Project Instructor: Peter Testa<br>
         Web Developer: Qihang Fan<br>
         Web Development Instructor: Anthony Tran
     </p>
