@@ -7,7 +7,7 @@ This web project results from the exploration in the overlapping fields of archi
 <br><br>
 <p align="center">
   <a href="https://qihangfan.github.io">
-  <img alt="image-display" width="600px" src="Materials/Image/SocialMediaImage.png" />
+  <img alt="image-display" width="1200px" src="Materials/Image/4Typos_Main.png" />
   </a>
 </p>
 <br><br><br>
