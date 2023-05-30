@@ -12,40 +12,6 @@ This web project results from the exploration in the overlapping fields of archi
 </p>
 <br><br><br>
 
-# Animation Video Vimeo Portal
-
-## Marfet
-<p align="center">
-  <a href="https://vimeo.com/817712858">
-  <img alt="image-display" width="1200px" src="Materials/Image/Marfet.png" />
-  </a>
-</p>
-<br>
-
-## Exhifition
-<p align="center">
-  <a href="https://vimeo.com/817712792">
-  <img alt="image-display" width="1200px" src="Materials/Image/Exhifition.png" />
-  </a>
-</p>
-<br>
-
-## Stufio
-<p align="center">
-  <a href="https://vimeo.com/817712955">
-  <img alt="image-display" width="1200px" src="Materials/Image/Stufio.png" />
-  </a>
-</p>
-<br>
-
-## Tofer
-<p align="center">
-  <a href="https://vimeo.com/817713053">
-  <img alt="image-display" width="1200px" src="Materials/Image/Tofer.png" />
-  </a>
-</p>
-<br><br><br>
-
 # Production
 Multiple skills are involved in the entire production process.
   - 3D software for architecture and digital media production, including Rhino, Cinema 4D, and Redshift.
@@ -90,3 +56,37 @@ Centralized factory seeks the best efficiency. It highlights the simplification 
   - Web Development Instructor: Anthony Tran
   
   Copyright © 2020 Qihang Fan. All Rights Reserved
+<br><br><br>
+
+# Animation Video Vimeo Portal
+
+## Marfet
+<p align="center">
+  <a href="https://vimeo.com/817712858">
+  <img alt="image-display" width="1200px" src="Materials/Image/Marfet.png" />
+  </a>
+</p>
+<br>
+
+## Exhifition
+<p align="center">
+  <a href="https://vimeo.com/817712792">
+  <img alt="image-display" width="1200px" src="Materials/Image/Exhifition.png" />
+  </a>
+</p>
+<br>
+
+## Stufio
+<p align="center">
+  <a href="https://vimeo.com/817712955">
+  <img alt="image-display" width="1200px" src="Materials/Image/Stufio.png" />
+  </a>
+</p>
+<br>
+
+## Tofer
+<p align="center">
+  <a href="https://vimeo.com/817713053">
+  <img alt="image-display" width="1200px" src="Materials/Image/Tofer.png" />
+  </a>
+</p>
