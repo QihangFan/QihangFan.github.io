@@ -6,8 +6,11 @@
 <br><br>
 
 This web project results from the exploration in the overlapping fields of architecture design, digital media practice, user experience design, and immersive web experience. It allows audiences to discover design features interactively and responsively within a website presentation format for desktop, tablet, and mobile devices. Users can navigate in the virtual environment in terms of both macro and micro observation level. It suggests the possible format of future NFT architectural products following the Web 3.0 and Metaverse tides.
+<br><br>
 
-[Website Portal](https://qihangfan.github.io)
+**Quick Link:**
+[Four Typoloties Website Portal](https://qihangfan.github.io)
+[The Source Animation](https://vimeo.com/836363861)
 <br><br>
 <p align="center">
   <a href="https://qihangfan.github.io">
