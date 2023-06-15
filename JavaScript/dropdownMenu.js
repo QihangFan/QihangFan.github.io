@@ -31,7 +31,7 @@ navTemplate2.innerHTML = `
         <img class="Icon" src="/Materials/Icon/linkedin.png" alt="LinkedIn" onclick="parent.open('https://www.linkedin.com/in/fqhang/')">
     </div>
     <div>
-        <img class="Icon" src="/Materials/Icon/vimeo-icon.png" alt="Vimeo" onclick="parent.open('https://vimeo.com/fqhang')">
+        <img class="Icon" src="/Materials/Icon/vimeo-icon.png" alt="Vimeo" onclick="parent.open('https://vimeo.com/836363861')">
     </div>
     <div>
         <img class="Icon" src="/Materials/Icon/qihang-fan.png" alt="portfolio" onclick="parent.open('https://www.qihangfan.com/')">
