@@ -15,7 +15,8 @@ This web project results from the exploration in the overlapping fields of archi
   </a>
 </p>
 <br>
-Existing factories have a small handicraft upcycling workflow, but their factory typology is insufficient to cover all the designers' activities
+Existing factories have a small handicraft upcycling workflow, but their factory typology is insufficient to cover all the designers' activities.
+
 The animation aims to express Garden Factory Typologies that resist mechanization trends. They represent emerging fashion houses that produce small batches of upcycled collections on macro and micro scales. And the decentralized factory typologies blended with local environments - the factory, the city, the nature, and the farm - are reinvented.
 <br><br><br>
 
