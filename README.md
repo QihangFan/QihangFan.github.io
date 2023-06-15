@@ -9,8 +9,8 @@ This web project results from the exploration in the overlapping fields of archi
 <br><br>
 
 **Quick Link:**
-[Four Typoloties Website Portal](https://qihangfan.github.io)
-[The Source Animation](https://vimeo.com/836363861)
+- [Four Typoloties Website Portal](https://qihangfan.github.io)
+- [The Source Animation](https://vimeo.com/836363861)
 <br><br>
 <p align="center">
   <a href="https://qihangfan.github.io">
