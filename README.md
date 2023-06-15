@@ -8,15 +8,15 @@
 This web project results from the exploration in the overlapping fields of architecture design, digital media practice, user experience design, and immersive web experience. It allows audiences to discover design features interactively and responsively within a website presentation format for desktop, tablet, and mobile devices. Users can navigate in the virtual environment in terms of both macro and micro observation level. It suggests the possible format of future NFT architectural products following the Web 3.0 and Metaverse tides.
 
 [Website Portal](https://qihangfan.github.io)
-<br>
-Existing factories have a small handicraft upcycling workflow, but their factory typology is insufficient to cover all the designers' activities
-The animation aims to express Garden Factory Typologies that resist mechanization trends. They represent emerging fashion houses that produce small batches of upcycled collections on macro and micro scales. And the decentralized factory typologies blended with local environments - the factory, the city, the nature, and the farm - are reinvented.
 <br><br>
 <p align="center">
   <a href="https://qihangfan.github.io">
   <img alt="image-display" width="1200px" src="Materials/Image/4Typos_Main.png" />
   </a>
 </p>
+<br>
+Existing factories have a small handicraft upcycling workflow, but their factory typology is insufficient to cover all the designers' activities
+The animation aims to express Garden Factory Typologies that resist mechanization trends. They represent emerging fashion houses that produce small batches of upcycled collections on macro and micro scales. And the decentralized factory typologies blended with local environments - the factory, the city, the nature, and the farm - are reinvented.
 <br><br><br>
 
 # Production
