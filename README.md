@@ -18,7 +18,7 @@ This web project results from the exploration of the overlapping fields of archi
   </a>
 </p>
 <br>
-Contemporary fashion houses introduce a small handicraft upcycling workflow, but their factory typology is insufficient to support the nonlinear designers' activities. The media design aims to express the new Garden Factory Typologies that resist conventional industrial mechanization trends. They represent emerging fashion houses that produce small batches of upcycled collections from the micro to the macro scale. And the decentralized factory typology miniatures blended with local environments - the factory, the city, the nature, and the farm - are reinvented. 
+Contemporary fashion houses introduce a small handicraft upcycling workflow, but their factory typology is insufficient to support the nonlinear designers' activities. The media design aims to express the new Garden Factory Typologies that resist conventional industrial mechanization trends. They represent emerging fashion houses that produce small batches of upcycled collections from the micro to the macro scale. And the decentralized factory typology miniatures blended with local environments - the market, the city, the nature, and the farm - are reinvented. 
 <br><br><br>
 
 # Production
