@@ -5,7 +5,7 @@
 - [2023 Digital Design Awards Winner](https://gdusa.com/) by Graphic Design USA
 <br><br>
 
-This web project results from the exploration in the overlapping fields of architecture design, digital media practice, user experience design, and immersive web experience. It allows audiences to discover design features interactively and responsively within a website presentation format for desktop, tablet, and mobile devices. Users can navigate in the virtual environment in terms of both macro and micro observation level. It suggests the possible format of future NFT architectural products following the Web 3.0 and Metaverse tides.
+This web project results from the exploration of the overlapping fields of architecture design, digital media practice, user experience design, and immersive web experience. It allows audiences to discover design features interactively and responsively within a website presentation format for desktop, tablet, and mobile devices. Users can navigate in the virtual environment regarding both macro and micro observation levels. It suggests the possible format of future NFT architectural products following the Web 3.0 and Metaverse tides.
 <br><br>
 
 **Quick Link:**
@@ -18,7 +18,7 @@ This web project results from the exploration in the overlapping fields of archi
   </a>
 </p>
 <br>
-Existing factories have a small handicraft upcycling workflow, but their factory typology is insufficient to cover all the designers' activities. The animation aims to express Garden Factory Typologies that resist mechanization trends. They represent emerging fashion houses that produce small batches of upcycled collections on macro and micro scales. And the decentralized factory typologies blended with local environments - the factory, the city, the nature, and the farm - are reinvented.
+Contemporary fashion houses introduce a small handicraft upcycling workflow, but their factory typology is insufficient to support all the designers' activities. The media design aims to express the new Garden Factory Typologies that resist conventional industrial mechanization trends. They represent emerging fashion houses that produce small batches of upcycled collections from the micro to the macro scale. And the decentralized factory typology miniatures blended with local environments - the factory, the city, the nature, and the farm - are reinvented.
 <br><br><br>
 
 # Production
@@ -41,20 +41,18 @@ The studio aims at designing a new Garden Factory for emerging fashion houses Du
   - Topic 05. Upcycling — New Forms of Luxury
   - Topic 06. Production Landscapes <br><br>
 
-## For Us
-After a careful study of Duran Lantink's approach to upcycling, we summarized the process into 7 stages. Duran Lantink starts design thinking from the very first step and he goes through multiple iterations. His workflow is nonlinear and circular.
-
-Although Duran Lantink indicates an upscaling of his small handicraft workflow, we find the current factory typology insufficient for covering all the designers' activities. We further splited the entire factory, reinvent the facotory typology blending with local environments, the factory, the city, the nature, and the farm to be specific (This is how four-typos come into being).
+## Research
+The fundamental research explored the upcycling concept that avant-garde fashion houses advocate and practice contemporarily. The upcycling design process includes 7 phases – deadstock dive, deconstruction, categorization, ideation, combination, reconstruction, and audition. However, fashion designers would go through multiple rounds of iteration and leap back and forth to compose the most satisfying pieces. The upcycling production workflow challenges the traditional linear and circular mechanical assembly line and raises the awareness of humanity. In that case, the direct dimension scaling would not work. New factory typologies and spaces need to be redefined.
 <br><br>
 
 ## Major Concepts
 - **Macro vs Micro**
 
-A factory that resists mechanization trend should maintain original functionality while emphasizing human-centered spaces. On the one hand, the Macro scale indicates our programmatic consideration of the architecture adaption. Each typology iterates and interacts with the local environment. On the other hand, the Micro scale suggests human involvement in all Duran Lantink production processes. Production activities no longer happen in a linear way but jump among various spaces presented in typological miniatures.
+A factory that resists mechanization trends should maintain original functionality while emphasizing human-centered spaces. On the one hand, the Macro Scale indicates our programmatic consideration of the architecture adaption. Each typology iterates and interacts with the local environment. On the other hand, the Micro Scale suggests human involvement in all Duran Lantink production processes. Production activities no longer happen in a linear way but jump among various spaces presented in typological miniatures.
 
 - **Decentralization**
 
-Centralized factory seeks the best efficiency. It highlights the simplification of the production process in order to maximize profit. Commercialization resulting from centralization damages human interaction and creativity. Therefore, we emphasize decentralization in the quazi-autonomous factory system to evoke the consciousness of humanity’s sustainability.
+A centralized factory seeks the best efficiency. It highlights the simplification of the production process in order to maximize profit. Commercialization resulting from centralization damages human interaction and creativity. Therefore, we emphasize decentralization in the quasi-autonomous factory system to evoke the consciousness of humanity’s sustainability.
 <br><br><br>
 
 
