@@ -33,7 +33,7 @@ Multiple skills are involved in the entire production process.
 # About Design
 
 ## Background
-The studio aims at designing a new Garden Factory for emerging fashion houses Duran Lantink and Collina Strada to produce small batch upcycled collections under the umbrella of Prada Group S.p.A. The design topics cover six discourses:
+The studio aims at designing a new Garden Factory for emerging fashion houses like Duran Lantink and Collina Strada to produce small-batch upcycled collections under the umbrella of Prada Group S.p.A. The design topics cover six discourses:
   - Topic 01. Architectural Types — (Fashion) House & Factory
   - Topic 02. Motion Space — Runways IRL, AR, VR
   - Topic 03. Interfaces — Physical/Digital Cameras, Rigs
@@ -48,7 +48,7 @@ The fundamental research explored the upcycling concept that avant-garde fashion
 ## Major Concepts
 - **Macro vs Micro**
 
-A factory that resists mechanization trends should maintain original functionality while emphasizing human-centered spaces. On the one hand, the Macro Scale indicates our programmatic consideration of the architecture adaption. Each typology iterates and interacts with the local environment. On the other hand, the Micro Scale suggests human involvement in all Duran Lantink production processes. Production activities no longer happen in a linear way but jump among various spaces presented in typological miniatures.
+A factory that resists mechanization trends should maintain original functionality while emphasizing human-centered spaces. On the one hand, the Macro Scale indicates our programmatic consideration of the architecture adaption. Each typology iterates and interacts with the local environment. On the other hand, the Micro Scale suggests human involvement in all production processes, like Duran Lantink. Production activities no longer happen in a linear way but jump among various spaces presented in typological miniatures.
 
 - **Decentralization**
 
