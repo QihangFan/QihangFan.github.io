@@ -2,7 +2,7 @@
 
 **Recognitions:**
 - [2023 Honorable Mention](https://www.awwwards.com/sites/four-typologies) by Awwwards
-- [2023 Digital Design Awards Winner](https://gdusa.com/) by Graphic Design USA
+- [2023 Digital Design Awards Winner](https://gdusa.com/2023-digital-design-awards-winner?rns=0|36327131) by Graphic Design USA
 <br><br>
 
 This web project results from the exploration of the overlapping fields of architecture design, digital media practice, user experience design, and immersive web experience. It allows audiences to discover design features interactively and responsively within a website presentation format for desktop, tablet, and mobile devices. Users can navigate in the virtual environment regarding both macro and micro observation levels. It suggests the possible format of future NFT architectural products following the Web 3.0 and Metaverse tides.
