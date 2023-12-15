@@ -1,6 +1,8 @@
 # Four Typologies in Immersive Web3 Architecture Experience
 
 **Recognitions:**
+- 2024 Interactive Competition Finalist by Communication Arts
+- 2023 2023 GOOD DESIGN® Award Winner by The Chicago Athenaeum
 - [2023 ASUS ProArtist Awards Animation Top 30](https://www.asus.com/campaign/ASUS-ProArtist-Awards-2023/us/winner.php) by ASUSTeK Computer Inc.
 - [2023 Honorable Mention](https://www.awwwards.com/sites/four-typologies) by Awwwards
 - [2023 Digital Design Awards Winner](https://gdusa.com/2023-digital-design-awards-winner?rns=0|36327131) by Graphic Design USA
