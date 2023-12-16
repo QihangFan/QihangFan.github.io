@@ -17,8 +17,8 @@ This web project results from the exploration of the overlapping fields of archi
 - [The Source Animation](https://vimeo.com/836363861)
 <br><br>
 <p align="center">
-  <a href="https://qihangfan.github.io">
-  <img alt="image-display" width="1200px" src="Materials/Image/4Typos_Main.png" />
+  <a href="https://vimeo.com/836404904">
+  <img alt="image-display" width="1200px" src="Materials/Image/4Typos_WebApp.png" />
   </a>
 </p>
 <br>
