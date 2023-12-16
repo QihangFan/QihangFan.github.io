@@ -13,7 +13,7 @@ This web project results from the exploration of the overlapping fields of archi
 
 **Quick Link:**
 - [Four Typologies Website Portal](https://qihangfan.github.io)
-- [Four Typologies Web App Trailer](https://vimeo.com/836404904)
+- [Four Typologies Web App Trailer Video](https://vimeo.com/836404904)
 - [The Source Animation](https://vimeo.com/836363861)
 <br><br>
 <p align="center">
