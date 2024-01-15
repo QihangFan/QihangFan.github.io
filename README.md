@@ -1,6 +1,8 @@
 # Four Typologies in Immersive Web3 Architecture Experience
 
 **Recognitions:**
+- [2024 AVA Digital Awards in UX Creativity Platinum Winner](https://enter.amcpros.com/ava/entry/four-typologies/) by Association of Marketing and Communication Professionals
+- [2024 AVA Digital Awards in Video Creativity Platinum Winner](https://enter.amcpros.com/ava/entry/four-typologies-2/) by Association of Marketing and Communication Professionals
 - 2024 Interactive Competition Finalist by Communication Arts
 - [2023 London Design Awards in UX Experimental / Innovative Gold Winner](https://thelondondesignawards.com/winner-info.php?id=1574) by London Design Awards
 - [2023 London Design Awards in UX Art Gold Winner](https://thelondondesignawards.com/winner-info.php?id=1575) by London Design Awards
