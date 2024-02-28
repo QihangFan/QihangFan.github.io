@@ -14,9 +14,9 @@
 - [2023 London Design Awards in UX Art Gold Winner](https://thelondondesignawards.com/winner-info.php?id=1575) by London Design Awards
 - [2023 London Design Awards in UX Best Visual Design - Aesthetic Gold Winner](https://thelondondesignawards.com/winner-info.php?id=1573) by London Design Awards
 - [2023 GOOD DESIGN® Award Winner](https://www.good-designawards.com/award-details.html?award=54570) by The Chicago Athenaeum
-- [2023 ASUS ProArtist Awards Animation Top 30](https://www.asus.com/campaign/ASUS-ProArtist-Awards-2023/us/winner.php) by ASUSTeK Computer Inc.
-- [2023 Honorable Mention](https://www.awwwards.com/sites/four-typologies) by Awwwards
 - [2023 Digital Design Awards Winner](https://gdusa.com/2023-digital-design-awards-winner?rns=0|36327131) by Graphic Design USA
+- [2023 Honorable Mention](https://www.awwwards.com/sites/four-typologies) by Awwwards
+- [2023 ASUS ProArtist Awards Animation Top 30](https://www.asus.com/campaign/ASUS-ProArtist-Awards-2023/us/winner.php) by ASUSTeK Computer Inc.
 <br><br>
 
 This web project results from the exploration of the overlapping fields of architecture design, digital media practice, user experience design, and immersive web experience. It allows audiences to discover design features interactively and responsively within a website presentation format for desktop, tablet, and mobile devices. Users can navigate in the virtual environment regarding both macro and micro observation levels. It suggests the possible format of future NFT architectural products following the Web 3.0 and Metaverse tides.
