@@ -43,11 +43,10 @@ The design results from the overlapping fields of architecture, digital media, u
 
 **Quick Link:**
 - [Four Typologies Website Portal](https://qihangfan.github.io)
-- [Four Typologies Web App Trailer Video](https://vimeo.com/836404904)
-- [The Source Animation](https://vimeo.com/836363861)
+- [Four Typologies Web App Trailer Video](https://youtu.be/lbqqF0dWa7A?si=CVNw7wiJV_UTixrd)
 <br><br>
 <p align="center">
-  <a href="https://vimeo.com/836404904">
+  <a href="https://youtu.be/lbqqF0dWa7A?si=CVNw7wiJV_UTixrd">
   <img alt="image-display" width="1200px" src="Materials/Image/4Typos_06_Cover.jpg" />
   </a>
 </p>
@@ -103,7 +102,7 @@ A centralized factory seeks the best efficiency. It highlights the simplificatio
 
 ## Marfet
 <p align="center">
-  <a href="https://vimeo.com/817712858">
+  <a href="https://youtu.be/Wi0f3n-9W1o?si=qUbfWRmzZzWWD_Oq">
   <img alt="image-display" width="1200px" src="Materials/Image/Marfet.png" />
   </a>
 </p>
@@ -111,7 +110,7 @@ A centralized factory seeks the best efficiency. It highlights the simplificatio
 
 ## Exhifition
 <p align="center">
-  <a href="https://vimeo.com/817712792">
+  <a href="https://youtu.be/JokPZN4YbMI?si=Xv_hHjzL5cX5vzBH">
   <img alt="image-display" width="1200px" src="Materials/Image/Exhifition.png" />
   </a>
 </p>
@@ -119,7 +118,7 @@ A centralized factory seeks the best efficiency. It highlights the simplificatio
 
 ## Stufio
 <p align="center">
-  <a href="https://vimeo.com/817712955">
+  <a href="https://youtu.be/__2MDxFcMMw?si=jqWDAY2_8Z_zJsar">
   <img alt="image-display" width="1200px" src="Materials/Image/Stufio.png" />
   </a>
 </p>
@@ -127,7 +126,7 @@ A centralized factory seeks the best efficiency. It highlights the simplificatio
 
 ## Tofer
 <p align="center">
-  <a href="https://vimeo.com/817713053">
+  <a href="https://youtu.be/0J_cTne2DOg?si=S5YDs813tlhvJ3v5">
   <img alt="image-display" width="1200px" src="Materials/Image/Tofer.png" />
   </a>
 </p>
